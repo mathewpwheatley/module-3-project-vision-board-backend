@@ -1725,3 +1725,1432 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 870)
 
 
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (5.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (1.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (1.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (1.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 14]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 16]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 17]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 18]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 19]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 20]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 21]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 22]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 23]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 24]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 25]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "micah@cole.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "micah@cole.io"], ["first_name", "Miki"], ["last_name", "Keeling"], ["created_at", "2020-06-14 05:47:50.306940"], ["updated_at", "2020-06-14 05:47:50.306940"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "veola@johnson.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "veola@johnson.io"], ["first_name", "Zenobia"], ["last_name", "Willms"], ["created_at", "2020-06-14 05:47:50.316917"], ["updated_at", "2020-06-14 05:47:50.316917"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "crystal@cristbernier.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "crystal@cristbernier.io"], ["first_name", "Derek"], ["last_name", "Morar"], ["created_at", "2020-06-14 05:47:50.323888"], ["updated_at", "2020-06-14 05:47:50.323888"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rhona.hagenes@runolfsdottir.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "rhona.hagenes@runolfsdottir.name"], ["first_name", "Roscoe"], ["last_name", "Wehner"], ["created_at", "2020-06-14 05:47:50.330423"], ["updated_at", "2020-06-14 05:47:50.330423"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tifany@senger.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "tifany@senger.name"], ["first_name", "Junior"], ["last_name", "Bradtke"], ["created_at", "2020-06-14 05:47:50.337051"], ["updated_at", "2020-06-14 05:47:50.337051"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "herlinda@mertz.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "herlinda@mertz.io"], ["first_name", "Andrew"], ["last_name", "Erdman"], ["created_at", "2020-06-14 05:47:50.344051"], ["updated_at", "2020-06-14 05:47:50.344051"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "stacey@schuppe.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "stacey@schuppe.biz"], ["first_name", "Elana"], ["last_name", "Crona"], ["created_at", "2020-06-14 05:47:50.351523"], ["updated_at", "2020-06-14 05:47:50.351523"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "cyril_sauer@strosin.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "cyril_sauer@strosin.name"], ["first_name", "Laine"], ["last_name", "Yundt"], ["created_at", "2020-06-14 05:47:50.358623"], ["updated_at", "2020-06-14 05:47:50.358623"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "elroy_olson@quigleybrekke.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "elroy_olson@quigleybrekke.co"], ["first_name", "Jerold"], ["last_name", "Ondricka"], ["created_at", "2020-06-14 05:47:50.377653"], ["updated_at", "2020-06-14 05:47:50.377653"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "francis@wolff.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "francis@wolff.org"], ["first_name", "Robt"], ["last_name", "Pfeffer"], ["created_at", "2020-06-14 05:47:50.384402"], ["updated_at", "2020-06-14 05:47:50.384402"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mitsue@terrymarks.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "mitsue@terrymarks.io"], ["first_name", "Bula"], ["last_name", "Shanahan"], ["created_at", "2020-06-14 05:47:50.391571"], ["updated_at", "2020-06-14 05:47:50.391571"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tish@hartmanntoy.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "tish@hartmanntoy.com"], ["first_name", "Toshia"], ["last_name", "Daniel"], ["created_at", "2020-06-14 05:47:50.398055"], ["updated_at", "2020-06-14 05:47:50.398055"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "june_zemlak@hilpert.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "june_zemlak@hilpert.com"], ["first_name", "Jacqulyn"], ["last_name", "Paucek"], ["created_at", "2020-06-14 05:47:50.404887"], ["updated_at", "2020-06-14 05:47:50.404887"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rudolph_rolfson@faheylynch.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "rudolph_rolfson@faheylynch.info"], ["first_name", "Raquel"], ["last_name", "Kutch"], ["created_at", "2020-06-14 05:47:50.411620"], ["updated_at", "2020-06-14 05:47:50.411620"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "horacio.ferry@fay.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "horacio.ferry@fay.com"], ["first_name", "Toney"], ["last_name", "Abshire"], ["created_at", "2020-06-14 05:47:50.418727"], ["updated_at", "2020-06-14 05:47:50.418727"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "valeria.cole@hoppe.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "valeria.cole@hoppe.info"], ["first_name", "Winfred"], ["last_name", "Rempel"], ["created_at", "2020-06-14 05:47:50.425694"], ["updated_at", "2020-06-14 05:47:50.425694"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "collette@friesen.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "collette@friesen.info"], ["first_name", "Winfred"], ["last_name", "Welch"], ["created_at", "2020-06-14 05:47:50.433704"], ["updated_at", "2020-06-14 05:47:50.433704"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "brice.mitchell@klockodooley.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "brice.mitchell@klockodooley.net"], ["first_name", "Hermila"], ["last_name", "Wiza"], ["created_at", "2020-06-14 05:47:50.440731"], ["updated_at", "2020-06-14 05:47:50.440731"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tiera_windler@stiedemann.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "tiera_windler@stiedemann.name"], ["first_name", "Romelia"], ["last_name", "Weimann"], ["created_at", "2020-06-14 05:47:50.447825"], ["updated_at", "2020-06-14 05:47:50.447825"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "moriah@mcglynn.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "moriah@mcglynn.info"], ["first_name", "Damien"], ["last_name", "Greenfelder"], ["created_at", "2020-06-14 05:47:50.454670"], ["updated_at", "2020-06-14 05:47:50.454670"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jo@batzkertzmann.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "jo@batzkertzmann.io"], ["first_name", "Ellen"], ["last_name", "Bailey"], ["created_at", "2020-06-14 05:47:50.462204"], ["updated_at", "2020-06-14 05:47:50.462204"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "reid_roob@oconnell.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "reid_roob@oconnell.net"], ["first_name", "Johnette"], ["last_name", "Hickle"], ["created_at", "2020-06-14 05:47:50.469546"], ["updated_at", "2020-06-14 05:47:50.469546"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "athena_volkman@moenbruen.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "athena_volkman@moenbruen.info"], ["first_name", "Cletus"], ["last_name", "Kozey"], ["created_at", "2020-06-14 05:47:50.478713"], ["updated_at", "2020-06-14 05:47:50.478713"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "malena@barrows.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "malena@barrows.name"], ["first_name", "Antonio"], ["last_name", "Balistreri"], ["created_at", "2020-06-14 05:47:50.485876"], ["updated_at", "2020-06-14 05:47:50.485876"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "reed_schroeder@feestroberts.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "reed_schroeder@feestroberts.org"], ["first_name", "Florentino"], ["last_name", "Hamill"], ["created_at", "2020-06-14 05:47:50.493355"], ["updated_at", "2020-06-14 05:47:50.493355"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.5ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "A Handful of Dust"], ["category", "Family"], ["user_id", 38], ["created_at", "2020-06-14 05:47:50.526849"], ["updated_at", "2020-06-14 05:47:50.526849"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.9ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Recalled to Life"], ["category", "Career"], ["user_id", 36], ["created_at", "2020-06-14 05:47:50.535916"], ["updated_at", "2020-06-14 05:47:50.535916"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.5ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Beneath the Bleeding"], ["category", "Travel"], ["user_id", 42], ["created_at", "2020-06-14 05:47:50.547785"], ["updated_at", "2020-06-14 05:47:50.547785"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.5ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Pale Kings and Princes"], ["category", "Home"], ["user_id", 42], ["created_at", "2020-06-14 05:47:50.564503"], ["updated_at", "2020-06-14 05:47:50.564503"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.5ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Mr Standfast"], ["category", "Home"], ["user_id", 43], ["created_at", "2020-06-14 05:47:50.573439"], ["updated_at", "2020-06-14 05:47:50.573439"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.5ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Mirror Crack'd from Side to Side"], ["category", "Personal"], ["user_id", 47], ["created_at", "2020-06-14 05:47:50.584390"], ["updated_at", "2020-06-14 05:47:50.584390"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.6ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Taming a Sea Horse"], ["category", "Family"], ["user_id", 49], ["created_at", "2020-06-14 05:47:50.598994"], ["updated_at", "2020-06-14 05:47:50.598994"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.7ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "No Highway"], ["category", "Career"], ["user_id", 41], ["created_at", "2020-06-14 05:47:50.614014"], ["updated_at", "2020-06-14 05:47:50.614014"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBoard Create (6.1ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fame Is the Spur"], ["category", "Home"], ["user_id", 36], ["created_at", "2020-06-14 05:47:50.636629"], ["updated_at", "2020-06-14 05:47:50.636629"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[36mBoard Create (1.6ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Oh! To be in England"], ["category", "Health"], ["user_id", 46], ["created_at", "2020-06-14 05:47:50.661073"], ["updated_at", "2020-06-14 05:47:50.661073"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mBoard Create (1.2ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Nine Coaches Waiting"], ["category", "Self Improvement"], ["user_id", 39], ["created_at", "2020-06-14 05:47:50.678567"], ["updated_at", "2020-06-14 05:47:50.678567"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.6ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Heart Is Deceitful Above All Things"], ["category", "Financial"], ["user_id", 29], ["created_at", "2020-06-14 05:47:50.695487"], ["updated_at", "2020-06-14 05:47:50.695487"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.7ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Wealth of Nations"], ["category", "Other"], ["user_id", 27], ["created_at", "2020-06-14 05:47:50.707747"], ["updated_at", "2020-06-14 05:47:50.707747"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.7ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Some Buried Caesar"], ["category", "Self Improvement"], ["user_id", 48], ["created_at", "2020-06-14 05:47:50.718861"], ["updated_at", "2020-06-14 05:47:50.718861"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Everything is Illuminated"], ["category", "Education"], ["user_id", 35], ["created_at", "2020-06-14 05:47:50.728684"], ["updated_at", "2020-06-14 05:47:50.728684"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.5ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Last Enemy"], ["category", "Travel"], ["user_id", 29], ["created_at", "2020-06-14 05:47:50.737431"], ["updated_at", "2020-06-14 05:47:50.737431"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Bury My Heart at Wounded Knee"], ["category", "Travel"], ["user_id", 49], ["created_at", "2020-06-14 05:47:50.767320"], ["updated_at", "2020-06-14 05:47:50.767320"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Those Barren Leaves, Thrones, Dominations"], ["category", "Personal"], ["user_id", 45], ["created_at", "2020-06-14 05:47:50.775582"], ["updated_at", "2020-06-14 05:47:50.775582"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Little Hands Clapping"], ["category", "Family"], ["user_id", 46], ["created_at", "2020-06-14 05:47:50.783109"], ["updated_at", "2020-06-14 05:47:50.783109"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Where Angels Fear to Tread"], ["category", "Self Improvement"], ["user_id", 46], ["created_at", "2020-06-14 05:47:50.792386"], ["updated_at", "2020-06-14 05:47:50.792386"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.5ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Where Angels Fear to Tread"], ["category", "Financial"], ["user_id", 34], ["created_at", "2020-06-14 05:47:50.801385"], ["updated_at", "2020-06-14 05:47:50.801385"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.5ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Waste Land"], ["category", "Self Improvement"], ["user_id", 37], ["created_at", "2020-06-14 05:47:50.812017"], ["updated_at", "2020-06-14 05:47:50.812017"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "A Catskill Eagle"], ["category", "Health"], ["user_id", 30], ["created_at", "2020-06-14 05:47:50.822436"], ["updated_at", "2020-06-14 05:47:50.822436"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "This Side of Paradise"], ["category", "Family"], ["user_id", 29], ["created_at", "2020-06-14 05:47:50.830781"], ["updated_at", "2020-06-14 05:47:50.830781"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "A Time of Gifts"], ["category", "Career"], ["user_id", 45], ["created_at", "2020-06-14 05:47:50.838961"], ["updated_at", "2020-06-14 05:47:50.838961"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Wildfire at Midnight"], ["category", "Relationship"], ["user_id", 39], ["created_at", "2020-06-14 05:47:50.846740"], ["updated_at", "2020-06-14 05:47:50.846740"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Man Within"], ["category", "Relationship"], ["user_id", 43], ["created_at", "2020-06-14 05:47:50.854116"], ["updated_at", "2020-06-14 05:47:50.854116"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "From Here to Eternity"], ["category", "Other"], ["user_id", 49], ["created_at", "2020-06-14 05:47:50.862569"], ["updated_at", "2020-06-14 05:47:50.862569"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Wealth of Nations"], ["category", "Home"], ["user_id", 36], ["created_at", "2020-06-14 05:47:50.870436"], ["updated_at", "2020-06-14 05:47:50.870436"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Have His Carcase"], ["category", "Relationship"], ["user_id", 37], ["created_at", "2020-06-14 05:47:50.878671"], ["updated_at", "2020-06-14 05:47:50.878671"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Taming a Sea Horse"], ["category", "Relationship"], ["user_id", 46], ["created_at", "2020-06-14 05:47:50.886469"], ["updated_at", "2020-06-14 05:47:50.886469"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Taming a Sea Horse"], ["category", "Self Improvement"], ["user_id", 26], ["created_at", "2020-06-14 05:47:50.893097"], ["updated_at", "2020-06-14 05:47:50.893097"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Proper Study"], ["category", "Other"], ["user_id", 35], ["created_at", "2020-06-14 05:47:50.901037"], ["updated_at", "2020-06-14 05:47:50.901037"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "O Pioneers!"], ["category", "Health"], ["user_id", 28], ["created_at", "2020-06-14 05:47:50.908426"], ["updated_at", "2020-06-14 05:47:50.908426"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.5ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "A Time of Gifts"], ["category", "Health"], ["user_id", 34], ["created_at", "2020-06-14 05:47:50.918792"], ["updated_at", "2020-06-14 05:47:50.918792"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Many Waters"], ["category", "Home"], ["user_id", 44], ["created_at", "2020-06-14 05:47:50.927619"], ["updated_at", "2020-06-14 05:47:50.927619"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Dying of the Light"], ["category", "Relationship"], ["user_id", 32], ["created_at", "2020-06-14 05:47:50.936637"], ["updated_at", "2020-06-14 05:47:50.936637"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Stars' Tennis Balls"], ["category", "Education"], ["user_id", 28], ["created_at", "2020-06-14 05:47:50.944244"], ["updated_at", "2020-06-14 05:47:50.944244"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "I Know Why the Caged Bird Sings"], ["category", "Family"], ["user_id", 30], ["created_at", "2020-06-14 05:47:50.951902"], ["updated_at", "2020-06-14 05:47:50.951902"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "This Side of Paradise"], ["category", "Relationship"], ["user_id", 47], ["created_at", "2020-06-14 05:47:50.959814"], ["updated_at", "2020-06-14 05:47:50.959814"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Monkey's Raincoat"], ["category", "Health"], ["user_id", 39], ["created_at", "2020-06-14 05:47:50.968249"], ["updated_at", "2020-06-14 05:47:50.968249"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Dying of the Light"], ["category", "Financial"], ["user_id", 50], ["created_at", "2020-06-14 05:47:50.976387"], ["updated_at", "2020-06-14 05:47:50.976387"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "If Not Now, When?"], ["category", "Education"], ["user_id", 26], ["created_at", "2020-06-14 05:47:50.983870"], ["updated_at", "2020-06-14 05:47:50.983870"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Torment of Others"], ["category", "Travel"], ["user_id", 45], ["created_at", "2020-06-14 05:47:50.992012"], ["updated_at", "2020-06-14 05:47:50.992012"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Man Within"], ["category", "Career"], ["user_id", 38], ["created_at", "2020-06-14 05:47:50.999938"], ["updated_at", "2020-06-14 05:47:50.999938"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Far-Distant Oxus"], ["category", "Personal"], ["user_id", 43], ["created_at", "2020-06-14 05:47:51.007792"], ["updated_at", "2020-06-14 05:47:51.007792"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.5ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Things Fall Apart"], ["category", "Health"], ["user_id", 30], ["created_at", "2020-06-14 05:47:51.015237"], ["updated_at", "2020-06-14 05:47:51.015237"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Noli Me Tangere"], ["category", "Other"], ["user_id", 39], ["created_at", "2020-06-14 05:47:51.024479"], ["updated_at", "2020-06-14 05:47:51.024479"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Waiting for the Barbarians"], ["category", "Health"], ["user_id", 34], ["created_at", "2020-06-14 05:47:51.032094"], ["updated_at", "2020-06-14 05:47:51.032094"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (19.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mBoard Create (0.4ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "The Road Less Traveled"], ["category", "Education"], ["user_id", 28], ["created_at", "2020-06-14 05:47:51.061173"], ["updated_at", "2020-06-14 05:47:51.061173"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "To Sail Beyond the Sunset"], ["content", "Non natus et sunt."], ["status", "In Progress"], ["board_id", 58], ["created_at", "2020-06-14 05:47:51.085220"], ["updated_at", "2020-06-14 05:47:51.085220"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "O Jerusalem!"], ["content", "Asperiores itaque animi deleniti."], ["status", "In Progress"], ["board_id", 77], ["created_at", "2020-06-14 05:47:51.093094"], ["updated_at", "2020-06-14 05:47:51.093094"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Wind's Twelve Quarters"], ["content", "Voluptatem sunt et voluptatem."], ["status", "Not Started"], ["board_id", 74], ["created_at", "2020-06-14 05:47:51.101090"], ["updated_at", "2020-06-14 05:47:51.101090"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Darkling Plain"], ["content", "Ex non sed explicabo."], ["status", "Not Started"], ["board_id", 60], ["created_at", "2020-06-14 05:47:51.108734"], ["updated_at", "2020-06-14 05:47:51.108734"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.5ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "All Passion Spent"], ["content", "Consequatur fuga consequatur dolores."], ["status", "Completed"], ["board_id", 99], ["created_at", "2020-06-14 05:47:51.116501"], ["updated_at", "2020-06-14 05:47:51.116501"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "All Passion Spent"], ["content", "Adipisci culpa quia et."], ["status", "Completed"], ["board_id", 64], ["created_at", "2020-06-14 05:47:51.124935"], ["updated_at", "2020-06-14 05:47:51.124935"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Beyond the Mexique Bay"], ["content", "Harum consequuntur deserunt inventore."], ["status", "Not Started"], ["board_id", 72], ["created_at", "2020-06-14 05:47:51.132703"], ["updated_at", "2020-06-14 05:47:51.132703"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 89], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "That Hideous Strength"], ["content", "Rerum velit aspernatur sed."], ["status", "In Progress"], ["board_id", 89], ["created_at", "2020-06-14 05:47:51.140977"], ["updated_at", "2020-06-14 05:47:51.140977"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "If I Forget Thee Jerusalem"], ["content", "Id dolores laboriosam debitis."], ["status", "Not Started"], ["board_id", 58], ["created_at", "2020-06-14 05:47:51.148490"], ["updated_at", "2020-06-14 05:47:51.148490"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Many Waters"], ["content", "Laborum qui doloremque quam."], ["status", "Not Started"], ["board_id", 55], ["created_at", "2020-06-14 05:47:51.156386"], ["updated_at", "2020-06-14 05:47:51.156386"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "For a Breath I Tarry"], ["content", "Sunt tenetur nihil veniam."], ["status", "Not Started"], ["board_id", 87], ["created_at", "2020-06-14 05:47:51.163683"], ["updated_at", "2020-06-14 05:47:51.163683"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Surprised by Joy"], ["content", "Non quaerat non reprehenderit."], ["status", "In Progress"], ["board_id", 99], ["created_at", "2020-06-14 05:47:51.172350"], ["updated_at", "2020-06-14 05:47:51.172350"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 98], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Stranger in a Strange Land"], ["content", "Molestiae maxime nesciunt iusto."], ["status", "Completed"], ["board_id", 98], ["created_at", "2020-06-14 05:47:51.188662"], ["updated_at", "2020-06-14 05:47:51.188662"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Have His Carcase"], ["content", "Facilis maxime voluptas voluptas."], ["status", "Not Started"], ["board_id", 51], ["created_at", "2020-06-14 05:47:51.196743"], ["updated_at", "2020-06-14 05:47:51.196743"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "That Hideous Strength"], ["content", "Accusamus tempore ut voluptates."], ["status", "Completed"], ["board_id", 55], ["created_at", "2020-06-14 05:47:51.205375"], ["updated_at", "2020-06-14 05:47:51.205375"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Unweaving the Rainbow"], ["content", "Doloremque quas nihil voluptatibus."], ["status", "Completed"], ["board_id", 76], ["created_at", "2020-06-14 05:47:51.221763"], ["updated_at", "2020-06-14 05:47:51.221763"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Mermaids Singing"], ["content", "Aliquam harum porro consectetur."], ["status", "Not Started"], ["board_id", 58], ["created_at", "2020-06-14 05:47:51.231888"], ["updated_at", "2020-06-14 05:47:51.231888"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.6ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Summer Bird-Cage"], ["content", "Odio aspernatur dolor earum."], ["status", "Not Started"], ["board_id", 69], ["created_at", "2020-06-14 05:47:51.246601"], ["updated_at", "2020-06-14 05:47:51.246601"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Gone with the Wind"], ["content", "Ipsam itaque eveniet autem."], ["status", "In Progress"], ["board_id", 74], ["created_at", "2020-06-14 05:47:51.263403"], ["updated_at", "2020-06-14 05:47:51.263403"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.8ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Green Bay Tree"], ["content", "Omnis quaerat similique nesciunt."], ["status", "Completed"], ["board_id", 72], ["created_at", "2020-06-14 05:47:51.280433"], ["updated_at", "2020-06-14 05:47:51.280433"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (1.0ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.5ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Last Temptation"], ["content", "Est quo sed cumque."], ["status", "In Progress"], ["board_id", 58], ["created_at", "2020-06-14 05:47:51.297208"], ["updated_at", "2020-06-14 05:47:51.297208"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.7ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 89], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.6ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Dance Dance Dance"], ["content", "Officia quisquam aut facere."], ["status", "Completed"], ["board_id", 89], ["created_at", "2020-06-14 05:47:51.321794"], ["updated_at", "2020-06-14 05:47:51.321794"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 73], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.7ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Oh! To be in England"], ["content", "Odio consequuntur nisi ut."], ["status", "Not Started"], ["board_id", 73], ["created_at", "2020-06-14 05:47:51.340304"], ["updated_at", "2020-06-14 05:47:51.340304"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 100], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.5ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Torment of Others"], ["content", "Et perspiciatis corporis autem."], ["status", "Completed"], ["board_id", 100], ["created_at", "2020-06-14 05:47:51.354319"], ["updated_at", "2020-06-14 05:47:51.354319"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "All Passion Spent"], ["content", "Laudantium vitae maiores est."], ["status", "Not Started"], ["board_id", 54], ["created_at", "2020-06-14 05:47:51.365387"], ["updated_at", "2020-06-14 05:47:51.365387"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.5ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Mr Standfast"], ["content", "Esse ipsum corrupti recusandae."], ["status", "Completed"], ["board_id", 63], ["created_at", "2020-06-14 05:47:51.376008"], ["updated_at", "2020-06-14 05:47:51.376008"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 93], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Road Less Traveled"], ["content", "Ab minima laborum omnis."], ["status", "In Progress"], ["board_id", 93], ["created_at", "2020-06-14 05:47:51.405063"], ["updated_at", "2020-06-14 05:47:51.405063"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Some Buried Caesar"], ["content", "Assumenda in voluptatum repellat."], ["status", "Completed"], ["board_id", 61], ["created_at", "2020-06-14 05:47:51.413015"], ["updated_at", "2020-06-14 05:47:51.413015"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Brandy of the Damned"], ["content", "Et enim totam sed."], ["status", "Completed"], ["board_id", 61], ["created_at", "2020-06-14 05:47:51.422107"], ["updated_at", "2020-06-14 05:47:51.422107"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Curious Incident of the Dog in the Night-Time"], ["content", "Nam facere omnis quia."], ["status", "In Progress"], ["board_id", 78], ["created_at", "2020-06-14 05:47:51.430183"], ["updated_at", "2020-06-14 05:47:51.430183"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Swiftly Tilting Planet"], ["content", "Numquam qui sit laboriosam."], ["status", "Completed"], ["board_id", 67], ["created_at", "2020-06-14 05:47:51.438381"], ["updated_at", "2020-06-14 05:47:51.438381"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Look to Windward"], ["content", "Quasi vero incidunt iusto."], ["status", "Not Started"], ["board_id", 65], ["created_at", "2020-06-14 05:47:51.446314"], ["updated_at", "2020-06-14 05:47:51.446314"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 85], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.5ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "That Good Night"], ["content", "Iure voluptatem officia sit."], ["status", "Completed"], ["board_id", 85], ["created_at", "2020-06-14 05:47:51.455674"], ["updated_at", "2020-06-14 05:47:51.455674"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "For Whom the Bell Tolls"], ["content", "Eligendi deleniti magni incidunt."], ["status", "Completed"], ["board_id", 55], ["created_at", "2020-06-14 05:47:51.463791"], ["updated_at", "2020-06-14 05:47:51.463791"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 81], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Fear and Trembling"], ["content", "Autem aut quis laboriosam."], ["status", "In Progress"], ["board_id", 81], ["created_at", "2020-06-14 05:47:51.472032"], ["updated_at", "2020-06-14 05:47:51.472032"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 90], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.5ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "That Good Night"], ["content", "Quas rerum tenetur fuga."], ["status", "Not Started"], ["board_id", 90], ["created_at", "2020-06-14 05:47:51.482803"], ["updated_at", "2020-06-14 05:47:51.482803"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Last Temptation"], ["content", "Aperiam quod dignissimos error."], ["status", "Not Started"], ["board_id", 78], ["created_at", "2020-06-14 05:47:51.492536"], ["updated_at", "2020-06-14 05:47:51.492536"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 100], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Time to Kill"], ["content", "Velit sit ut voluptate."], ["status", "Completed"], ["board_id", 100], ["created_at", "2020-06-14 05:47:51.501217"], ["updated_at", "2020-06-14 05:47:51.501217"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.6ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "To Your Scattered Bodies Go"], ["content", "Ad similique aut natus."], ["status", "In Progress"], ["board_id", 83], ["created_at", "2020-06-14 05:47:51.509043"], ["updated_at", "2020-06-14 05:47:51.509043"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 93], ["LIMIT", 1]]
+  [1m[36mGoal Create (1.2ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Road Less Traveled"], ["content", "Incidunt et excepturi error."], ["status", "In Progress"], ["board_id", 93], ["created_at", "2020-06-14 05:47:51.525080"], ["updated_at", "2020-06-14 05:47:51.525080"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.6ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Moab Is My Washpot"], ["content", "Ab aspernatur tempore dicta."], ["status", "Not Started"], ["board_id", 87], ["created_at", "2020-06-14 05:47:51.536759"], ["updated_at", "2020-06-14 05:47:51.536759"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[36mGoal Create (1.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Fear and Trembling"], ["content", "Impedit temporibus vel eligendi."], ["status", "In Progress"], ["board_id", 53], ["created_at", "2020-06-14 05:47:51.552382"], ["updated_at", "2020-06-14 05:47:51.552382"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 90], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.7ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Eyeless in Gaza"], ["content", "Suscipit impedit blanditiis minus."], ["status", "In Progress"], ["board_id", 90], ["created_at", "2020-06-14 05:47:51.575359"], ["updated_at", "2020-06-14 05:47:51.575359"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.6ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Everything is Illuminated"], ["content", "Autem occaecati et animi."], ["status", "Completed"], ["board_id", 99], ["created_at", "2020-06-14 05:47:51.592796"], ["updated_at", "2020-06-14 05:47:51.592796"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 97], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.6ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Time To Murder And Create"], ["content", "Dolores ut sapiente qui."], ["status", "Not Started"], ["board_id", 97], ["created_at", "2020-06-14 05:47:51.608954"], ["updated_at", "2020-06-14 05:47:51.608954"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.8ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "For Whom the Bell Tolls"], ["content", "Sunt qui facilis enim."], ["status", "In Progress"], ["board_id", 62], ["created_at", "2020-06-14 05:47:51.626840"], ["updated_at", "2020-06-14 05:47:51.626840"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 85], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.7ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Sleep the Brave"], ["content", "Necessitatibus ipsa explicabo voluptatem."], ["status", "Completed"], ["board_id", 85], ["created_at", "2020-06-14 05:47:51.640024"], ["updated_at", "2020-06-14 05:47:51.640024"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.7ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 88], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.6ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Daffodil Sky"], ["content", "Occaecati et vitae modi."], ["status", "Not Started"], ["board_id", 88], ["created_at", "2020-06-14 05:47:51.654313"], ["updated_at", "2020-06-14 05:47:51.654313"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Doors of Perception"], ["content", "Totam velit recusandae magnam."], ["status", "In Progress"], ["board_id", 61], ["created_at", "2020-06-14 05:47:51.663507"], ["updated_at", "2020-06-14 05:47:51.663507"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.6ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "No Country for Old Men"], ["content", "Qui voluptatem nam repudiandae."], ["status", "Not Started"], ["board_id", 78], ["created_at", "2020-06-14 05:47:51.672357"], ["updated_at", "2020-06-14 05:47:51.672357"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 73], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Where Angels Fear to Tread"], ["content", "Et officia eos rerum."], ["status", "Completed"], ["board_id", 73], ["created_at", "2020-06-14 05:47:51.683077"], ["updated_at", "2020-06-14 05:47:51.683077"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Beneath the Bleeding"], ["content", "Consequatur dicta aut est."], ["status", "Not Started"], ["board_id", 99], ["created_at", "2020-06-14 05:47:51.691718"], ["updated_at", "2020-06-14 05:47:51.691718"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Far From the Madding Crowd"], ["content", "Ea qui ut nisi."], ["status", "Completed"], ["board_id", 74], ["created_at", "2020-06-14 05:47:51.699801"], ["updated_at", "2020-06-14 05:47:51.699801"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Quo Vadis"], ["content", "Excepturi pariatur nostrum eum."], ["status", "In Progress"], ["board_id", 70], ["created_at", "2020-06-14 05:47:51.708509"], ["updated_at", "2020-06-14 05:47:51.708509"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Vile Bodies"], ["content", "Voluptas iste tempore aut."], ["status", "In Progress"], ["board_id", 68], ["created_at", "2020-06-14 05:47:51.716959"], ["updated_at", "2020-06-14 05:47:51.716959"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 81], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Lilies of the Field"], ["content", "Veritatis minima omnis nostrum."], ["status", "In Progress"], ["board_id", 81], ["created_at", "2020-06-14 05:47:51.725814"], ["updated_at", "2020-06-14 05:47:51.725814"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 86], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Farewell to Arms"], ["content", "Vel ut iusto voluptatem."], ["status", "Completed"], ["board_id", 86], ["created_at", "2020-06-14 05:47:51.734057"], ["updated_at", "2020-06-14 05:47:51.734057"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 89], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "O Pioneers!"], ["content", "In praesentium non autem."], ["status", "Completed"], ["board_id", 89], ["created_at", "2020-06-14 05:47:51.761594"], ["updated_at", "2020-06-14 05:47:51.761594"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "An Instant In The Wind"], ["content", "Accusantium exercitationem ab consequatur."], ["status", "Not Started"], ["board_id", 72], ["created_at", "2020-06-14 05:47:51.769778"], ["updated_at", "2020-06-14 05:47:51.769778"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ring of Bright Water"], ["content", "Praesentium animi porro quo."], ["status", "Completed"], ["board_id", 76], ["created_at", "2020-06-14 05:47:51.778773"], ["updated_at", "2020-06-14 05:47:51.778773"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ah, Wilderness!"], ["content", "Sed impedit aut veritatis."], ["status", "In Progress"], ["board_id", 62], ["created_at", "2020-06-14 05:47:51.787461"], ["updated_at", "2020-06-14 05:47:51.787461"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "I Know Why the Caged Bird Sings"], ["content", "Reiciendis eveniet magnam aperiam."], ["status", "Completed"], ["board_id", 67], ["created_at", "2020-06-14 05:47:51.795745"], ["updated_at", "2020-06-14 05:47:51.795745"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Farewell to Arms"], ["content", "A sapiente laboriosam ut."], ["status", "Completed"], ["board_id", 74], ["created_at", "2020-06-14 05:47:51.803914"], ["updated_at", "2020-06-14 05:47:51.803914"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Stars' Tennis Balls"], ["content", "Aperiam aut asperiores animi."], ["status", "In Progress"], ["board_id", 62], ["created_at", "2020-06-14 05:47:51.810757"], ["updated_at", "2020-06-14 05:47:51.810757"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Parliament of Man"], ["content", "Commodi voluptates veritatis et."], ["status", "Not Started"], ["board_id", 53], ["created_at", "2020-06-14 05:47:51.817497"], ["updated_at", "2020-06-14 05:47:51.817497"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Other Side of Silence"], ["content", "Praesentium eligendi consequatur iure."], ["status", "In Progress"], ["board_id", 66], ["created_at", "2020-06-14 05:47:51.826038"], ["updated_at", "2020-06-14 05:47:51.826038"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Grapes of Wrath"], ["content", "Velit nemo alias sed."], ["status", "Completed"], ["board_id", 52], ["created_at", "2020-06-14 05:47:51.833649"], ["updated_at", "2020-06-14 05:47:51.833649"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Down to a Sunless Sea"], ["content", "Vitae sit ex vero."], ["status", "Completed"], ["board_id", 66], ["created_at", "2020-06-14 05:47:51.841868"], ["updated_at", "2020-06-14 05:47:51.841868"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Needle's Eye"], ["content", "Minus cum esse vitae."], ["status", "Not Started"], ["board_id", 54], ["created_at", "2020-06-14 05:47:51.849366"], ["updated_at", "2020-06-14 05:47:51.849366"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Wives of Bath"], ["content", "Minima est quo quia."], ["status", "In Progress"], ["board_id", 54], ["created_at", "2020-06-14 05:47:51.858425"], ["updated_at", "2020-06-14 05:47:51.858425"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Curious Incident of the Dog in the Night-Time"], ["content", "Unde consectetur eius et."], ["status", "In Progress"], ["board_id", 78], ["created_at", "2020-06-14 05:47:51.866461"], ["updated_at", "2020-06-14 05:47:51.866461"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Postern of Fate"], ["content", "Id asperiores occaecati aut."], ["status", "Completed"], ["board_id", 78], ["created_at", "2020-06-14 05:47:51.874566"], ["updated_at", "2020-06-14 05:47:51.874566"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 84], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Scanner Darkly"], ["content", "Praesentium corporis laudantium iure."], ["status", "Completed"], ["board_id", 84], ["created_at", "2020-06-14 05:47:51.882006"], ["updated_at", "2020-06-14 05:47:51.882006"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Summer Bird-Cage"], ["content", "Inventore magnam iusto reprehenderit."], ["status", "Completed"], ["board_id", 63], ["created_at", "2020-06-14 05:47:51.889452"], ["updated_at", "2020-06-14 05:47:51.889452"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Nine Coaches Waiting"], ["content", "Ut dignissimos quo nulla."], ["status", "Not Started"], ["board_id", 65], ["created_at", "2020-06-14 05:47:51.899829"], ["updated_at", "2020-06-14 05:47:51.899829"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Time to Kill"], ["content", "Earum quae ut sequi."], ["status", "Not Started"], ["board_id", 56], ["created_at", "2020-06-14 05:47:51.908234"], ["updated_at", "2020-06-14 05:47:51.908234"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 84], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Heart Is Deceitful Above All Things"], ["content", "Nobis quam quia qui."], ["status", "Completed"], ["board_id", 84], ["created_at", "2020-06-14 05:47:51.916356"], ["updated_at", "2020-06-14 05:47:51.916356"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 84], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Mr Standfast"], ["content", "Accusantium qui non ex."], ["status", "In Progress"], ["board_id", 84], ["created_at", "2020-06-14 05:47:51.925299"], ["updated_at", "2020-06-14 05:47:51.925299"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 81], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Wings of the Dove"], ["content", "Sit consectetur eveniet ipsam."], ["status", "Completed"], ["board_id", 81], ["created_at", "2020-06-14 05:47:51.933527"], ["updated_at", "2020-06-14 05:47:51.933527"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "That Good Night"], ["content", "Quo deserunt ut odio."], ["status", "In Progress"], ["board_id", 58], ["created_at", "2020-06-14 05:47:51.941725"], ["updated_at", "2020-06-14 05:47:51.941725"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Things Fall Apart"], ["content", "Voluptatem magni voluptate deleniti."], ["status", "Completed"], ["board_id", 76], ["created_at", "2020-06-14 05:47:51.949969"], ["updated_at", "2020-06-14 05:47:51.949969"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Carrion Comfort"], ["content", "Earum quas deserunt id."], ["status", "Not Started"], ["board_id", 99], ["created_at", "2020-06-14 05:47:51.957698"], ["updated_at", "2020-06-14 05:47:51.957698"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Wealth of Nations"], ["content", "Et quo ullam voluptatibus."], ["status", "Completed"], ["board_id", 99], ["created_at", "2020-06-14 05:47:51.964794"], ["updated_at", "2020-06-14 05:47:51.964794"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "An Acceptable Time"], ["content", "Neque iusto nam autem."], ["status", "In Progress"], ["board_id", 68], ["created_at", "2020-06-14 05:47:51.972730"], ["updated_at", "2020-06-14 05:47:51.972730"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "East of Eden"], ["content", "Est sapiente est id."], ["status", "Not Started"], ["board_id", 77], ["created_at", "2020-06-14 05:47:51.980602"], ["updated_at", "2020-06-14 05:47:51.980602"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 92], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Cabbages and Kings"], ["content", "Aut quia amet sunt."], ["status", "Completed"], ["board_id", 92], ["created_at", "2020-06-14 05:47:51.988396"], ["updated_at", "2020-06-14 05:47:51.988396"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 97], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Man Within"], ["content", "Vitae consequatur aliquam dolor."], ["status", "In Progress"], ["board_id", 97], ["created_at", "2020-06-14 05:47:51.995203"], ["updated_at", "2020-06-14 05:47:51.995203"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 97], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Of Mice and Men"], ["content", "Minus eos deserunt culpa."], ["status", "Completed"], ["board_id", 97], ["created_at", "2020-06-14 05:47:52.003496"], ["updated_at", "2020-06-14 05:47:52.003496"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (19.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 91], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Millstone"], ["content", "Nihil aut praesentium provident."], ["status", "Completed"], ["board_id", 91], ["created_at", "2020-06-14 05:47:52.030917"], ["updated_at", "2020-06-14 05:47:52.030917"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 73], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "It's a Battlefield"], ["content", "Aliquid vero iusto quas."], ["status", "In Progress"], ["board_id", 73], ["created_at", "2020-06-14 05:47:52.038363"], ["updated_at", "2020-06-14 05:47:52.038363"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 94], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Moving Finger"], ["content", "Quos non qui eligendi."], ["status", "Not Started"], ["board_id", 94], ["created_at", "2020-06-14 05:47:52.045407"], ["updated_at", "2020-06-14 05:47:52.045407"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Unweaving the Rainbow"], ["content", "Omnis dolores laudantium facere."], ["status", "Not Started"], ["board_id", 61], ["created_at", "2020-06-14 05:47:52.053255"], ["updated_at", "2020-06-14 05:47:52.053255"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Golden Apples of the Sun"], ["content", "Eveniet provident iste sed."], ["status", "Completed"], ["board_id", 52], ["created_at", "2020-06-14 05:47:52.062329"], ["updated_at", "2020-06-14 05:47:52.062329"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 79], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "That Hideous Strength"], ["content", "Praesentium deserunt aut dolorem."], ["status", "Not Started"], ["board_id", 79], ["created_at", "2020-06-14 05:47:52.070467"], ["updated_at", "2020-06-14 05:47:52.070467"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 84], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "That Good Night"], ["content", "Ut doloribus incidunt culpa."], ["status", "Not Started"], ["board_id", 84], ["created_at", "2020-06-14 05:47:52.078091"], ["updated_at", "2020-06-14 05:47:52.078091"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 75], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Confederacy of Dunces"], ["content", "Doloremque deleniti praesentium officiis."], ["status", "In Progress"], ["board_id", 75], ["created_at", "2020-06-14 05:47:52.085776"], ["updated_at", "2020-06-14 05:47:52.085776"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 89], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Things Fall Apart"], ["content", "A fuga itaque reiciendis."], ["status", "Completed"], ["board_id", 89], ["created_at", "2020-06-14 05:47:52.093645"], ["updated_at", "2020-06-14 05:47:52.093645"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 91], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Some Buried Caesar"], ["content", "Magnam perferendis quae est."], ["status", "In Progress"], ["board_id", 91], ["created_at", "2020-06-14 05:47:52.101361"], ["updated_at", "2020-06-14 05:47:52.101361"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Skull Beneath the Skin"], ["content", "Quo ipsum quia doloribus."], ["status", "In Progress"], ["board_id", 68], ["created_at", "2020-06-14 05:47:52.109573"], ["updated_at", "2020-06-14 05:47:52.109573"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 59], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Françoise Sagan"], ["content", "Aut impedit voluptate numquam."], ["status", "Not Started"], ["board_id", 59], ["created_at", "2020-06-14 05:47:52.116270"], ["updated_at", "2020-06-14 05:47:52.116270"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "For a Breath I Tarry"], ["content", "Veniam ea quidem laborum."], ["status", "In Progress"], ["board_id", 77], ["created_at", "2020-06-14 05:47:52.124423"], ["updated_at", "2020-06-14 05:47:52.124423"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Scanner Darkly"], ["content", "Rerum laudantium laboriosam recusandae."], ["status", "Completed"], ["board_id", 74], ["created_at", "2020-06-14 05:47:52.132236"], ["updated_at", "2020-06-14 05:47:52.132236"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Handful of Dust"], ["content", "Est non eveniet quia."], ["status", "In Progress"], ["board_id", 83], ["created_at", "2020-06-14 05:47:52.139886"], ["updated_at", "2020-06-14 05:47:52.139886"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Beneath the Bleeding"], ["content", "Voluptas quia eum voluptates."], ["status", "In Progress"], ["board_id", 65], ["created_at", "2020-06-14 05:47:52.147519"], ["updated_at", "2020-06-14 05:47:52.147519"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 84], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Absalom, Absalom!"], ["content", "Sit dolor ab sed."], ["status", "Not Started"], ["board_id", 84], ["created_at", "2020-06-14 05:47:52.155258"], ["updated_at", "2020-06-14 05:47:52.155258"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Moab Is My Washpot"], ["content", "Officiis nesciunt mollitia nemo."], ["status", "In Progress"], ["board_id", 72], ["created_at", "2020-06-14 05:47:52.162747"], ["updated_at", "2020-06-14 05:47:52.162747"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Many-Splendoured Thing"], ["content", "Culpa voluptas voluptatum iusto."], ["status", "In Progress"], ["board_id", 68], ["created_at", "2020-06-14 05:47:52.170342"], ["updated_at", "2020-06-14 05:47:52.170342"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Torment of Others"], ["content", "Ipsum laborum aliquid aliquam."], ["status", "Not Started"], ["board_id", 52], ["created_at", "2020-06-14 05:47:52.177876"], ["updated_at", "2020-06-14 05:47:52.177876"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Bury My Heart at Wounded Knee"], ["content", "Deserunt ipsa eum repellendus."], ["status", "Not Started"], ["board_id", 78], ["created_at", "2020-06-14 05:47:52.185909"], ["updated_at", "2020-06-14 05:47:52.185909"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Nectar in a Sieve"], ["content", "At quaerat voluptatem vero."], ["status", "Completed"], ["board_id", 63], ["created_at", "2020-06-14 05:47:52.193307"], ["updated_at", "2020-06-14 05:47:52.193307"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "As I Lay Dying"], ["content", "Quod minus totam eos."], ["status", "Not Started"], ["board_id", 67], ["created_at", "2020-06-14 05:47:52.201549"], ["updated_at", "2020-06-14 05:47:52.201549"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 85], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Death Be Not Proud"], ["content", "Illum dolores voluptates numquam."], ["status", "Not Started"], ["board_id", 85], ["created_at", "2020-06-14 05:47:52.208867"], ["updated_at", "2020-06-14 05:47:52.208867"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Many Waters"], ["content", "Vel et autem ab."], ["status", "In Progress"], ["board_id", 69], ["created_at", "2020-06-14 05:47:52.216171"], ["updated_at", "2020-06-14 05:47:52.216171"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 81], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Tiger! Tiger!"], ["content", "Ullam fugiat tempore dignissimos."], ["status", "In Progress"], ["board_id", 81], ["created_at", "2020-06-14 05:47:52.224101"], ["updated_at", "2020-06-14 05:47:52.224101"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Some Buried Caesar"], ["content", "Non ratione ut et."], ["status", "In Progress"], ["board_id", 51], ["created_at", "2020-06-14 05:47:52.231782"], ["updated_at", "2020-06-14 05:47:52.231782"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 91], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Some Buried Caesar"], ["content", "Natus et et sint."], ["status", "Completed"], ["board_id", 91], ["created_at", "2020-06-14 05:47:52.239211"], ["updated_at", "2020-06-14 05:47:52.239211"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Françoise Sagan"], ["content", "Eveniet suscipit molestias debitis."], ["status", "Not Started"], ["board_id", 65], ["created_at", "2020-06-14 05:47:52.246049"], ["updated_at", "2020-06-14 05:47:52.246049"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 75], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Endless Night"], ["content", "Quia ea nihil reiciendis."], ["status", "Not Started"], ["board_id", 75], ["created_at", "2020-06-14 05:47:52.253833"], ["updated_at", "2020-06-14 05:47:52.253833"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Dance Dance Dance"], ["content", "Et exercitationem quis praesentium."], ["status", "Completed"], ["board_id", 60], ["created_at", "2020-06-14 05:47:52.261631"], ["updated_at", "2020-06-14 05:47:52.261631"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 75], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Vile Bodies"], ["content", "Quo aliquam aut error."], ["status", "Completed"], ["board_id", 75], ["created_at", "2020-06-14 05:47:52.285496"], ["updated_at", "2020-06-14 05:47:52.285496"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Torment of Others"], ["content", "Esse in voluptatum soluta."], ["status", "Not Started"], ["board_id", 60], ["created_at", "2020-06-14 05:47:52.292439"], ["updated_at", "2020-06-14 05:47:52.292439"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "In Death Ground"], ["content", "Hic sit et et."], ["status", "Completed"], ["board_id", 80], ["created_at", "2020-06-14 05:47:52.300682"], ["updated_at", "2020-06-14 05:47:52.300682"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Noli Me Tangere"], ["content", "Id accusamus qui culpa."], ["status", "In Progress"], ["board_id", 69], ["created_at", "2020-06-14 05:47:52.308070"], ["updated_at", "2020-06-14 05:47:52.308070"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Clouds of Witness"], ["content", "Illum rerum cum quod."], ["status", "In Progress"], ["board_id", 52], ["created_at", "2020-06-14 05:47:52.314724"], ["updated_at", "2020-06-14 05:47:52.314724"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Things Fall Apart"], ["content", "Unde et quas rerum."], ["status", "In Progress"], ["board_id", 76], ["created_at", "2020-06-14 05:47:52.321120"], ["updated_at", "2020-06-14 05:47:52.321120"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Fame Is the Spur"], ["content", "Occaecati vitae consectetur atque."], ["status", "In Progress"], ["board_id", 63], ["created_at", "2020-06-14 05:47:52.328014"], ["updated_at", "2020-06-14 05:47:52.328014"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Waste Land"], ["content", "Quis sit dolorum quam."], ["status", "Completed"], ["board_id", 55], ["created_at", "2020-06-14 05:47:52.335289"], ["updated_at", "2020-06-14 05:47:52.335289"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 89], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "East of Eden"], ["content", "Laborum dicta sequi maiores."], ["status", "Not Started"], ["board_id", 89], ["created_at", "2020-06-14 05:47:52.343267"], ["updated_at", "2020-06-14 05:47:52.343267"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 73], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "For a Breath I Tarry"], ["content", "Autem enim voluptatem fuga."], ["status", "Completed"], ["board_id", 73], ["created_at", "2020-06-14 05:47:52.350768"], ["updated_at", "2020-06-14 05:47:52.350768"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Wives of Bath"], ["content", "Beatae voluptatem omnis sequi."], ["status", "Completed"], ["board_id", 51], ["created_at", "2020-06-14 05:47:52.358234"], ["updated_at", "2020-06-14 05:47:52.358234"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Edna O'Brien"], ["content", "A iste voluptatem incidunt."], ["status", "Not Started"], ["board_id", 61], ["created_at", "2020-06-14 05:47:52.365870"], ["updated_at", "2020-06-14 05:47:52.365870"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 75], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "After Many a Summer Dies the Swan"], ["content", "Sit enim debitis minima."], ["status", "Not Started"], ["board_id", 75], ["created_at", "2020-06-14 05:47:52.373440"], ["updated_at", "2020-06-14 05:47:52.373440"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Frequent Hearses"], ["content", "Sit doloremque cupiditate et."], ["status", "Completed"], ["board_id", 52], ["created_at", "2020-06-14 05:47:52.381287"], ["updated_at", "2020-06-14 05:47:52.381287"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Tirra Lirra by the River"], ["content", "Deleniti reiciendis similique totam."], ["status", "Completed"], ["board_id", 87], ["created_at", "2020-06-14 05:47:52.389452"], ["updated_at", "2020-06-14 05:47:52.389452"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Things Fall Apart"], ["content", "Dolorum debitis optio animi."], ["status", "Completed"], ["board_id", 87], ["created_at", "2020-06-14 05:47:52.397059"], ["updated_at", "2020-06-14 05:47:52.397059"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 84], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Eyeless in Gaza"], ["content", "Hic qui optio culpa."], ["status", "Not Started"], ["board_id", 84], ["created_at", "2020-06-14 05:47:52.404613"], ["updated_at", "2020-06-14 05:47:52.404613"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Waste Land"], ["content", "Eligendi magni commodi in."], ["status", "In Progress"], ["board_id", 60], ["created_at", "2020-06-14 05:47:52.411915"], ["updated_at", "2020-06-14 05:47:52.411915"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "That Good Night"], ["content", "Ut quaerat nobis dolorum."], ["status", "Completed"], ["board_id", 69], ["created_at", "2020-06-14 05:47:52.419342"], ["updated_at", "2020-06-14 05:47:52.419342"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 92], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Parliament of Man"], ["content", "Modi vel rerum quia."], ["status", "Completed"], ["board_id", 92], ["created_at", "2020-06-14 05:47:52.428079"], ["updated_at", "2020-06-14 05:47:52.428079"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "It's a Battlefield"], ["content", "Eos nemo deserunt impedit."], ["status", "Not Started"], ["board_id", 95], ["created_at", "2020-06-14 05:47:52.436165"], ["updated_at", "2020-06-14 05:47:52.436165"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Other Side of Silence"], ["content", "Veritatis provident cum est."], ["status", "Not Started"], ["board_id", 57], ["created_at", "2020-06-14 05:47:52.443690"], ["updated_at", "2020-06-14 05:47:52.443690"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Confederacy of Dunces"], ["content", "Laboriosam modi maxime ut."], ["status", "Not Started"], ["board_id", 55], ["created_at", "2020-06-14 05:47:52.454358"], ["updated_at", "2020-06-14 05:47:52.454358"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Wives of Bath"], ["content", "Omnis occaecati molestiae qui."], ["status", "In Progress"], ["board_id", 52], ["created_at", "2020-06-14 05:47:52.462409"], ["updated_at", "2020-06-14 05:47:52.462409"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Last Enemy"], ["content", "Optio voluptate consequatur et."], ["status", "Completed"], ["board_id", 57], ["created_at", "2020-06-14 05:47:52.470630"], ["updated_at", "2020-06-14 05:47:52.470630"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Waste Land"], ["content", "At quae non aut."], ["status", "Completed"], ["board_id", 67], ["created_at", "2020-06-14 05:47:52.478615"], ["updated_at", "2020-06-14 05:47:52.478615"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Yellow Meads of Asphodel"], ["content", "Laudantium aut modi molestiae."], ["status", "Not Started"], ["board_id", 53], ["created_at", "2020-06-14 05:47:52.486668"], ["updated_at", "2020-06-14 05:47:52.486668"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 79], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Mirror Crack'd from Side to Side"], ["content", "Labore sed assumenda rerum."], ["status", "In Progress"], ["board_id", 79], ["created_at", "2020-06-14 05:47:52.494181"], ["updated_at", "2020-06-14 05:47:52.494181"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Needle's Eye"], ["content", "Maxime et ducimus dolorem."], ["status", "In Progress"], ["board_id", 61], ["created_at", "2020-06-14 05:47:52.501965"], ["updated_at", "2020-06-14 05:47:52.501965"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 93], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Now Sleeps the Crimson Petal"], ["content", "Blanditiis architecto quaerat molestiae."], ["status", "Not Started"], ["board_id", 93], ["created_at", "2020-06-14 05:47:52.509974"], ["updated_at", "2020-06-14 05:47:52.509974"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Waste Land"], ["content", "Beatae sequi aperiam minima."], ["status", "Not Started"], ["board_id", 57], ["created_at", "2020-06-14 05:47:52.518511"], ["updated_at", "2020-06-14 05:47:52.518511"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Lilies of the Field"], ["content", "Quo ea et enim."], ["status", "Completed"], ["board_id", 65], ["created_at", "2020-06-14 05:47:52.543686"], ["updated_at", "2020-06-14 05:47:52.543686"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "To Your Scattered Bodies Go"], ["content", "Velit quo sint cumque."], ["status", "Completed"], ["board_id", 56], ["created_at", "2020-06-14 05:47:52.550177"], ["updated_at", "2020-06-14 05:47:52.550177"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.5ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "No Highway"], ["content", "Quas ut exercitationem rerum."], ["status", "Completed"], ["board_id", 62], ["created_at", "2020-06-14 05:47:52.559421"], ["updated_at", "2020-06-14 05:47:52.559421"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Fear and Trembling"], ["content", "Ea provident quia commodi."], ["status", "Completed"], ["board_id", 87], ["created_at", "2020-06-14 05:47:52.567142"], ["updated_at", "2020-06-14 05:47:52.567142"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 92], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Fame Is the Spur"], ["content", "Maiores dolor dolores dolores."], ["status", "Not Started"], ["board_id", 92], ["created_at", "2020-06-14 05:47:52.574967"], ["updated_at", "2020-06-14 05:47:52.574967"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Eyeless in Gaza"], ["content", "Sequi dolorem minus sed."], ["status", "Not Started"], ["board_id", 64], ["created_at", "2020-06-14 05:47:52.582317"], ["updated_at", "2020-06-14 05:47:52.582317"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Have His Carcase"], ["content", "Similique repudiandae quod beatae."], ["status", "Not Started"], ["board_id", 61], ["created_at", "2020-06-14 05:47:52.589831"], ["updated_at", "2020-06-14 05:47:52.589831"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Moab Is My Washpot"], ["content", "Molestias corrupti quidem amet."], ["status", "Not Started"], ["board_id", 66], ["created_at", "2020-06-14 05:47:52.597197"], ["updated_at", "2020-06-14 05:47:52.597197"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Waste Land"], ["content", "Laboriosam ab voluptates reprehenderit."], ["status", "In Progress"], ["board_id", 69], ["created_at", "2020-06-14 05:47:52.605218"], ["updated_at", "2020-06-14 05:47:52.605218"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ring of Bright Water"], ["content", "Ratione et et voluptatem."], ["status", "In Progress"], ["board_id", 76], ["created_at", "2020-06-14 05:47:52.613360"], ["updated_at", "2020-06-14 05:47:52.613360"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Arms and the Man"], ["content", "Aperiam facere earum porro."], ["status", "Not Started"], ["board_id", 69], ["created_at", "2020-06-14 05:47:52.620952"], ["updated_at", "2020-06-14 05:47:52.620952"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "After Many a Summer Dies the Swan"], ["content", "Aut in earum nemo."], ["status", "In Progress"], ["board_id", 76], ["created_at", "2020-06-14 05:47:52.629478"], ["updated_at", "2020-06-14 05:47:52.629478"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Down to a Sunless Sea"], ["content", "Labore temporibus adipisci consequatur."], ["status", "In Progress"], ["board_id", 99], ["created_at", "2020-06-14 05:47:52.636981"], ["updated_at", "2020-06-14 05:47:52.636981"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 97], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Last Enemy"], ["content", "Doloribus consequuntur qui id."], ["status", "Not Started"], ["board_id", 97], ["created_at", "2020-06-14 05:47:52.644244"], ["updated_at", "2020-06-14 05:47:52.644244"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Antic Hay"], ["content", "Quidem dolor et dolor."], ["status", "Completed"], ["board_id", 52], ["created_at", "2020-06-14 05:47:52.651917"], ["updated_at", "2020-06-14 05:47:52.651917"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Line of Beauty"], ["content", "Adipisci dolores quos voluptatem."], ["status", "Not Started"], ["board_id", 60], ["created_at", "2020-06-14 05:47:52.659157"], ["updated_at", "2020-06-14 05:47:52.659157"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Down to a Sunless Sea"], ["content", "Numquam officiis earum aliquam."], ["status", "Not Started"], ["board_id", 76], ["created_at", "2020-06-14 05:47:52.666778"], ["updated_at", "2020-06-14 05:47:52.666778"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Heart Is a Lonely Hunter"], ["content", "Voluptas placeat voluptate provident."], ["status", "Not Started"], ["board_id", 99], ["created_at", "2020-06-14 05:47:52.674601"], ["updated_at", "2020-06-14 05:47:52.674601"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 98], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Behold the Man"], ["content", "Ea sit quibusdam labore."], ["status", "Completed"], ["board_id", 98], ["created_at", "2020-06-14 05:47:52.681017"], ["updated_at", "2020-06-14 05:47:52.681017"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Last Temptation"], ["content", "Dicta magnam optio repellat."], ["status", "Completed"], ["board_id", 69], ["created_at", "2020-06-14 05:47:52.689283"], ["updated_at", "2020-06-14 05:47:52.689283"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "For Whom the Bell Tolls"], ["content", "Amet necessitatibus quibusdam aperiam."], ["status", "In Progress"], ["board_id", 69], ["created_at", "2020-06-14 05:47:52.696709"], ["updated_at", "2020-06-14 05:47:52.696709"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 97], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Millstone"], ["content", "Sit nobis nihil nisi."], ["status", "Completed"], ["board_id", 97], ["created_at", "2020-06-14 05:47:52.704444"], ["updated_at", "2020-06-14 05:47:52.704444"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 84], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Line of Beauty"], ["content", "Eaque sed consequatur voluptatem."], ["status", "Not Started"], ["board_id", 84], ["created_at", "2020-06-14 05:47:52.710974"], ["updated_at", "2020-06-14 05:47:52.710974"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "It's a Battlefield"], ["content", "Molestiae et autem voluptas."], ["status", "In Progress"], ["board_id", 60], ["created_at", "2020-06-14 05:47:52.719893"], ["updated_at", "2020-06-14 05:47:52.719893"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 91], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Of Mice and Men"], ["content", "Sed architecto sunt ea."], ["status", "Completed"], ["board_id", 91], ["created_at", "2020-06-14 05:47:52.727146"], ["updated_at", "2020-06-14 05:47:52.727146"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Curious Incident of the Dog in the Night-Time"], ["content", "Repellendus suscipit quasi aut."], ["status", "Completed"], ["board_id", 58], ["created_at", "2020-06-14 05:47:52.734927"], ["updated_at", "2020-06-14 05:47:52.734927"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Parliament of Man"], ["content", "Tenetur est impedit voluptas."], ["status", "Completed"], ["board_id", 62], ["created_at", "2020-06-14 05:47:52.745047"], ["updated_at", "2020-06-14 05:47:52.745047"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "By Grand Central Station I Sat Down and Wept"], ["content", "Qui et distinctio reprehenderit."], ["status", "Completed"], ["board_id", 78], ["created_at", "2020-06-14 05:47:52.753098"], ["updated_at", "2020-06-14 05:47:52.753098"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Absalom, Absalom!"], ["content", "Sit sint reprehenderit in."], ["status", "Completed"], ["board_id", 55], ["created_at", "2020-06-14 05:47:52.760700"], ["updated_at", "2020-06-14 05:47:52.760700"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Beyond the Mexique Bay"], ["content", "Delectus eligendi perspiciatis vitae."], ["status", "Completed"], ["board_id", 70], ["created_at", "2020-06-14 05:47:52.768797"], ["updated_at", "2020-06-14 05:47:52.768797"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Beyond the Mexique Bay"], ["content", "Reprehenderit vel et dolores."], ["status", "Not Started"], ["board_id", 62], ["created_at", "2020-06-14 05:47:52.776318"], ["updated_at", "2020-06-14 05:47:52.776318"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 59], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Monstrous Regiment of Women"], ["content", "Similique quae perspiciatis quia."], ["status", "Completed"], ["board_id", 59], ["created_at", "2020-06-14 05:47:52.801838"], ["updated_at", "2020-06-14 05:47:52.801838"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Monstrous Regiment of Women"], ["content", "Voluptas iste voluptate tempora."], ["status", "In Progress"], ["board_id", 80], ["created_at", "2020-06-14 05:47:52.810019"], ["updated_at", "2020-06-14 05:47:52.810019"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 92], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Dulce et Decorum Est"], ["content", "Esse voluptas cum quo."], ["status", "In Progress"], ["board_id", 92], ["created_at", "2020-06-14 05:47:52.817782"], ["updated_at", "2020-06-14 05:47:52.817782"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 89], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Needle's Eye"], ["content", "Quos debitis tenetur quo."], ["status", "Not Started"], ["board_id", 89], ["created_at", "2020-06-14 05:47:52.825725"], ["updated_at", "2020-06-14 05:47:52.825725"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Nectar in a Sieve"], ["content", "Quasi sit aut nemo."], ["status", "Not Started"], ["board_id", 68], ["created_at", "2020-06-14 05:47:52.832598"], ["updated_at", "2020-06-14 05:47:52.832598"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 85], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Recalled to Life"], ["content", "Voluptatem autem dolores temporibus."], ["status", "Completed"], ["board_id", 85], ["created_at", "2020-06-14 05:47:52.840270"], ["updated_at", "2020-06-14 05:47:52.840270"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Vile Bodies"], ["content", "Ducimus magni eum commodi."], ["status", "Completed"], ["board_id", 65], ["created_at", "2020-06-14 05:47:52.848273"], ["updated_at", "2020-06-14 05:47:52.848273"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 92], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The World, the Flesh and the Devil"], ["content", "Est consequatur blanditiis quia."], ["status", "Completed"], ["board_id", 92], ["created_at", "2020-06-14 05:47:52.856849"], ["updated_at", "2020-06-14 05:47:52.856849"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Wind's Twelve Quarters"], ["content", "Sit itaque dolor consequatur."], ["status", "In Progress"], ["board_id", 61], ["created_at", "2020-06-14 05:47:52.864586"], ["updated_at", "2020-06-14 05:47:52.864586"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ego Dominus Tuus"], ["content", "Esse aperiam qui quis."], ["status", "Completed"], ["board_id", 56], ["created_at", "2020-06-14 05:47:52.872258"], ["updated_at", "2020-06-14 05:47:52.872258"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Edna O'Brien"], ["content", "Ullam ratione suscipit qui."], ["status", "In Progress"], ["board_id", 80], ["created_at", "2020-06-14 05:47:52.880012"], ["updated_at", "2020-06-14 05:47:52.880012"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "His Dark Materials"], ["content", "Consequatur error recusandae et."], ["status", "Not Started"], ["board_id", 58], ["created_at", "2020-06-14 05:47:52.887769"], ["updated_at", "2020-06-14 05:47:52.887769"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 93], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Françoise Sagan"], ["content", "Sequi commodi nulla et."], ["status", "Completed"], ["board_id", 93], ["created_at", "2020-06-14 05:47:52.895801"], ["updated_at", "2020-06-14 05:47:52.895801"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 94], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Time of our Darkness"], ["content", "Inventore molestiae qui nihil."], ["status", "Not Started"], ["board_id", 94], ["created_at", "2020-06-14 05:47:52.904550"], ["updated_at", "2020-06-14 05:47:52.904550"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Postern of Fate"], ["content", "Nam mollitia reprehenderit voluptas."], ["status", "Not Started"], ["board_id", 67], ["created_at", "2020-06-14 05:47:52.912625"], ["updated_at", "2020-06-14 05:47:52.912625"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 98], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Those Barren Leaves, Thrones, Dominations"], ["content", "Aut unde a reiciendis."], ["status", "Completed"], ["board_id", 98], ["created_at", "2020-06-14 05:47:52.921166"], ["updated_at", "2020-06-14 05:47:52.921166"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "After Many a Summer Dies the Swan"], ["content", "At distinctio dolor et."], ["status", "Not Started"], ["board_id", 58], ["created_at", "2020-06-14 05:47:52.929591"], ["updated_at", "2020-06-14 05:47:52.929591"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 98], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Everything is Illuminated"], ["content", "Voluptatem eius error voluptatem."], ["status", "Not Started"], ["board_id", 98], ["created_at", "2020-06-14 05:47:52.937655"], ["updated_at", "2020-06-14 05:47:52.937655"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("title", "content", "status", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Tiger! Tiger!"], ["content", "Cum aut perferendis aliquid."], ["status", "Completed"], ["board_id", 65], ["created_at", "2020-06-14 05:47:52.944037"], ["updated_at", "2020-06-14 05:47:52.944037"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
