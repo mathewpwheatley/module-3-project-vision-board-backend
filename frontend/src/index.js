@@ -19,7 +19,7 @@ function buildBoardCard(boardId) {
     const boardCard = document.createElement("div")
     boardCard.id = "board-card"
     boardCard.setAttribute("board_id", boardId)
-    boardCard.style.background = `url(assets/${board.attributes.background})`
+    boardCard.style.background = `url(assets/boards/${board.attributes.background})`
     
     const boardTitleCard = document.createElement("div")
     boardTitleCard.id = "board-title-card"

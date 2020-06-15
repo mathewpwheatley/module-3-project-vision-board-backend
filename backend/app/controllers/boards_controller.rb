@@ -10,4 +10,10 @@ class BoardsController < ApplicationController
         render json: BoardSerializer.new(board)
     end
 
+    def create
+    end
+
+    def destroy
+    end
+
 end
