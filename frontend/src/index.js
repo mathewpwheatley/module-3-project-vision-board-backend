@@ -6,7 +6,7 @@ const GOALS_URL = `${BASE_URL}/goals`
 document.addEventListener("DOMContentLoaded", function() {
 
   // Testing, can be deleted
-  buildBoardCard(160)
+  buildBoardCard(151)
   // Testing, can be deleted
 })
 
@@ -17,28 +17,26 @@ function buildBoardCard(boardId) {
     
     // Build board card elements
     const boardCard = document.createElement("div")
-    boardCard.id = "board"
+    boardCard.id = "board-card"
     boardCard.setAttribute("board_id", boardId)
     boardCard.style.background = `url(assets/${board.attributes.background})`
     
+    const boardTitleCard = document.createElement("div")
+    boardTitleCard.id = "board-title-card"
     const boardTitle = document.createElement("h2")
     boardTitle.id = "board-title"
     boardTitle.innerText = board.attributes.title
+    boardTitleCard.append(boardTitle)
 
     const goalsGrid = document.createElement("div")
     goalsGrid.id = "goals-grid"
+    board.attributes.goals.forEach(function(goal) {
+      // goalsGrid.append(buildGoalCard(goal))
+    })
 
     // Assemble board card elements
-    boardCard.append(boardTitle)
+    boardCard.append(boardTitleCard)
     boardCard.append(goalsGrid)
     document.querySelector("main").append(boardCard)
   })
 }
-
-{/* <div class="card">
-  <img src="img_avatar.png" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>John Doe</b></h4>
-    <p>Architect & Engineer</p>
-  </div>
-</div> */}

@@ -19,22 +19,23 @@ main {
   padding-bottom: 30px;
 }
 
-#board {
+#board-card {
   margin: auto;
   width: 95%;
-  height: 95%;
+  height: 90vh;
   border: 5px solid silver;
+  background-size: cover;
 }
 
-#board-background {
-  max-width: 100%;
-  max-height: 100%;
+#board-title-card {
+  text-align: center;  
 }
 
 #board-title {
-  display: flex; */
-  align-items: center;
-  justify-content: center;
+  padding: 10px;
+  display: inline-block;
+  background-color: #F7DD38;
+  border: 2px solid #94841f;
 }
 
 #goals-grid {
