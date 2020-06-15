@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_14_024425) do
+ActiveRecord::Schema.define(version: 2020_06_15_182751) do
 
   create_table "boards", force: :cascade do |t|
     t.string "title"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_06_14_024425) do
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "background"
     t.index ["user_id"], name: "index_boards_on_user_id"
   end
 

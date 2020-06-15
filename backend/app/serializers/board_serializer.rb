@@ -1,5 +1,5 @@
 class BoardSerializer
   include FastJsonapi::ObjectSerializer
-  attributes(:title, :category, :goals)
+  attributes(:title, :category, :background, :goals)
   belongs_to(:user)
 end

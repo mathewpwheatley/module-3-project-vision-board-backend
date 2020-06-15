@@ -6,7 +6,7 @@ const GOALS_URL = `${BASE_URL}/goals`
 document.addEventListener("DOMContentLoaded", function() {
 
   // Testing, can be deleted
-  buildBoardCard(52)
+  buildBoardCard(160)
   // Testing, can be deleted
 })
 
