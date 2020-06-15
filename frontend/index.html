@@ -1,44 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Module 3 Project: Vision Board</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <div id="wrapper">
+        <div id="left">
+          <h2>Boards</h2>
+        </div>
 
-      <div id="left">
-        <h2>Boards</h2>
+        <div id="middle">
+          <h2>Goals</h2>
+        </div>
+
+        <div id="left">
+          <h2>Login</h2>
+        </div>
       </div>
-
-      <div id="middle">
-        <h2>Goals</h2>
-      </div>
-
-      <div id="left">
-        <h2>Login</h2>
-      </div>
-
-    </div>
-
     </header>
 
     <main>
-      <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie&amp;subset=latin' rel='stylesheet' href="styles.css" type='text/css'>
+      <link
+        href="http://fonts.googleapis.com/css?family=Reenie+Beanie&amp;subset=latin"
+        rel="stylesheet"
+        href="styles.css"
+        type="text/css"
+      />
 
-<ul id="notes">
-    <li>
-        <p>Push new feature to Kiln for code review</p>
-    </li>
-    <li class="kiln">
-        <p>Browse hacker news for a bit</p>
-    </li>
-    <li>
-        <p>Read JavaScript: The Good Parts by Douglas Crockford</p>
-    </li>
-</ul>
+      <form>
+        <label>Create a New Goal</label>
+        <input type="text">
+        <input type="submit">
+      </form>
+
+      <ul id="notes">
+        <li>
+          <p>Push new feature to Kiln for code review</p>
+          <button>Edit</button>
+          <button>Delete</button>
+        </li>
+        <li class="kiln">
+          <p>Browse hacker news for a bit</p>
+          <button>Edit</button>
+          <button>Delete</button>
+        </li>
+        <li>
+          <p>Read JavaScript: The Good Parts by Douglas Crockford</p>
+          <button>Edit</button>
+          <button>Delete</button>
+        </li>
+      </ul>
     </main>
 
     <script src="./src/index.js"></script>
