@@ -11,6 +11,8 @@ const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
 const confirmSignup = document.getElementById("signup-submit")
 
+
+
 ////////////////////////////
 // Board Functions: Start //
 ////////////////////////////
@@ -222,6 +224,11 @@ function deleteBoard(boardId) {
 // Board Functions: End //
 //////////////////////////
 
+
+///////////////////////////
+// User Functions: Start //
+///////////////////////////
+
 function addGoal(event) {
   console.log(event.target.getAttribute("board-id"))
 }
@@ -335,6 +342,15 @@ for(const button of cancelBtns){
         signupFormDiv.style.display = ""
       }, 5000)
   }
+
+  /////////////////////////
+  // User Functions: End //
+  ///////////////////////// 
+
+  ///////////////////////////
+  // Goal Functions: Start //
+  ///////////////////////////
+
   const newGoalForm = document.getElementById("new-goal");
   const goalFormLabel = document.getElementById("form-label")
   const goalsSection = document.getElementById("notes");
@@ -399,7 +415,6 @@ for(const button of cancelBtns){
       });
   }
 
-  // Create Goals Section
   function createOrEditGoal() {
     newGoalForm.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -439,4 +454,8 @@ for(const button of cancelBtns){
 
   fetchGoals();
   createOrEditGoal();
+
+  /////////////////////////
+  // Goal Functions: End //
+  /////////////////////////
 })
