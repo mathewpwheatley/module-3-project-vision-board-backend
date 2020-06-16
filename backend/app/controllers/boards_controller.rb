@@ -1,10 +1,5 @@
 class BoardsController < ApplicationController
 
-    def index
-        boards = Board.all
-        render json: BoardSerializer.new(boards)
-    end
-
     def show
         board = Board.find(params[:id])
         render json: BoardSerializer.new(board)
@@ -15,7 +10,7 @@ class BoardsController < ApplicationController
         if board.valid?
             render json: BoardSerializer.new(board)
         else
-            # Send error somehow
+            render json: {errors: board.errors.full_messages}
         end
     end
 
@@ -25,7 +20,7 @@ class BoardsController < ApplicationController
         if board.valid?
             render json: BoardSerializer.new(board)
         else
-            # Send error somehow
+            render json: {errors: board.errors.full_messages}
         end
     end
 

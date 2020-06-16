@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :goals
-  resources :boards
+  resources :boards, except: [:index, :new, :edit]
   resources :users
 
   post '/login', to: 'users#login'

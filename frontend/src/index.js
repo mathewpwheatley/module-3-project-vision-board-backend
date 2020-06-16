@@ -11,8 +11,6 @@ const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
 const confirmSignup = document.getElementById("signup-submit")
 
-
-
 ////////////////////////////
 // Board Functions: Start //
 ////////////////////////////
@@ -229,13 +227,7 @@ function deleteBoard(boardId) {
 // User Functions: Start //
 ///////////////////////////
 
-function addGoal(event) {
-  console.log(event.target.getAttribute("board-id"))
-}
 document.addEventListener("DOMContentLoaded", function() {
-  // Test board load
-  fetchBoard(155) 
-
   //event listeners for form submit
   loginForm.addEventListener("submit", handleLogin)
   signupForm.addEventListener("submit", handleSignup)
@@ -290,8 +282,14 @@ for(const button of cancelBtns){
     }
     fetch(`${BASE_URL}/login`, configObject)
     .then(res => res.json())
-    .then(data => console.log(data))
-    loginFormDiv.style.display = ""
+    .then(function(json) { 
+      // Set window variable to user data
+      window.user = json.data
+      // Close login form
+      loginFormDiv.style.display = ""
+      // Generate first board
+      fetchBoard(window.user.attributes.boards[0].id)
+    })
   }
 
   function signupUser(firstName, lastName, email){
@@ -451,9 +449,6 @@ for(const button of cancelBtns){
       statusInput.value = "-- Select a Status --"
     });
   }
-
-  fetchGoals();
-  createOrEditGoal();
 
   /////////////////////////
   // Goal Functions: End //
