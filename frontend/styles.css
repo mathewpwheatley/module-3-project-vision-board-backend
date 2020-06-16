@@ -37,23 +37,25 @@ body {
     color: black;
     font-family: Helvetica;
   }
+
+  /* style navbar headers(placeholder) */
+  header h2.navli{
+    float: left;
+  }
   
   li {
     font-size: 1.05em;
     list-style: none;
     padding-right: 20px;
   }
-  
-  button {
+/* style form toggling buttons and float right */
+  header button.togglebutton {
     font-size: .65em;
     color: #fff;
     background-color: green;
-    border-radius: 10px;
-  }
-  
-  button.release {
+    /* border-radius: 10px; */
     float: right;
-    background-color: #E1332D;
+    opacity: 0.8;
   }
   
   @media only screen and (min-width: 500px) {
@@ -67,4 +69,74 @@ body {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
+
+  * {
+    box-sizing: border-box;
+    }
+    body {
+    font-family: Roboto, Helvetica, sans-serif;
+    }
   
+    /* Position the Popup form */
+    .login-popup {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    }
+    /* Hide the Popup form */
+    .form-popup {
+    display: none;
+    position: fixed;
+    left: 45%;
+    top:5%;
+    transform: translate(-45%,5%);
+    border: 2px solid #666;
+    z-index: 9;
+    }
+    /* Styles for the form container */
+    .form-container {
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    }
+    /* Full-width for input fields */
+    .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #eee;
+    }
+    /* When the inputs get focus, get shady*/
+    .form-container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+    }
+    
+    /* Style submit/login button */
+    .form-container .btn {
+    background-color: #8ebf42;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    }
+    /* Style cancel button */
+    .cancel {
+    background-color: #cc0000;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: 87%;
+    margin-bottom:10px;
+    margin-left:20px;
+    opacity: 0.8;
+    }
+    /* Hover effects for buttons */
+    .form-container .btn:hover, .open-button:hover, .cancel:hover, .togglebutton:hover {
+    opacity: 1;
+    }

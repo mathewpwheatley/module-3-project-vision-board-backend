@@ -1,31 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Module 3 Project: Vision Board</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-
+    <div>
       <div>
-        <h2>Boards</h2>
-      </div>
-
-      <div>
-        <h2>Goals</h2>
-      </div>
-
-      <div>
-        <h2>Login</h2>
-      </div>
-
-    </header>
-
-    <main>
-      <!-- Build Page Here -->
-    </main>
-
+        <header>
+          <button class= "togglebutton" id="loginButton"><h2>Login</h2></button>
+          <button class="togglebutton" id="signupButton"><h2>Signup</h2></button>
+          
+          <h2 class="navli">Boards</h2>
+          <h2 class="navli">Goals</h2>
+        </header>
+        </div>
+        <div class="form-popup" id="login-form-div">
+          <form class="form-container" id="login-form">
+            <h2>Please Log In</h2>
+            <label for="email">
+              <strong>E-mail</strong>
+            </label>
+            <input type="text" placeholder="Your Email" name="email" />
+            <button type="submit" class="btn" id="login-submit">Log in</button>
+          </form>
+          <button class="btn cancel">Cancel</button>
+        </div>
+        
+        
+        
+        <div class="form-popup" id="signup-form-div">
+          <form class="form-container" id="signup-form">
+            <h2>New User Signup</h2>
+            <label for="firstName">
+              <strong>First Name:</strong>
+            </label>
+            <input type="text" placeholder="Your First Name" name="fname" />
+            <label for="lastName">
+              <strong>Last Name:</strong>
+            </label>
+            <input type="text" placeholder="Your Last Name" name="lname" />
+            <label for="email">
+              <strong>E-mail:</strong>
+            </label>
+            <input type="text" placeholder="Your Email" name="email" />
+            <button type="submit" class="btn" id="signup-submit">Signup</button>
+          </form>
+          <button class="btn cancel">Cancel</button>
+        </div>
+        
+    </div>
+      <main>
+        <!-- Build Page Here -->
+      </main>
     <script src="./src/index.js"></script>
   </body>
 </html>
