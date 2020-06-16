@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(res => {
           if(res.status == 201){
             res.json()
-            .then(newUserData => displayUserSignup(newUserData))
+            .then(newUserData => displayUserSignup())
         } else{
           res.json()
           .then(errorData => displayError(errorData))
@@ -107,9 +107,17 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       
     }
-    function displayUserSignup(newUser){
-      console.log(newUser)
-      signupFormDiv.style.display = ""
+    function displayUserSignup(){
+      let p = document.createElement("p")
+        p.innerText = "Account created! You can now sign in with your email"       
+        p.style.color = "green"
+        p.style.fontSize = "12px"
+        signupForm.insertBefore(p, confirmSignup)
+        setTimeout( () => {
+          p.remove()
+          signupFormDiv.style.display = ""
+        }, 5000)
+     
     }
  
 
