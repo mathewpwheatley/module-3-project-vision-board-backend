@@ -9,6 +9,7 @@ const signupForm = document.getElementById("signup-form")
 const loginBtn = document.getElementById("loginButton")
 const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
+const confirmSignup = document.getElementById("signup-submit")
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -94,8 +95,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
 
-    function displayError(errors){
-      console.log(errors)
+    function displayError(data){
+      let errors = data["errors"]
+      for(const error of errors){
+        let p = document.createElement("p")
+        p.innerText = error
+        p.style.color = "red"
+        p.style.fontSize = "12px"
+        signupForm.insertBefore(p, confirmSignup)
+        setTimeout( () => {p.remove()}, 2000)
+      }
+      
     }
     function displayUserSignup(newUser){
       console.log(newUser)
