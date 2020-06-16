@@ -23,7 +23,7 @@ class GoalsController < ApplicationController
         goal = Goal.find(params[:id])
         goal.update(goal_params)
         if goal.valid?
-            render json: GoalSerializer.new(board)
+            render json: GoalSerializer.new(goal)
         else
             #error
         end
@@ -37,8 +37,8 @@ class GoalsController < ApplicationController
 
     private
 
-    def board_params
-        params.require(:board).permit(:title, :content, :status)
+    def goal_params
+        params.require(:goal).permit(:board_id, :title, :content, :status)
     end
 
 end
