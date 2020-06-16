@@ -3378,6 +3378,7 @@ Completed 200 OK in 46ms (Views: 27.4ms | ActiveRecord: 3.7ms | Allocations: 216
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Started GET "/users" for ::1 at 2020-06-15 09:27:47 -0700
   [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -3440,6 +3441,18 @@ Completed 200 OK in 34ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 263
 
 
 Started GET "/favicon.ico" for ::1 at 2020-06-15 09:12:52 -0700
+=======
+Started GET "/" for ::1 at 2020-06-15 11:49:40 -0700
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/colton/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/colton/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.9ms | Allocations: 480)
+Completed 200 OK in 52ms (Views: 29.4ms | ActiveRecord: 0.0ms | Allocations: 2636)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-06-15 11:49:42 -0700
+>>>>>>> 3bf74b5f1b53dbfa1c63fd485d52aaef2eb11137
   
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   
@@ -3466,6 +3479,7 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users" for ::1 at 2020-06-15 09:12:56 -0700
 Processing by UsersController#index as HTML
   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
@@ -13663,5 +13677,550 @@ Processing by BoardsController#update as JSON
   [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 155]]
   ↳ app/controllers/boards_controller.rb:26:in `update'
 Completed 200 OK in 32ms (Views: 3.6ms | ActiveRecord: 6.7ms | Allocations: 6765)
+=======
+Started GET "/goals" for ::1 at 2020-06-15 11:49:45 -0700
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (4.9ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 103ms (Views: 78.1ms | ActiveRecord: 7.8ms | Allocations: 49129)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 11:49:51 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (2.6ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 138ms (Views: 135.2ms | ActiveRecord: 2.6ms | Allocations: 42238)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 11:51:10 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 135ms (Views: 133.8ms | ActiveRecord: 1.2ms | Allocations: 42237)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 11:52:04 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (0.5ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 71ms (Views: 70.5ms | ActiveRecord: 0.5ms | Allocations: 42232)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 11:53:54 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (13.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 273ms (Views: 249.4ms | ActiveRecord: 13.2ms | Allocations: 42221)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 11:54:14 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.0ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 132ms (Views: 130.8ms | ActiveRecord: 1.0ms | Allocations: 42217)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 11:54:28 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (7.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 37ms (Views: 27.5ms | ActiveRecord: 7.3ms | Allocations: 42220)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 11:54:47 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (0.9ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.9ms | Allocations: 42220)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 11:55:46 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (2.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 2.7ms | Allocations: 42217)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 14:39:06 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (7.4ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 127ms (Views: 88.5ms | ActiveRecord: 17.8ms | Allocations: 48615)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 14:46:29 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (14.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 178ms (Views: 159.1ms | ActiveRecord: 14.7ms | Allocations: 42250)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 14:48:41 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (13.1ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 399ms (Views: 385.1ms | ActiveRecord: 13.1ms | Allocations: 42238)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 14:50:22 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.0ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 134ms (Views: 132.4ms | ActiveRecord: 1.0ms | Allocations: 42217)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 14:52:10 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.1ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 128ms (Views: 125.2ms | ActiveRecord: 1.1ms | Allocations: 42237)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 14:56:15 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (6.6ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 206ms (Views: 199.2ms | ActiveRecord: 6.6ms | Allocations: 42240)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 14:57:43 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (0.9ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 160ms (Views: 159.3ms | ActiveRecord: 0.9ms | Allocations: 42217)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 16:44:46 -0700
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (2.8ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 91ms (Views: 78.1ms | ActiveRecord: 4.3ms | Allocations: 48615)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 16:44:59 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (0.9ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 278ms (Views: 276.7ms | ActiveRecord: 0.9ms | Allocations: 42234)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 16:50:21 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (81.4ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 243ms (Views: 148.5ms | ActiveRecord: 81.4ms | Allocations: 42237)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 16:51:27 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (4.9ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 257ms (Views: 252.0ms | ActiveRecord: 4.9ms | Allocations: 42237)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 16:54:22 -0700
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (5.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 185ms (Views: 175.7ms | ActiveRecord: 5.7ms | Allocations: 42219)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 16:54:38 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.5ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 1.5ms | Allocations: 42237)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 16:55:53 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 137ms (Views: 135.4ms | ActiveRecord: 1.3ms | Allocations: 42217)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 17:02:07 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (11.9ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 390ms (Views: 370.2ms | ActiveRecord: 11.9ms | Allocations: 42242)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 17:02:49 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (0.8ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 62ms (Views: 56.5ms | ActiveRecord: 0.8ms | Allocations: 42220)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 17:04:58 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (2.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 105ms (Views: 101.0ms | ActiveRecord: 2.3ms | Allocations: 42220)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 17:05:32 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.0ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 1.0ms | Allocations: 42220)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 17:08:14 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (11.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 450ms (Views: 411.4ms | ActiveRecord: 11.2ms | Allocations: 42220)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 17:11:57 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (299.9ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 473ms (Views: 166.6ms | ActiveRecord: 299.9ms | Allocations: 42221)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 17:12:26 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (0.8ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 199ms (Views: 198.1ms | ActiveRecord: 0.8ms | Allocations: 42221)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 17:13:47 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (0.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 198ms (Views: 197.2ms | ActiveRecord: 0.7ms | Allocations: 42220)
+
+
+Started GET "/goals" for ::1 at 2020-06-15 17:34:32 -0700
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (9.4ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 160ms (Views: 68.9ms | ActiveRecord: 10.2ms | Allocations: 48614)
+
+
+Started DELETE "/goals/202" for ::1 at 2020-06-15 17:36:22 -0700
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for GoalsController):
+  
+actionpack (6.0.3.1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/goals" for ::1 at 2020-06-16 09:20:50 -0700
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (2.8ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 162ms (Views: 126.4ms | ActiveRecord: 4.0ms | Allocations: 49051)
+
+
+Started GET "/goals" for ::1 at 2020-06-16 09:20:52 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (0.8ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.8ms | Allocations: 42234)
+
+
+Started GET "/goals" for ::1 at 2020-06-16 09:21:02 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.1ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 90ms (Views: 88.1ms | ActiveRecord: 1.1ms | Allocations: 42237)
+
+
+Started GET "/goals" for ::1 at 2020-06-16 09:25:50 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (3.5ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 144ms (Views: 135.6ms | ActiveRecord: 3.5ms | Allocations: 42237)
+
+
+Started GET "/goals" for ::1 at 2020-06-16 09:25:56 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.4ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 172ms (Views: 170.5ms | ActiveRecord: 1.4ms | Allocations: 42235)
+
+
+Started GET "/goals" for ::1 at 2020-06-16 09:29:13 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 1.7ms | Allocations: 42220)
+>>>>>>> 3bf74b5f1b53dbfa1c63fd485d52aaef2eb11137
+
+
+Started GET "/goals" for ::1 at 2020-06-16 10:40:40 -0700
+Started GET "/boards/155" for ::1 at 2020-06-16 10:40:40 -0700
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BoardsController#show as */*
+  Parameters: {"id"=>"155"}
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (6.5ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 262ms (Views: 233.2ms | ActiveRecord: 7.2ms | Allocations: 48879)
+
+
+  [1m[36mBoard Load (1.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `show'
+  [1m[36mGoal Load (2.4ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 155]]
+  ↳ app/controllers/boards_controller.rb:10:in `show'
+Completed 200 OK in 475ms (Views: 121.1ms | ActiveRecord: 4.3ms | Allocations: 64056)
+
+
+Started GET "/boards/155" for ::1 at 2020-06-16 10:44:36 -0700
+Started GET "/goals" for ::1 at 2020-06-16 10:44:36 -0700
+Processing by BoardsController#show as */*
+  Parameters: {"id"=>"155"}
+Processing by GoalsController#index as */*
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `show'
+  [1m[36mGoal Load (1.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 155]]
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+  ↳ app/controllers/boards_controller.rb:10:in `show'
+Completed 200 OK in 152ms (Views: 139.4ms | ActiveRecord: 0.6ms | Allocations: 26714)
+
+
+Completed 200 OK in 186ms (Views: 183.1ms | ActiveRecord: 1.7ms | Allocations: 44386)
+
+
+Started GET "/boards/155" for ::1 at 2020-06-16 10:46:14 -0700
+Started GET "/goals" for ::1 at 2020-06-16 10:46:14 -0700
+Processing by BoardsController#show as */*
+  Parameters: {"id"=>"155"}
+  [1m[36mBoard Load (1.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+Processing by GoalsController#index as */*
+  ↳ app/controllers/boards_controller.rb:9:in `show'
+  [1m[36mGoal Load (3.0ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  [1m[36mGoal Load (0.5ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 155]]
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+  ↳ app/controllers/boards_controller.rb:10:in `show'
+Completed 200 OK in 114ms (Views: 109.5ms | ActiveRecord: 2.1ms | Allocations: 43871)
+
+
+Completed 200 OK in 122ms (Views: 118.7ms | ActiveRecord: 3.0ms | Allocations: 43943)
+
+
+Started GET "/boards/155" for ::1 at 2020-06-16 10:50:28 -0700
+Processing by BoardsController#show as */*
+  Parameters: {"id"=>"155"}
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `show'
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 155]]
+Started GET "/goals" for ::1 at 2020-06-16 10:50:28 -0700
+  ↳ app/controllers/boards_controller.rb:10:in `show'
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.5ms | Allocations: 2944)
+
+
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 188ms (Views: 186.0ms | ActiveRecord: 1.7ms | Allocations: 41711)
+
+
+Started GET "/boards/155" for ::1 at 2020-06-16 10:50:47 -0700
+Processing by BoardsController#show as */*
+  Parameters: {"id"=>"155"}
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+Started GET "/goals" for ::1 at 2020-06-16 10:50:47 -0700
+  ↳ app/controllers/boards_controller.rb:9:in `show'
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 155]]
+  ↳ app/controllers/boards_controller.rb:10:in `show'
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.5ms | Allocations: 2995)
+
+
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (2.0ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 2.0ms | Allocations: 41624)
+
+
+Started GET "/boards/155" for ::1 at 2020-06-16 10:50:57 -0700
+Started GET "/goals" for ::1 at 2020-06-16 10:50:57 -0700
+Processing by BoardsController#show as */*
+Processing by GoalsController#index as */*
+  Parameters: {"id"=>"155"}
+  [1m[36mGoal Load (1.6ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `show'
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 155]]
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+  ↳ app/controllers/boards_controller.rb:10:in `show'
+Completed 200 OK in 123ms (Views: 119.4ms | ActiveRecord: 0.5ms | Allocations: 31747)
+
+
+Completed 200 OK in 244ms (Views: 242.2ms | ActiveRecord: 1.6ms | Allocations: 44482)
+
+
+Started GET "/boards/155" for ::1 at 2020-06-16 10:57:32 -0700
+Started GET "/goals" for ::1 at 2020-06-16 10:57:32 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BoardsController#show as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Parameters: {"id"=>"155"}
+  [1m[36mBoard Load (1.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (5.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/boards_controller.rb:9:in `show'
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+  [1m[36mGoal Load (0.8ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 155]]
+Completed 200 OK in 132ms (Views: 123.5ms | ActiveRecord: 5.3ms | Allocations: 42007)
+
+
+  ↳ app/controllers/boards_controller.rb:10:in `show'
+Completed 200 OK in 167ms (Views: 134.8ms | ActiveRecord: 2.4ms | Allocations: 44876)
+
+
+Started GET "/boards/155" for ::1 at 2020-06-16 10:58:22 -0700
+Processing by BoardsController#show as */*
+  Parameters: {"id"=>"155"}
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `show'
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 155]]
+  ↳ app/controllers/boards_controller.rb:10:in `show'
+Completed 200 OK in 14ms (Views: 8.8ms | ActiveRecord: 0.6ms | Allocations: 2619)
+
+
+Started GET "/boards/155" for ::1 at 2020-06-16 10:59:06 -0700
+Processing by BoardsController#show as */*
+  Parameters: {"id"=>"155"}
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `show'
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 155]]
+  ↳ app/controllers/boards_controller.rb:10:in `show'
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.8ms | Allocations: 2619)
+
+
+Started GET "/boards/155" for ::1 at 2020-06-16 11:02:37 -0700
+Processing by BoardsController#show as */*
+  Parameters: {"id"=>"155"}
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `show'
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 155]]
+Started GET "/goals" for ::1 at 2020-06-16 11:02:37 -0700
+Processing by GoalsController#index as */*
+  ↳ app/controllers/boards_controller.rb:10:in `show'
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.5ms | Allocations: 3291)
+
+
+  [1m[36mGoal Load (8.5ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 141ms (Views: 131.9ms | ActiveRecord: 8.5ms | Allocations: 42951)
+
+
+Started DELETE "/goals/601" for ::1 at 2020-06-16 11:03:26 -0700
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for GoalsController):
+  
+actionpack (6.0.3.1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/boards/155" for ::1 at 2020-06-16 11:05:05 -0700
+Started GET "/goals" for ::1 at 2020-06-16 11:05:05 -0700
+Processing by GoalsController#index as */*
+Processing by BoardsController#show as */*
+  [1m[36mGoal Load (1.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  Parameters: {"id"=>"155"}
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 1.7ms | Allocations: 41756)
+
+
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `show'
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 155]]
+  ↳ app/controllers/boards_controller.rb:10:in `show'
+Completed 200 OK in 71ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 42459)
 
 
