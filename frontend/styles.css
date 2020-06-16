@@ -24,7 +24,7 @@ body {
   min-height: 100px;
   margin: 25px auto;
   padding: 60px 15px 15px 15px;
-  background: #fff url(https://our.fogbugz.com/images/tbKiwiLogo.gif) no-repeat 4px 8px;
+  background: #fff url(https://img.freepik.com/free-vector/start_53876-25533.jpg?size=338&ext=jpg) no-repeat 4px 8px;
   -webkit-box-shadow: 0 2px 12px rgba(0,0,0,.5);
   -moz-box-shadow: 0 2px 12px rgba(0,0,0,.5);
   box-shadow: 0 1px 2px #000;
@@ -39,14 +39,30 @@ body {
   -o-transform: rotate(.5deg);
 }
 
-#notes li.kiln
+/* #notes li.kiln
 {
   background-image: url(https://rob.kilnhg.com/Content/Images/kiln_focus.gif);
-}
+} */
 
 #notes li p {
   text-align: center;
   font: normal normal normal 40px/48px 'Reenie Beanie', Helvetica, Arial, sans-serif;
+  color: #000;
+  text-shadow: white 1px 1px 0px;
+  overflow:hidden;
+}
+
+#notes li h2 {
+  text-align: left;
+  font: normal normal bold 40px/48px 'Reenie Beanie', Helvetica, Arial, sans-serif;
+  color: #000;
+  text-shadow: white 1px 1px 0px;
+  overflow:hidden;
+}
+
+#notes li h4 {
+  text-align: left;
+  font: normal normal bold 40px/48px 'Reenie Beanie', Helvetica, Arial, sans-serif;
   color: #000;
   text-shadow: white 1px 1px 0px;
   overflow:hidden;

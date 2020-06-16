@@ -30,19 +30,28 @@
         type="text/css"
       />
 
-      <form>
-        <label>Create a New Goal</label>
-        <input type="text">
-        <input type="submit">
+      <form id="new-goal">
+        <label id="form-label"><strong>Create a New Goal</strong></label>
+        <input id="name" type="text" placeholder="Name of Goal">
+        <textarea id="description" type="text" placeholder="Goal Description"></textarea>
+        <select id="status" name="goal-status">
+          <option disabled selected value> -- Select a Status -- </option>
+          <option value="Starting">Starting</option>
+          <option value="Started">Started</option>
+          <option value="Finished">Finished</option>
+        </select>
+        <input id="submit-button" type="submit" value="Submit">
       </form>
 
       <ul id="notes">
         <li>
-          <p>Push new feature to Kiln for code review</p>
+          <h2>Goal Name</h2>
+          <p>Goal Description</p>
+          <h4>Goal Status</h4>
           <button>Edit</button>
           <button>Delete</button>
         </li>
-        <li class="kiln">
+        <li>
           <p>Browse hacker news for a bit</p>
           <button>Edit</button>
           <button>Delete</button>
