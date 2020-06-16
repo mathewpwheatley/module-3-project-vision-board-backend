@@ -3,101 +3,107 @@ const USERS_URL = `${BASE_URL}/users`
 const BOARDS_URL = `${BASE_URL}/boards`
 const GOALS_URL = `${BASE_URL}/goals`
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => fetchBoard(155))
 
-  // Testing, can be deleted
-  buildBoardCard(152)
-  // Testing, can be deleted
-})
+////////////////////////////
+// Board Functions: Start //
+////////////////////////////
 
-function buildBoardCard(boardId) {
-  // Fetch board information
-  fetch(BOARDS_URL + "/" + boardId).then(resp => resp.json()).then(function(json) {
-    const board = json.data
-    
-    // Build board card elements
-    const boardCard = document.createElement("div")
-    boardCard.id = "board-card"
-    boardCard.setAttribute("board_id", boardId)
-    boardCard.style.background = `url(assets/boards/${board.attributes.background})`
-
-    const addGoalButton = document.createElement("button")
-    addGoalButton.id = "add-goal-button"
-    addGoalButton.setAttribute("board_id", boardId)
-    addGoalButton.innerText = "Add Goal"
-    addGoalButton.addEventListener("click", event => addGoal(event))
-    
-    const boardTitleCard = document.createElement("div")
-    boardTitleCard.id = "board-title-card"
-
-    const boardTitle = document.createElement("h2")
-    boardTitle.id = "board-title"
-    boardTitle.innerText = board.attributes.title
-
-    const boardButtonsCard = document.createElement("div")
-    boardButtonsCard.id = "board-buttons-card"
-
-    const editBoardButton = document.createElement("button")
-    editBoardButton.id = "edit-board-button"
-    editBoardButton.innerText = "Edit Board"
-    editBoardButton.addEventListener("click", event => editBoard(event.target))
-
-    const deleteBoardButton = document.createElement("button")
-    deleteBoardButton.id = "delete-board-button"
-    deleteBoardButton.innerText = "Delete Board"
-    deleteBoardButton.addEventListener("click", event => deleteBoard(boardId))
-
-    const goalsGrid = document.createElement("div")
-    goalsGrid.id = "goals-grid"
-    board.attributes.goals.forEach(function(goal) {
-      // goalsGrid.append(buildGoalCard(goal))
-    })
-
-    // Assemble board card elements
-    boardTitleCard.append(addGoalButton)
-    boardTitleCard.append(boardTitle)
-    boardButtonsCard.append(editBoardButton)
-    boardButtonsCard.append(deleteBoardButton)
-    boardTitleCard.append(boardButtonsCard)
-    boardCard.append(boardTitleCard)
-    boardCard.append(goalsGrid)
-    document.querySelector("main").append(boardCard)
-  })
+function fetchBoard(boardId) {
+  fetch(BOARDS_URL + "/" + boardId).then(resp => resp.json()).then(json => buildBoardCard(json.data))
 }
 
-function buildBoardForm(target) {
+function buildBoardCard(board) {
+  // Delete old board if it exists
+  if (document.getElementById("board-card")) {
+    document.getElementById("board-card").remove()
+  }
 
+  // Build board card elements
+  const boardCard = document.createElement("div")
+  boardCard.id = "board-card"
+  boardCard.setAttribute("board-id", board.id)
+  boardCard.style.background = `url(assets/boards/${board.attributes.background})`
+
+  const boardHeader = document.createElement("div")
+  boardHeader.id = "board-header"
+
+  const addGoalButton = document.createElement("button")
+  addGoalButton.id = "add-goal-button"
+  addGoalButton.setAttribute("board-id", board.id)
+  addGoalButton.innerText = "Add Goal"
+  addGoalButton.addEventListener("click", event => addGoal(event))
+
+  const boardTitleCard = document.createElement("div")
+  boardTitleCard.id = "board-title-card"
+
+  const boardTitle = document.createElement("h2")
+  boardTitle.id = "board-title"
+  boardTitle.innerText = board.attributes.title
+
+  const boardCategory = document.createElement("h4")
+  boardCategory.id = "board-category"
+  boardCategory.innerText = board.attributes.category
+
+  const boardButtonsCard = document.createElement("div")
+  boardButtonsCard.id = "board-buttons-card"
+
+  const editBoardButton = document.createElement("button")
+  editBoardButton.id = "edit-board-button"
+  editBoardButton.innerText = "Edit Board"
+  editBoardButton.addEventListener("click", event => buildBoardForm(board.id))
+
+  const deleteBoardButton = document.createElement("button")
+  deleteBoardButton.id = "delete-board-button"
+  deleteBoardButton.innerText = "Delete Board"
+  deleteBoardButton.addEventListener("click", event => deleteBoard(board.id))
+
+  const goalsGrid = document.createElement("div")
+  goalsGrid.id = "goals-grid"
+  board.attributes.goals.forEach(function(goal) {
+    // goalsGrid.append(buildGoalCard(goal))
+  })
+
+  // Assemble board card elements
+  boardHeader.append(addGoalButton)
+  boardTitleCard.append(boardTitle)
+  boardTitleCard.append(boardCategory)
+  boardHeader.append(boardTitleCard)
+  boardButtonsCard.append(editBoardButton)
+  boardButtonsCard.append(deleteBoardButton)
+  boardHeader.append(boardButtonsCard)
+  boardCard.append(boardHeader)
+  boardCard.append(goalsGrid)
+  document.querySelector("main").append(boardCard)
+}
+
+function buildBoardForm(boardId) {
   // Create form
   const boardForm = document.createElement("form")
   boardForm.id = "board-form"
 
   // Label form
   const formLabel = document.createElement("h2")
-  if (!!target) {
-    formLabel.innerText = "Edit Board"
-  } else {
-    formLabel.innerText = "New Board"
-  }
 
   // Create from fields
   const titleCard = document.createElement("div")
   titleCard.className = "board-form-input"
   const titleLabel = document.createElement("p")
-  titleLabel.innerText = "Title:"
+  titleLabel.innerText = "Title: "
   const titleInput = document.createElement("input")
   titleInput.name = "title"
 
   const categoryCard = document.createElement("div")
   categoryCard.className = "board-form-input"
   const categoryLabel = document.createElement("p")
-  categoryLabel.innerText = "Category:"
+  categoryLabel.innerText = "Category: "
   const categoryInput = document.createElement("input")
   categoryInput.name = "category"
 
   const backgroundCard = document.createElement("div")
   backgroundCard.className = "board-form-input"
   const backgroundLabel = document.createElement("p")
-  backgroundLabel.innerText = "Background:"
+  backgroundLabel.innerText = "Background: "
   const backgroundInput = document.createElement("input")
   backgroundInput.setAttribute("type", "text")
   backgroundInput.name = "background"
@@ -110,7 +116,18 @@ function buildBoardForm(target) {
   cancelButton.addEventListener("click", event => document.querySelector("#new-edit-board-form").remove())
   const submitButton = document.createElement("button")
   submitButton.innerText = "Submit"
-  submitButton.addEventListener("click", event => console.log(event))
+  if (!!boardId) {submitButton.setAttribute("board-id",boardId)}
+  submitButton.addEventListener("click", event => createEditBoard(event))
+
+  // Fill form if it is an edit form
+  if (!!boardId) {
+    formLabel.innerText = "Edit Board"
+    titleInput.value = document.getElementById("board-title").innerText
+    categoryInput.value = document.getElementById("board-category").innerText
+    backgroundInput.value = document.getElementById("board-card").style.background
+  } else {
+    formLabel.innerText = "New Board"
+  }
 
   // Assemble form elements
   boardForm.append(formLabel)
@@ -130,15 +147,48 @@ function buildBoardForm(target) {
   document.querySelector("main").append(boardForm)
 }
 
-function createBoard() {
-  // Open form
-  buildBoardForm()
-  console.log("Functionality has not been written")
-  // Write me!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-}
-
-function editBoard(target) {
-  buildBoardForm(target)
+function createEditBoard(event) {
+  // Prevent redirect from submit button press
+  event.preventDefault()
+  // Setup fetch options for PATCH request, these will be changed for a new POST request
+  const body = {
+    title: event.target.form.querySelector("input[name='title']").value,
+    category: event.target.form.querySelector("input[name='category']").value,
+    background: event.target.form.querySelector("input[name='background']").value
+  }
+  const options = {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    }, 
+    body: JSON.stringify(body)
+  }
+  // Check if the board ID is present to determine if this is a new or edited board
+  if (event.target.getAttribute("board-id")) {
+    // Create board edit fetch request
+    const boardId = event.target.getAttribute("board-id")
+    fetch(BOARDS_URL + "/" + boardId, options).then(resp => resp.json()).then(function(json) {
+      if (json.data.id === boardId) {
+        event.target.form.remove()
+        buildBoardCard(json.data)
+      } else {
+        console.log("Error Updating Board")
+      }
+    })
+  } else {
+    // Create new board fetch request
+    options.method = "POST"
+    body.user_id = undefined // FILL ME IN ONCE EVERYTHING IS DEFINED
+    fetch(BOARDS_URL, options).then(resp => resp.json()).then(function(json) {
+      if (json.data.id === boardId) {
+        event.target.form.remove()
+        buildBoardCard(json.data)
+      } else {
+        console.log("Error Creating Board")
+      }
+    })
+  }
 }
 
 function deleteBoard(boardId) {
@@ -162,6 +212,10 @@ function deleteBoard(boardId) {
   }
 }
 
-function addGoal(clickEvent) {
-  console.log(clickEvent.target.getAttribute("board_id"))
+//////////////////////////
+// Board Functions: End //
+//////////////////////////
+
+function addGoal(event) {
+  console.log(event.target.getAttribute("board-id"))
 }
