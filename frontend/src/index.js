@@ -37,6 +37,7 @@ function buildBoardCard(board) {
   const addGoalButton = document.createElement("button")
   addGoalButton.id = "add-goal-button"
   addGoalButton.setAttribute("board-id", board.id)
+  addGoalButton.className = "togglebutton"
   addGoalButton.innerText = "Add Goal"
   addGoalButton.addEventListener("click", event => addGoal(event))
 
@@ -56,19 +57,20 @@ function buildBoardCard(board) {
 
   const editBoardButton = document.createElement("button")
   editBoardButton.id = "edit-board-button"
+  editBoardButton.className = "togglebutton"
   editBoardButton.innerText = "Edit Board"
   editBoardButton.addEventListener("click", event => buildBoardForm(board.id))
 
   const deleteBoardButton = document.createElement("button")
   deleteBoardButton.id = "delete-board-button"
+  deleteBoardButton.className = "togglebutton"
   deleteBoardButton.innerText = "Delete Board"
   deleteBoardButton.addEventListener("click", event => deleteBoard(board.id))
 
   const goalsGrid = document.createElement("div")
-  goalsGrid.id = "goals-grid"
-  board.attributes.goals.forEach(function(goal) {
-    // goalsGrid.append(buildGoalCard(goal))
-  })
+  // goalsGrid.id = "goals-grid"
+  goalsGrid.id = "notes"
+
 
   // Assemble board card elements
   boardHeader.append(addGoalButton)
@@ -80,7 +82,13 @@ function buildBoardCard(board) {
   boardHeader.append(boardButtonsCard)
   boardCard.append(boardHeader)
   boardCard.append(goalsGrid)
-  document.querySelector("main").append(boardCard)
+  document.querySelector("main").prepend(boardCard)
+
+  // Fill board with goals
+  board.attributes.goals.forEach(function(goal) {
+    // goalsGrid.append(createGoalCard(goal))
+    console.log(goal)
+  })
 }
 
 function buildBoardForm(boardId) {
@@ -348,60 +356,12 @@ for(const button of cancelBtns){
   ///////////////////////////
   // Goal Functions: Start //
   ///////////////////////////
-
   const newGoalForm = document.getElementById("new-goal");
   const goalFormLabel = document.getElementById("form-label")
-  const goalsSection = document.getElementById("notes");
   const nameInput = document.getElementById("name")
   const descriptionInput = document.getElementById("description")
   const statusInput = document.getElementById("status")
   const submitButton = document.getElementById("submit-button")
-
-  function createGoalCard(goal) {
-    const li = document.createElement("li");
-    const h2 = document.createElement("h2");
-    const p = document.createElement("p");
-    const h4 = document.createElement("h4");
-    const editButton = document.createElement("button");
-    const deleteButton = document.createElement("button");
-
-    editButton.innerText = "Edit";
-    deleteButton.innerText = "Delete";
-    editButton.style.marginRight = "5px";
-    deleteButton.style.marginLeft = "5px";
-
-    goalsSection.appendChild(li);
-    li.appendChild(h2);
-    li.appendChild(p);
-    li.appendChild(h4);
-    li.appendChild(editButton);
-    li.appendChild(deleteButton);
-
-    li.setAttribute("goal-id", goal.id)
-    h2.innerHTML = goal.attributes.title;
-    p.innerHTML = goal.attributes.content;
-    h4.innerHTML = goal.attributes.status;
-
-    deleteButton.addEventListener("click", function () {
-      li.remove()
-      return fetch(`${GOALS_URL}/${goal.id}`, {
-        method: 'DELETE'
-      })
-      .then(response => response.json()
-      .then(json => {
-        return json
-      }))
-    });
-
-    editButton.addEventListener("click", function() {
-      goalFormLabel.innerHTML = `<strong>Edit ${goal.attributes.title}</strong>`
-      nameInput.value = goal.attributes.title
-      descriptionInput.value = goal.attributes.content
-      statusInput.value = goal.attributes.status
-      submitButton.setAttribute("goal-id", goal.id)
-      submitButton.value = "Complete Edit"
-    })
-  }
 
   function fetchGoals() {
     fetch(GOALS_URL)
@@ -448,6 +408,53 @@ for(const button of cancelBtns){
       newGoalForm.reset()
       statusInput.value = "-- Select a Status --"
     });
+  }
+
+  function createGoalCard(goal) {
+    const goalsSection = document.getElementById("notes");
+    const li = document.createElement("li");
+    const h2 = document.createElement("h2");
+    const p = document.createElement("p");
+    const h4 = document.createElement("h4");
+    const editButton = document.createElement("button");
+    const deleteButton = document.createElement("button");
+  
+    editButton.innerText = "Edit";
+    deleteButton.innerText = "Delete";
+    editButton.style.marginRight = "5px";
+    deleteButton.style.marginLeft = "5px";
+  
+    goalsSection.appendChild(li);
+    li.appendChild(h2);
+    li.appendChild(p);
+    li.appendChild(h4);
+    li.appendChild(editButton);
+    li.appendChild(deleteButton);
+  
+    li.setAttribute("goal-id", goal.id)
+    h2.innerHTML = goal.title;
+    p.innerHTML = goal.content;
+    h4.innerHTML = goal.status;
+  
+    deleteButton.addEventListener("click", function () {
+      li.remove()
+      return fetch(`${GOALS_URL}/${goal.id}`, {
+        method: 'DELETE'
+      })
+      .then(response => response.json()
+      .then(json => {
+        return json
+      }))
+    });
+  
+    editButton.addEventListener("click", function() {
+      goalFormLabel.innerHTML = `<strong>Edit ${goal.attributes.title}</strong>`
+      nameInput.value = goal.attributes.title
+      descriptionInput.value = goal.attributes.content
+      statusInput.value = goal.attributes.status
+      submitButton.setAttribute("goal-id", goal.id)
+      submitButton.value = "Complete Edit"
+    })
   }
 
   /////////////////////////
