@@ -41,7 +41,7 @@ main {
 #board-card {
   margin: auto;
   width: 95%;
-  height: 90vh;
+  /* height: 90vh; */
   border: 5px solid silver;
   background-size: cover;
 }
@@ -71,9 +71,10 @@ main {
   right: 10px;
 }
 
-#goals-grid {
+#notes {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
   grid-template-rows: auto;
   grid-gap: 20px;
   padding-top: 10px;
@@ -185,7 +186,7 @@ button.togglebutton {
   opacity: 1;
   }
 
-#notes li {
+#notes div {
   position: relative;
   width: 300px;
   min-height: 100px;
@@ -200,7 +201,7 @@ button.togglebutton {
   -o-transform: rotate(-.5deg);
 }
 
-#notes li:nth-child(even) {
+#notes div:nth-child(even) {
   -webkit-transform: rotate(.5deg);
   -moz-transform: rotate(.5deg);
   -o-transform: rotate(.5deg);
@@ -211,31 +212,31 @@ button.togglebutton {
   background-image: url(https://rob.kilnhg.com/Content/Images/kiln_focus.gif);
 } */
 
-#notes li p {
+#notes div p {
   text-align: center;
-  font: normal normal normal 40px/48px 'Reenie Beanie', Helvetica, Arial, sans-serif;
+  font: normal normal normal 24px/32px 'Reenie Beanie', Helvetica, Arial, sans-serif;
   color: #000;
   text-shadow: white 1px 1px 0px;
   overflow:hidden;
 }
 
-#notes li h2 {
+#notes div h2 {
   text-align: left;
-  font: normal normal bold 40px/48px 'Reenie Beanie', Helvetica, Arial, sans-serif;
+  font: normal normal bold 24px/32px 'Reenie Beanie', Helvetica, Arial, sans-serif;
   color: #000;
   text-shadow: white 1px 1px 0px;
   overflow:hidden;
 }
 
-#notes li h4 {
+#notes div h4 {
   text-align: left;
-  font: normal normal bold 40px/48px 'Reenie Beanie', Helvetica, Arial, sans-serif;
+  font: normal normal bold 24px/32px 'Reenie Beanie', Helvetica, Arial, sans-serif;
   color: #000;
   text-shadow: white 1px 1px 0px;
   overflow:hidden;
 }
 
-#notes li::before {
+#notes div::before {
   content: ' ';
   display: block;
   position: absolute;
@@ -254,7 +255,7 @@ button.togglebutton {
   -o-transform: rotate(-6deg);
 }
 
-#notes li:nth-child(even)::before {
+#notes div:nth-child(even)::before {
   -webkit-transform: rotate(6deg);
   -moz-transform: rotate(6deg);
   -o-transform: rotate(6deg);
