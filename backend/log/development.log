@@ -3690,3 +3690,47 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/goals" for ::1 at 2020-06-16 09:20:50 -0700
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (2.8ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 162ms (Views: 126.4ms | ActiveRecord: 4.0ms | Allocations: 49051)
+
+
+Started GET "/goals" for ::1 at 2020-06-16 09:20:52 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (0.8ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.8ms | Allocations: 42234)
+
+
+Started GET "/goals" for ::1 at 2020-06-16 09:21:02 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.1ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 90ms (Views: 88.1ms | ActiveRecord: 1.1ms | Allocations: 42237)
+
+
+Started GET "/goals" for ::1 at 2020-06-16 09:25:50 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (3.5ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 144ms (Views: 135.6ms | ActiveRecord: 3.5ms | Allocations: 42237)
+
+
+Started GET "/goals" for ::1 at 2020-06-16 09:25:56 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.4ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 172ms (Views: 170.5ms | ActiveRecord: 1.4ms | Allocations: 42235)
+
+
+Started GET "/goals" for ::1 at 2020-06-16 09:29:13 -0700
+Processing by GoalsController#index as */*
+  [1m[36mGoal Load (1.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/goals_controller.rb:5:in `index'
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 1.7ms | Allocations: 42220)
+
+

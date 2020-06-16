@@ -72,17 +72,17 @@ document.addEventListener("DOMContentLoaded", function () {
   function createOrEditGoal() {
     newGoalForm.addEventListener("submit", function (event) {
       event.preventDefault();
-      console.log(event)
       const goal = {
-        // const id = event.target.
-        
+        id: event.target.getAttribute("goal-id"),
         title: `${event.target[0].value}`,
         content: `${event.target[1].value}`,
         status: `${event.target[2].value}`,
       };
+      console.log(goal)
       if (submitButton.value === "Complete Edit") {
-        console.log(goal.title)
-        let editedGoal = document.querySelector(`goal-id = ${goal.id}`)
+        //troubles on line 84 and 86
+        let editedGoal = document.querySelector(`li[goal-id = "${goal.id}"]`)
+        console.log(editedGoal)
         editedGoal.remove()
         createGoalCard(goal)
         const data = {
