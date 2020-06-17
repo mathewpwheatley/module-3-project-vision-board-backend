@@ -403,6 +403,14 @@ navbarUsername.className = "rightnavli"
 navbarUsername.innerText = `${currentUser.attributes.first_name}`
 header.replaceChild(navbarUsername, signupBtn)
 }
+function logoutUser(navbarUsername) {
+  loginBtn.innerHTML = "<h2>Login</h2>"
+  header.replaceChild(signupBtn, navbarUsername)
+  window.user = ""
+  // Remove board from DOM
+  document.getElementById("board-card").remove()
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   //event listeners
   //login/signup form submission
@@ -416,13 +424,6 @@ document.addEventListener("DOMContentLoaded", function () {
  
   //Edit navbar on login.  login becomes logout. signup button replaced with current useer firstname.
 
-    function logoutUser(navbarUsername) {
-      loginBtn.innerHTML = "<h2>Login</h2>"
-      header.replaceChild(signupBtn, navbarUsername)
-      window.user = ""
-      // Remove board from DOM
-      document.getElementById("board-card").remove()
-    }
 
   signupBtn.addEventListener("click", function () {
     signupFormDiv.style.display = "block";
@@ -494,54 +495,6 @@ document.addEventListener("DOMContentLoaded", function () {
       statusInput.value = goal.attributes.status;
       submitButton.setAttribute("goal-id", goal.id);
       submitButton.value = "Complete Edit";
-    });
-  }
-
-  function createOrEditGoal() {
-    newGoalForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const goal = {
-        id: event.target[3].getAttribute("goal-id"),
-        title: `${event.target[0].value}`,
-        content: `${event.target[1].value}`,
-        status: `${event.target[2].value}`,
-      };
-      const data = {
-        board_id: document.getElementById("board-card").getAttribute("board-id"),
-        title: goal.title,
-        content: goal.content,
-        status: goal.status
-      }
-      if (submitButton.value === "Complete Edit") {
-        let editedGoal = document.querySelector(`li[goal-id = "${goal.id}"]`)
-        let title = editedGoal.querySelector("h2")
-        let content = editedGoal.querySelector("p")
-        let status = editedGoal.querySelector("h4")
-        title.innerHTML = `${event.target[0].value}`
-        content.innerHTML = `${event.target[1].value}`
-        status.innerHTML = `${event.target[2].value}`
-        fetch(`${GOALS_URL}/${goal.id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        });
-       } else {
-        fetch(`${GOALS_URL}`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(function(json) {
-          createGoalCard(json.data)
-        })
-    }
-      newGoalForm.reset()
-      statusInput.value = "-- Select a Status --"
     });
   }
   /////////////////////////
