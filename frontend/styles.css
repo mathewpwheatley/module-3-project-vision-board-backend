@@ -105,7 +105,7 @@ header h2.navli{
 }
 
 /* style form toggling buttons and float right */
-header button.togglebutton {
+button.togglebutton {
   font-size: .65em;
   color: #fff;
   background-color: green;
