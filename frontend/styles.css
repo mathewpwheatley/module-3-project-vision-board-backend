@@ -100,9 +100,13 @@ main {
 }
 /* Board Styling: End */
 
-/* style navbar headers(placeholder) */
+/* style navbar headers left(placeholder) */
 header h2.navli{
   float: left;
+}
+/* style navbar headers left(placeholder) */
+header h2.rightnavli{
+  float: right;
 }
 
 /* style form toggling buttons and float right */
