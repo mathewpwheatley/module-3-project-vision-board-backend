@@ -367,7 +367,8 @@ function changeNavbar(currentUser){
       loginBtn.innerHTML = "<h2>Login</h2>"
       header.replaceChild(signupBtn, navbarUsername)
       window.user = ""
-      console.log("TEST")
+      // Remove board from DOM
+      document.getElementById("board-card").remove()
     }
 
   function signupUser(firstName, lastName, email){
