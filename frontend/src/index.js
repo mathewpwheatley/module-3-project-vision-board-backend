@@ -240,15 +240,13 @@ function deleteBoard(boardId) {
     // Send delete request to server
     fetch(BOARDS_URL + "/" + boardId, options)
       .then((resp) => resp.json())
-      .then(function (json) {
+      .then(async function (json) {
         // Verify the data was deleted on server side via confirmation
         if (json.data.id) {
           // Delete board from DOM
           document.querySelector("#board-card").remove()
-          // ///////////////////////////////////////////////////////////////////////
-          // Need to update window.user now that their boards have been modified, otherwise the below if statement will give false results
-          //  We could seperate the get user request out of the login so it could be called by that function and this one.
-          // ///////////////////////////////////////////////////////////////////////
+          // Update user data now that board has been deleted
+          await fetchUser(window.user.attributes.email)
           if (window.user.attributes.boards.length > 0) {
             fetchBoard(window.user.attributes.boards[0].id)
           } else {
