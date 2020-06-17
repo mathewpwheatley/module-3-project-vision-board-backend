@@ -321,6 +321,7 @@ function buildErrorMsg(data) {
     errorP.innerText = error;
     errorP.style.color = "red";
     errorP.style.fontSize = "12px";
+    errorP.style.textAlign = "center"
     renderError(errorP)
   }
 }

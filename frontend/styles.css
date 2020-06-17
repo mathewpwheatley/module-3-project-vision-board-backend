@@ -141,6 +141,10 @@ z-index: 10;
 background-color: #fff;
 /* z-index: 10; */
 }
+/* Styles for error box oops! */
+.error-container h2 {
+  text-align: center;
+}
 
   /* Position the Popup form */
   .login-popup {
