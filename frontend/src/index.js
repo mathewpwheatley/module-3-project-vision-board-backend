@@ -10,8 +10,7 @@ const loginBtn = document.getElementById("loginButton")
 const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
 const confirmSignup = document.getElementById("signup-submit")
-
-
+const header = document.querySelector("header")
 
 ////////////////////////////
 // Board Functions: Start //
@@ -229,9 +228,6 @@ function deleteBoard(boardId) {
 // User Functions: Start //
 ///////////////////////////
 
-function addGoal(event) {
-  console.log(event.target.getAttribute("board-id"))
-}
 document.addEventListener("DOMContentLoaded", function() {
   // Test board load
   fetchBoard(155) 
@@ -290,9 +286,30 @@ for(const button of cancelBtns){
     }
     fetch(`${BASE_URL}/login`, configObject)
     .then(res => res.json())
-    .then(data => console.log(data))
-    loginFormDiv.style.display = ""
+    .then(function(json) { 
+      window.user = json.data
+      loginFormDiv.style.display = ""
+      changeNavbar(window.user)
+    });
   }
+
+  //Edit navbar on login.  login becomes logout. signup button replaced with current useer firstname.
+function changeNavbar(currentUser){
+    loginBtn.innerHTML = "<h2>Logout</h2>"
+    loginBtn.addEventListener("click", () => {logoutUser(navbarUsername)}
+  )
+    const navbarUsername = document.createElement("h2")
+    navbarUsername.className = "rightnavli"
+    navbarUsername.innerText = `${currentUser.attributes.first_name}`
+    header.replaceChild(navbarUsername, signupBtn)
+}
+
+    function logoutUser(navbarUsername) {
+      loginBtn.innerHTML = "<h2>Login</h2>"
+      header.replaceChild(signupBtn, navbarUsername)
+      window.user = ""
+      console.log("TEST")
+    }
 
   function signupUser(firstName, lastName, email){
     let configObject = {
