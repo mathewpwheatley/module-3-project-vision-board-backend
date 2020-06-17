@@ -1,5 +1,4 @@
-# Vision Board
-## Module 3 Project
+# Vision Board: Module 3 Project
 ### Flatiorn School: Seattle 0420 Cohort
 
 # Team:
