@@ -14,12 +14,11 @@
   <body>
     <div>
       <div>
-        <header>
+        <header id="header">
           <button class= "togglebutton" id="loginButton"><h2>Login</h2></button>
           <button class="togglebutton" id="signupButton"><h2>Signup</h2></button>
           
           <h2 class="navli">Boards</h2>
-          <h2 class="navli">Goals</h2>
         </header>
         </div>
         <div class="form-popup" id="login-form-div">
@@ -58,7 +57,6 @@
         
     </div>
       <main>
-        <!-- Build Page Here -->
 
         <form id="new-goal">
           <label id="form-label"><strong>Create a New Goal</strong></label>
@@ -66,15 +64,13 @@
           <textarea id="description" type="text" placeholder="Goal Description"></textarea>
           <select id="status" name="goal-status">
             <option disabled selected value> -- Select a Status -- </option>
-            <option value="Starting">Starting</option>
-            <option value="Started">Started</option>
-            <option value="Finished">Finished</option>
+            <option value="Not Started">Not Started</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
           </select>
           <input id="submit-button" type="submit" value="Submit">
         </form>
   
-        <ul id="notes">
-        </ul>
       </main>
     <script src="./src/index.js"></script>
   </body>
