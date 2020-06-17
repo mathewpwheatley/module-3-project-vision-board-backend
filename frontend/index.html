@@ -15,10 +15,22 @@
     <div>
       <div>
         <header id="header">
-          <button class= "togglebutton" id="loginButton"><h2>Login</h2></button>
-          <button class="togglebutton" id="signupButton"><h2>Signup</h2></button>
+
+          <!-- Board Hover Dropdown Navbar-->
+          <ul id="menuList">
+            <li>
+                <a>Boards &#9662;</a>
+                <ul class="dropdown" id="boardsList">
+                </ul>
+            </li>
+            <li><a id="loginButton">Login</a></li>
+            <li id="signupButton">Signup</a></li>
+          </ul>
+
+
+
           
-          <h2 class="navli">Boards</h2>
+          <!-- <h2 class="navli">Boards</h2> -->
         </header>
         </div>
         <div class="form-popup" id="login-form-div">
@@ -75,3 +87,4 @@
     <script src="./src/index.js"></script>
   </body>
 </html>
+

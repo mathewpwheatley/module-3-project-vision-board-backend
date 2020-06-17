@@ -11,6 +11,9 @@ const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
 const confirmSignup = document.getElementById("signup-submit")
 const header = document.querySelector("header")
+const boardsBtn = document.getElementById("boardsbtn")
+const menuList = document.getElementById("menuList")
+const boardsList = document.getElementById("boardsList")
 
 ////////////////////////////
 // Board Functions: Start //
@@ -410,20 +413,36 @@ function displayUserSignup() {
 }
 
 function changeNavbar(currentUser){
-loginBtn.innerHTML = "<h2>Logout</h2>"
+let currentUserUrl = `http://localhost:3000/users/${window.user.id}`
+
+fetch(currentUserUrl).then(resp => resp.json()).then(object => buildBoardsList(object.data.attributes.boards))
+
+loginBtn.innerText = "Logout"
 loginBtn.addEventListener("click", () => {logoutUser(navbarUsername)}
 )
-const navbarUsername = document.createElement("h2")
-navbarUsername.className = "rightnavli"
-navbarUsername.innerText = `${currentUser.attributes.first_name}`
-header.replaceChild(navbarUsername, signupBtn)
+const navbarUsername = document.createElement("li")
+navbarUsername.style.float="right"
+navbarUsername.innerText = `Logged in as: ${currentUser.attributes.first_name}`
+menuList.replaceChild(navbarUsername, signupButton)
 }
 function logoutUser(navbarUsername) {
-  loginBtn.innerHTML = "<h2>Login</h2>"
-  header.replaceChild(signupBtn, navbarUsername)
+  loginBtn.innerText = "Login"
+  menuList.replaceChild(signupBtn, navbarUsername)
   window.user = ""
   // Remove board from DOM
   document.getElementById("board-card").remove()
+}
+
+function buildBoardsList(boards) {
+  for(board of boards){
+    const item = document.createElement("li")
+    item.innerHTML = `<a>○${board.title}</a>`
+    item.setAttribute(`board-id`, board.id)
+    item.addEventListener("click", function(event) {
+      fetchBoard(event.target.parentElement.getAttribute("board-id"))
+    })
+    boardsList.appendChild(item)
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -516,3 +535,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // Goal Functions: End //
   /////////////////////////
 });
+
