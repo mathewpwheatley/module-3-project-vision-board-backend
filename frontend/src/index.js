@@ -9,7 +9,7 @@ const signupForm = document.getElementById("signup-form")
 const loginBtn = document.getElementById("loginButton")
 const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
-const confirmSignup = document.getElementById("signup-submit")
+const confirmLogin = document.getElementById("login-submit")
 const header = document.querySelector("header")
 const errorBox = document.getElementById("error-div")
 
@@ -428,11 +428,14 @@ function confirmUserSignup() {
   p.innerText = "Account created! You can now sign in with your email";
   p.style.color = "green";
   p.style.fontSize = "12px";
-  signupForm.insertBefore(p, confirmSignup);
+  loginForm.insertBefore(p, confirmLogin);
   setTimeout(() => {
-    p.remove();
     signupFormDiv.style.display = "";
-  }, 5000);
+    loginFormDiv.style.display = "block"
+  });
+  setTimeout(() => {
+    p.remove()
+  }, 2000);
 }
 
 function changeNavbar(currentUser){
