@@ -10,6 +10,7 @@ const loginBtn = document.getElementById("loginButton")
 const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
 const confirmSignup = document.getElementById("signup-submit")
+const newGoalForm = document.getElementById("new-goal")
 const header = document.querySelector("header")
 
 ////////////////////////////
@@ -41,7 +42,9 @@ function buildBoardCard(board) {
   addGoalButton.setAttribute("board-id", board.id)
   addGoalButton.className = "togglebutton"
   addGoalButton.innerText = "Add Goal"
-  addGoalButton.addEventListener("click", event => addGoal(event))
+  addGoalButton.addEventListener("click", function() {
+    newGoalForm.hidden = false
+  })
 
   const boardTitleCard = document.createElement("div")
   boardTitleCard.id = "board-title-card"
@@ -306,6 +309,7 @@ function createGoalCard(goal) {
   });
 
   editButton.addEventListener("click", function() {
+    newGoalForm.hidden = false
     goalFormLabel.innerHTML = `<strong>Edit ${goal.title}</strong>`
     nameInput.value = goal.title
     descriptionInput.value = goal.content
@@ -442,7 +446,6 @@ function logoutUser(navbarUsername) {
 }
 
 function createOrEditGoal() {
-  const newGoalForm = document.getElementById("new-goal");
   newGoalForm.addEventListener("submit", function (event) {
     event.preventDefault();
     const goal = {
@@ -488,6 +491,7 @@ function createOrEditGoal() {
   }
     newGoalForm.reset()
     statusInput.value = "-- Select a Status --"
+    newGoalForm.hidden = true
   });
 }
 
