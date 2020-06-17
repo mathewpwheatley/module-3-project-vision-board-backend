@@ -128,9 +128,10 @@ function buildBoardForm(boardId) {
   backgroundCard.className = "board-form-input";
   const cancelButton = document.createElement("button");
   cancelButton.innerText = "Cancel";
-  cancelButton.addEventListener("click", (event) =>
-    document.querySelector("#new-edit-board-form").remove()
-  );
+  cancelButton.addEventListener("click", function(event) {
+    event.preventDefault()
+    document.getElementById("board-form").remove()
+  });
   const submitButton = document.createElement("button");
   submitButton.innerText = "Submit";
   if (!!boardId) {
@@ -143,9 +144,7 @@ function buildBoardForm(boardId) {
     formLabel.innerText = "Edit Board";
     titleInput.value = document.getElementById("board-title").innerText;
     categoryInput.value = document.getElementById("board-category").innerText;
-    backgroundInput.value = document.getElementById(
-      "board-card"
-    ).style.background;
+    backgroundInput.value = document.getElementById("board-card").style.background.split("/").slice(-1)[0].slice(0,-2);
   } else {
     formLabel.innerText = "New Board";
   }
@@ -190,6 +189,7 @@ function createEditBoard(event) {
   if (event.target.getAttribute("board-id")) {
     // Create board edit fetch request
     const boardId = event.target.getAttribute("board-id");
+    options.body =  JSON.stringify(body)
     fetch(BOARDS_URL + "/" + boardId, options)
       .then((resp) => resp.json())
       .then(function (json) {
@@ -203,15 +203,17 @@ function createEditBoard(event) {
   } else {
     // Create new board fetch request
     options.method = "POST";
-    body.user_id = undefined; // FILL ME IN ONCE EVERYTHING IS DEFINED
+    body.user_id = window.user.id;
+    options.body = JSON.stringify(body)
     fetch(BOARDS_URL, options)
       .then((resp) => resp.json())
       .then(function (json) {
-        if (json.data.id === boardId) {
+        if (json.data.id) {
           event.target.form.remove();
           buildBoardCard(json.data);
         } else {
-          console.log("Error Creating Board");
+          // Console log error message from server
+          console.log(json);
         }
       });
   }
@@ -236,9 +238,19 @@ function deleteBoard(boardId) {
     fetch(BOARDS_URL + "/" + boardId, options)
       .then((resp) => resp.json())
       .then(function (json) {
-        if (json.data.id == boardId) {
+        // Verify the data was deleted on server side via confirmation
+        if (json.data.id) {
           // Delete board from DOM
-          document.querySelector("#board-card").remove();
+          document.querySelector("#board-card").remove()
+          // ///////////////////////////////////////////////////////////////////////
+          // Need to update window.user now that their boards have been modified, otherwise the below if statement will give false results
+          //  We could seperate the get user request out of the login so it could be called by that function and this one.
+          // ///////////////////////////////////////////////////////////////////////
+          if (window.user.attributes.boards.length > 0) {
+            fetchBoard(window.user.attributes.boards[0].id)
+          } else {
+            buildBoardForm()
+          }
         }
       });
   }
@@ -247,7 +259,6 @@ function deleteBoard(boardId) {
 //////////////////////////
 // Board Functions: End //
 //////////////////////////
-
 
 function createGoalCard(goal) {
   const goalsSection = document.getElementById("notes");
@@ -337,8 +348,12 @@ function loginUser(email) {
     // Close login form
     loginForm.reset()
     loginFormDiv.style.display = ""
-    // Generate first board
-    fetchBoard(window.user.attributes.boards[0].id)
+    // Generate first board if it exists
+    if (window.user.attributes.boards.length > 0) {
+      fetchBoard(window.user.attributes.boards[0].id)
+    } else {
+      buildBoardForm()
+    }
     // Update nav bar
     changeNavbar(window.user)
   });
