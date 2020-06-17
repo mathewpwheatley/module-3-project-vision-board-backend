@@ -16,6 +16,8 @@ const header = document.querySelector("header")
 const boardsBtn = document.getElementById("boardsbtn")
 const menuList = document.getElementById("menuList")
 const boardsList = document.getElementById("boardsList")
+const confirmLogin = document.getElementById("login-submit")
+const errorBox = document.getElementById("error-div")
 
 ////////////////////////////
 // Board Functions: Start //
@@ -284,6 +286,10 @@ function deleteBoard(boardId) {
 // Board Functions: End //
 //////////////////////////
 
+///////////////////////////
+// Goal Functions: Start //
+///////////////////////////
+
 const statusInput = document.getElementById("status")
 const submitButton = document.getElementById("submit-button")
 
@@ -340,6 +346,91 @@ function createGoalCard(goal) {
   })
 }
 
+function createOrEditGoal() {
+  newGoalForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log(event)
+    const goal = {
+      id: event.target[4].getAttribute("goal-id"),
+      title: `${event.target[0].value}`,
+      content: `${event.target[1].value}`,
+      status: `${event.target[3].value}`,
+    };
+    const data = {
+      board_id: document.getElementById("board-card").getAttribute("board-id"),
+      title: goal.title,
+      content: goal.content,
+      status: goal.status
+    }
+    if (submitButton.value === "Complete Edit") {
+      let editedGoal = document.querySelector(`div[goal-id = "${goal.id}"]`)
+      let title = editedGoal.querySelector("h2")
+      let content = editedGoal.querySelector("p")
+      let status = editedGoal.querySelector("h4")
+      title.innerHTML = `${event.target[0].value}`
+      content.innerHTML = `${event.target[1].value}`
+      status.innerHTML = `${event.target[3].value}`
+      editedGoal.style.background = `${event.target[2].value}`
+      fetch(`${GOALS_URL}/${goal.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+      })
+    }
+    else {
+      fetch(`${GOALS_URL}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(function(json) {
+        fetchBoard(data.board_id)
+      })
+      //Trying to add picture funcionality but coming up as null
+      // document.querySelector(`div[goal-id = "${goal.id}"]`).style.background = `${event.target[2].value}`
+  }
+    newGoalForm.reset()
+    statusInput.value = "-- Select a Status --"
+    newGoalForm.hidden = true
+  });
+}
+
+/////////////////////////
+// Goal Functions: End //
+/////////////////////////
+
+//////////////////////////
+// Error Rendering Start//
+//////////////////////////
+function buildErrorMsg(data) {
+  // signupForm.reset();
+  let errors = data["errors"];
+  for (const error of errors) {
+    let errorP = document.createElement("p");
+    errorP.innerText = error;
+    errorP.style.color = "red";
+    errorP.style.fontSize = "12px";
+    errorP.style.textAlign = "center"
+    renderError(errorP)
+  }
+}
+
+function renderError(errorMsg){
+  errorBox.appendChild(errorMsg)
+  errorBox.style.display = "block"
+  setTimeout(() => {
+    errorBox.style.display = "none"
+  }, 3000)
+}
+
+//////////////////////////
+// Error Rendering End  //
+//////////////////////////
 
 ///////////////////////////
 // User Functions: Start //
@@ -425,30 +516,20 @@ function renderUser(){
 }
   
 
-function buildErrorMsg(data) {
-  signupForm.reset();
-  let errors = data["errors"];
-  for (const error of errors) {
-    let p = document.createElement("p");
-    p.innerText = error;
-    p.style.color = "red";
-    p.style.fontSize = "12px";
-    setTimeout(() => {
-      p.remove();
-    }, 2000);
-  }
-}
 function confirmUserSignup() {
   signupForm.reset();
   let p = document.createElement("p");
   p.innerText = "Account created! You can now sign in with your email";
   p.style.color = "green";
   p.style.fontSize = "12px";
-  signupForm.insertBefore(p, confirmSignup);
+  loginForm.insertBefore(p, confirmLogin);
   setTimeout(() => {
-    p.remove();
     signupFormDiv.style.display = "";
-  }, 5000);
+    loginFormDiv.style.display = "block"
+  });
+  setTimeout(() => {
+    p.remove()
+  }, 2000);
 }
 
 function changeNavbar(currentUser){
@@ -472,61 +553,6 @@ function logoutUser(navbarUsername) {
   // Remove board from DOM
   document.getElementById("board-card").remove()
 }
-
-function createOrEditGoal() {
-  newGoalForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    console.log(event)
-    const goal = {
-      id: event.target[4].getAttribute("goal-id"),
-      title: `${event.target[0].value}`,
-      content: `${event.target[1].value}`,
-      status: `${event.target[3].value}`,
-    };
-    const data = {
-      board_id: document.getElementById("board-card").getAttribute("board-id"),
-      title: goal.title,
-      content: goal.content,
-      status: goal.status
-    }
-    if (submitButton.value === "Complete Edit") {
-      let editedGoal = document.querySelector(`div[goal-id = "${goal.id}"]`)
-      let title = editedGoal.querySelector("h2")
-      let content = editedGoal.querySelector("p")
-      let status = editedGoal.querySelector("h4")
-      title.innerHTML = `${event.target[0].value}`
-      content.innerHTML = `${event.target[1].value}`
-      status.innerHTML = `${event.target[3].value}`
-      editedGoal.style.background = `${event.target[2].value}`
-      fetch(`${GOALS_URL}/${goal.id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data)
-      })
-    }
-    else {
-      fetch(`${GOALS_URL}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data)
-      })
-      .then(response => response.json())
-      .then(function(json) {
-        fetchBoard(data.board_id)
-      })
-      //Trying to add picture funcionality but coming up as null
-      // document.querySelector(`div[goal-id = "${goal.id}"]`).style.background = `${event.target[2].value}`
-  }
-    newGoalForm.reset()
-    statusInput.value = "-- Select a Status --"
-    newGoalForm.hidden = true
-  });
-}
-
 
 function buildBoardsList(boards) {
   for(board of boards){
@@ -569,14 +595,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // User Functions: End //
   /////////////////////////
 
-  ///////////////////////////
-  // Goal Functions: Start //
-  ///////////////////////////
-
   createOrEditGoal()
-
-  /////////////////////////
-  // Goal Functions: End //
-  /////////////////////////
 });
 
