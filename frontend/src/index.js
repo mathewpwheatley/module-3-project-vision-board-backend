@@ -10,6 +10,7 @@ const loginBtn = document.getElementById("loginButton")
 const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
 const confirmSignup = document.getElementById("signup-submit")
+const header = document.querySelector("header")
 
 ////////////////////////////
 // Board Functions: Start //
@@ -346,8 +347,28 @@ for(const button of cancelBtns){
       loginFormDiv.style.display = ""
       // Generate first board
       fetchBoard(window.user.attributes.boards[0].id)
-    })
+      // Update nav bar
+      changeNavbar(window.user)
+    });
   }
+
+  //Edit navbar on login.  login becomes logout. signup button replaced with current useer firstname.
+function changeNavbar(currentUser){
+    loginBtn.innerHTML = "<h2>Logout</h2>"
+    loginBtn.addEventListener("click", () => {logoutUser(navbarUsername)}
+  )
+    const navbarUsername = document.createElement("h2")
+    navbarUsername.className = "rightnavli"
+    navbarUsername.innerText = `${currentUser.attributes.first_name}`
+    header.replaceChild(navbarUsername, signupBtn)
+}
+
+    function logoutUser(navbarUsername) {
+      loginBtn.innerHTML = "<h2>Login</h2>"
+      header.replaceChild(signupBtn, navbarUsername)
+      window.user = ""
+      console.log("TEST")
+    }
 
   function signupUser(firstName, lastName, email){
     let configObject = {
