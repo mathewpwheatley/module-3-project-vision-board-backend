@@ -11,6 +11,7 @@ const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
 const confirmSignup = document.getElementById("signup-submit")
 const newGoalForm = document.getElementById("new-goal")
+newGoalForm.style.padding = "25px"
 const header = document.querySelector("header")
 
 ////////////////////////////
@@ -468,11 +469,12 @@ function logoutUser(navbarUsername) {
 function createOrEditGoal() {
   newGoalForm.addEventListener("submit", function (event) {
     event.preventDefault();
+    console.log(event)
     const goal = {
-      id: event.target[3].getAttribute("goal-id"),
+      id: event.target[4].getAttribute("goal-id"),
       title: `${event.target[0].value}`,
       content: `${event.target[1].value}`,
-      status: `${event.target[2].value}`,
+      status: `${event.target[3].value}`,
     };
     const data = {
       board_id: document.getElementById("board-card").getAttribute("board-id"),
@@ -487,7 +489,8 @@ function createOrEditGoal() {
       let status = editedGoal.querySelector("h4")
       title.innerHTML = `${event.target[0].value}`
       content.innerHTML = `${event.target[1].value}`
-      status.innerHTML = `${event.target[2].value}`
+      status.innerHTML = `${event.target[3].value}`
+      editedGoal.style.background = `${event.target[2].value}`
       fetch(`${GOALS_URL}/${goal.id}`, {
         method: "PATCH",
         headers: {
@@ -508,6 +511,8 @@ function createOrEditGoal() {
       .then(function(json) {
         fetchBoard(data.board_id)
       })
+      //Trying to add picture funcionality but coming up as null
+      // document.querySelector(`div[goal-id = "${goal.id}"]`).style.background = `${event.target[2].value}`
   }
     newGoalForm.reset()
     statusInput.value = "-- Select a Status --"
