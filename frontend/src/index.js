@@ -317,7 +317,7 @@ function createGoalCard(goal) {
 function handleLogin(e) {
   e.preventDefault();
   let email = e.target.email.value;
-  loginUser(email);
+  fetchUser(email);
 }
 
 
@@ -328,8 +328,13 @@ function handleSignup(e) {
   let email = e.target.email.value;
   signupUser(firstName, lastName, email);
 }
-//fetches
-function loginUser(email) {
+
+///////////////////////////
+//       Fetches         //
+///////////////////////////
+
+//recieve user email from login handler and fetch user data, send to loginUser
+function fetchUser(email){
   let configObject = {
     method: "POST",
     headers: {
@@ -345,20 +350,9 @@ function loginUser(email) {
   .then(function(json) { 
     // Set window variable to user data
     window.user = json.data
-    // Close login form
-    loginForm.reset()
-    loginFormDiv.style.display = ""
-    // Generate first board if it exists
-    if (window.user.attributes.boards.length > 0) {
-      fetchBoard(window.user.attributes.boards[0].id)
-    } else {
-      buildBoardForm()
-    }
-    // Update nav bar
-    changeNavbar(window.user)
-  });
+    loginUser(window.user)
+  })
 }
-
 
 function signupUser(firstName, lastName, email) {
   let configObject = {
@@ -375,14 +369,29 @@ function signupUser(firstName, lastName, email) {
   };
   fetch(`${USERS_URL}`, configObject).then((res) => {
     if (res.status == 201) {
-      displayUserSignup();
+      confirmSignup();
     } else {
-      res.json().then((errorData) => displayError(errorData));
+      res.json().then((errorData) => renderError(errorData));
     }
   });
 }
 
-function displayError(data) {
+function loginUser(userData) {
+  console.log(userData)
+  // Close login form
+  loginForm.reset()
+  loginFormDiv.style.display = ""
+    // Generate first board if it exists
+    if (userData.attributes.boards.length > 0) {
+      fetchBoard(userData.attributes.boards[0].id)
+    } else {
+      buildBoardForm()
+    }
+    // Update nav bar
+    changeNavbar(userData)
+}
+
+function renderError(data) {
   signupForm.reset();
   let errors = data["errors"];
   for (const error of errors) {
@@ -396,7 +405,7 @@ function displayError(data) {
     }, 2000);
   }
 }
-function displayUserSignup() {
+function confirmSignup() {
   signupForm.reset();
   let p = document.createElement("p");
   p.innerText = "Account created! You can now sign in with your email";
@@ -466,52 +475,52 @@ document.addEventListener("DOMContentLoaded", function () {
   const statusInput = document.getElementById("status")
   const submitButton = document.getElementById("submit-button")
 
-  function createGoalCard(goal) {
-    const li = document.createElement("li");
-    const h2 = document.createElement("h2");
-    const p = document.createElement("p");
-    const h4 = document.createElement("h4");
-    const editButton = document.createElement("button");
-    const deleteButton = document.createElement("button");
+  // function createGoalCard(goal) {
+  //   const li = document.createElement("li");
+  //   const h2 = document.createElement("h2");
+  //   const p = document.createElement("p");
+  //   const h4 = document.createElement("h4");
+  //   const editButton = document.createElement("button");
+  //   const deleteButton = document.createElement("button");
 
-    editButton.innerText = "Edit";
-    deleteButton.innerText = "Delete";
-    editButton.style.marginRight = "5px";
-    deleteButton.style.marginLeft = "5px";
+  //   editButton.innerText = "Edit";
+  //   deleteButton.innerText = "Delete";
+  //   editButton.style.marginRight = "5px";
+  //   deleteButton.style.marginLeft = "5px";
 
-    goalsSection.appendChild(li);
-    li.appendChild(h2);
-    li.appendChild(p);
-    li.appendChild(h4);
-    li.appendChild(editButton);
-    li.appendChild(deleteButton);
+  //   goalsSection.appendChild(li);
+  //   li.appendChild(h2);
+  //   li.appendChild(p);
+  //   li.appendChild(h4);
+  //   li.appendChild(editButton);
+  //   li.appendChild(deleteButton);
 
-    li.setAttribute("goal-id", goal.id)
-    // console.log(goal)
-    h2.innerHTML = goal.attributes.title;
-    p.innerHTML = goal.attributes.content;
-    h4.innerHTML = goal.attributes.status;
+  //   li.setAttribute("goal-id", goal.id)
+  //   // console.log(goal)
+  //   h2.innerHTML = goal.attributes.title;
+  //   p.innerHTML = goal.attributes.content;
+  //   h4.innerHTML = goal.attributes.status;
 
-    deleteButton.addEventListener("click", function () {
-      li.remove();
-      return fetch(`${GOALS_URL}/${goal.id}`, {
-        method: "DELETE",
-      }).then((response) =>
-        response.json().then((json) => {
-          return json;
-        })
-      );
-    });
+  //   deleteButton.addEventListener("click", function () {
+  //     li.remove();
+  //     return fetch(`${GOALS_URL}/${goal.id}`, {
+  //       method: "DELETE",
+  //     }).then((response) =>
+  //       response.json().then((json) => {
+  //         return json;
+  //       })
+  //     );
+  //   });
 
-    editButton.addEventListener("click", function () {
-      goalFormLabel.innerHTML = `<strong>Edit ${goal.attributes.title}</strong>`;
-      nameInput.value = goal.attributes.title;
-      descriptionInput.value = goal.attributes.content;
-      statusInput.value = goal.attributes.status;
-      submitButton.setAttribute("goal-id", goal.id);
-      submitButton.value = "Complete Edit";
-    });
-  }
+  //   editButton.addEventListener("click", function () {
+  //     goalFormLabel.innerHTML = `<strong>Edit ${goal.attributes.title}</strong>`;
+  //     nameInput.value = goal.attributes.title;
+  //     descriptionInput.value = goal.attributes.content;
+  //     statusInput.value = goal.attributes.status;
+  //     submitButton.setAttribute("goal-id", goal.id);
+  //     submitButton.value = "Complete Edit";
+  //   });
+  // }
   /////////////////////////
   // Goal Functions: End //
   /////////////////////////
