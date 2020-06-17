@@ -11,6 +11,7 @@ const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
 const confirmSignup = document.getElementById("signup-submit")
 const newGoalForm = document.getElementById("new-goal")
+newGoalForm.style.padding = "25px"
 const header = document.querySelector("header")
 
 ////////////////////////////
@@ -511,7 +512,7 @@ function createOrEditGoal() {
         fetchBoard(data.board_id)
       })
       //Trying to add picture funcionality but coming up as null
-      document.querySelector(`div[goal-id = "${goal.id}"]`).style.background = `${event.target[2].value}`
+      // document.querySelector(`div[goal-id = "${goal.id}"]`).style.background = `${event.target[2].value}`
   }
     newGoalForm.reset()
     statusInput.value = "-- Select a Status --"
