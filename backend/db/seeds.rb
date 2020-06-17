@@ -19,7 +19,7 @@ board_seeds.times do
     Board.create(
         title: Faker::Book.title,
         category: ["Career", "Education", "Family", "Financial", "Health", "Home", "Other", "Personal", "Relationship", "Self Improvement", "Travel"].sample,
-        background: ["black_board.jpg", "cork_board.jpg"].sample,
+        background: ["black_board.jpg", "cork_board.jpg", "dragon.jpg", "green_board.jpg", "monster_truck.jpg", "rocket.png", "school.jpg", "space.jpg", "unicorn.jpg"].sample,
         user_id: User.all.sample.id
     )
 end

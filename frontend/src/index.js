@@ -87,7 +87,7 @@ function buildBoardCard(board) {
   boardHeader.append(boardButtonsCard)
   boardCard.append(boardHeader)
   boardCard.append(goalsGrid)
-  document.querySelector("main").prepend(boardCard)
+  document.querySelector("main").append(boardCard)
 
   // Fill board with goals
   board.attributes.goals.forEach(function(goal) {
@@ -115,17 +115,34 @@ function buildBoardForm(boardId) {
   categoryCard.className = "board-form-input";
   const categoryLabel = document.createElement("p");
   categoryLabel.innerText = "Category: ";
-  const categoryInput = document.createElement("input");
+  const categoryInput = document.createElement("select");
   categoryInput.name = "category";
+
+  let values = ["Career", "Education", "Family", "Financial", "Health", "Home", "Other", "Personal", "Relationship", "Self Improvement", "Travel"];
+  for (const val of values) {
+    const option = document.createElement("option");
+    option.value = val;
+    option.text = val;
+    categoryInput.appendChild(option);
+  }
 
   const backgroundCard = document.createElement("div");
   backgroundCard.className = "board-form-input";
   const backgroundLabel = document.createElement("p");
   backgroundLabel.innerText = "Background: ";
-  const backgroundInput = document.createElement("input");
+  const backgroundInput = document.createElement("select");
   backgroundInput.setAttribute("type", "text");
   backgroundInput.name = "background";
 
+  
+  values = ["black_board.jpg", "cork_board.jpg", "dragon.jpg", "green_board.jpg", "monster_truck.jpg", "rocket.png", "school.jpg", "space.jpg", "unicorn.jpg"]
+  for (const val of values) {
+    const option = document.createElement("option");
+    option.value = val;
+    option.text = val;
+    backgroundInput.appendChild(option);
+  }
+  
   // Create from buttons
   const buttonCard = document.createElement("div");
   backgroundCard.className = "board-form-input";
@@ -157,11 +174,14 @@ function buildBoardForm(boardId) {
   titleCard.append(titleLabel);
   titleCard.append(titleInput);
   boardForm.append(titleCard);
+  boardForm.append(document.createElement("br"));
   categoryCard.append(categoryLabel);
   categoryCard.append(categoryInput);
+  boardForm.append(document.createElement("br"));
   boardForm.append(categoryCard);
   backgroundCard.append(backgroundLabel);
   backgroundCard.append(backgroundInput);
+  boardForm.append(document.createElement("br"));
   boardForm.append(backgroundCard);
   buttonCard.append(cancelButton);
   buttonCard.append(submitButton);
@@ -176,9 +196,8 @@ function createEditBoard(event) {
   // Setup fetch options for PATCH request, these will be changed for a new POST request
   const body = {
     title: event.target.form.querySelector("input[name='title']").value,
-    category: event.target.form.querySelector("input[name='category']").value,
-    background: event.target.form.querySelector("input[name='background']")
-      .value,
+    category: event.target.form.querySelector("select[name='category']").value,
+    background: event.target.form.querySelector("select[name='background']").value,
   };
   const options = {
     method: "PATCH",
@@ -240,15 +259,13 @@ function deleteBoard(boardId) {
     // Send delete request to server
     fetch(BOARDS_URL + "/" + boardId, options)
       .then((resp) => resp.json())
-      .then(function (json) {
+      .then(async function (json) {
         // Verify the data was deleted on server side via confirmation
         if (json.data.id) {
           // Delete board from DOM
           document.querySelector("#board-card").remove()
-          // ///////////////////////////////////////////////////////////////////////
-          // Need to update window.user now that their boards have been modified, otherwise the below if statement will give false results
-          //  We could seperate the get user request out of the login so it could be called by that function and this one.
-          // ///////////////////////////////////////////////////////////////////////
+          // Update user data now that board has been deleted
+          await fetchUser(window.user.attributes.email)
           if (window.user.attributes.boards.length > 0) {
             fetchBoard(window.user.attributes.boards[0].id)
           } else {
@@ -327,7 +344,7 @@ function createGoalCard(goal) {
 function handleLogin(e) {
   e.preventDefault();
   let email = e.target.email.value;
-  fetchUser(email);
+  loginUser(email);
 }
 
 
@@ -336,15 +353,13 @@ function handleSignup(e) {
   let firstName = e.target.fname.value;
   let lastName = e.target.lname.value;
   let email = e.target.email.value;
-  signupUser(firstName, lastName, email);
+  fetchSignupUser(firstName, lastName, email);
 }
 
-///////////////////////////
-//       Fetches         //
-///////////////////////////
 
+//Fetches
 //recieve user email from login handler and fetch user data, send to loginUser
-function fetchUser(email){
+async function fetchUser(email){
   let configObject = {
     method: "POST",
     headers: {
@@ -355,16 +370,15 @@ function fetchUser(email){
       email: email,
     }),
   }
-  fetch(`${BASE_URL}/login`, configObject)
+  return fetch(`${BASE_URL}/login`, configObject)
   .then(res => res.json())
   .then(function(json) { 
     // Set window variable to user data
     window.user = json.data
-    loginUser(window.user)
   })
 }
 
-function signupUser(firstName, lastName, email) {
+function fetchSignupUser(firstName, lastName, email) {
   let configObject = {
     method: "POST",
     headers: {
@@ -381,27 +395,33 @@ function signupUser(firstName, lastName, email) {
     if (res.status == 201) {
       confirmUserSignup();
     } else {
-      res.json().then((errorData) => renderError(errorData));
+      res.json().then((errorData) => {
+        
+        buildErrorMsg(errorData)
+      });
     }
   });
 }
 
-function loginUser(userData) {
-  console.log(userData)
-  // Close login form
-  loginForm.reset()
-  loginFormDiv.style.display = ""
-    // Generate first board if it exists
-    if (userData.attributes.boards.length > 0) {
-      fetchBoard(userData.attributes.boards[0].id)
-    } else {
-      buildBoardForm()
-    }
-    // Update nav bar
-    changeNavbar(userData)
+async function loginUser(email) {
+  await fetchUser(email)
+  renderUser()
 }
 
-function renderError(data) {
+function renderUser(){
+  loginFormDiv.style.display = ""
+  // Generate first board if it exists
+  if (window.user.attributes.boards.length > 0) {
+   fetchBoard(window.user.attributes.boards[0].id)
+ } else {
+   buildBoardForm()
+ }
+ // Update nav bar
+ changeNavbar(window.user)
+}
+  
+
+function buildErrorMsg(data) {
   signupForm.reset();
   let errors = data["errors"];
   for (const error of errors) {
@@ -409,7 +429,6 @@ function renderError(data) {
     p.innerText = error;
     p.style.color = "red";
     p.style.fontSize = "12px";
-    signupForm.insertBefore(p, confirmSignup);
     setTimeout(() => {
       p.remove();
     }, 2000);
@@ -437,6 +456,7 @@ navbarUsername.className = "rightnavli"
 navbarUsername.innerText = `${currentUser.attributes.first_name}`
 header.replaceChild(navbarUsername, signupBtn)
 }
+
 function logoutUser(navbarUsername) {
   loginBtn.innerHTML = "<h2>Login</h2>"
   header.replaceChild(signupBtn, navbarUsername)
