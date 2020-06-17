@@ -11,6 +11,7 @@ const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
 const confirmSignup = document.getElementById("signup-submit")
 const header = document.querySelector("header")
+const errorBox = document.getElementById("error-div")
 
 ////////////////////////////
 // Board Functions: Start //
@@ -309,6 +310,32 @@ function createGoalCard(goal) {
   })
 }
 
+//////////////////////////
+// Error Rendering Start//
+//////////////////////////
+function buildErrorMsg(data) {
+  // signupForm.reset();
+  let errors = data["errors"];
+  for (const error of errors) {
+    let errorP = document.createElement("p");
+    errorP.innerText = error;
+    errorP.style.color = "red";
+    errorP.style.fontSize = "12px";
+    renderError(errorP)
+  }
+}
+
+function renderError(errorMsg){
+  errorBox.appendChild(errorMsg)
+  errorBox.style.display = "block"
+  setTimeout(() => {
+    errorBox.style.display = "none"
+  }, 3000)
+}
+
+//////////////////////////
+// Error Rendering End  //
+//////////////////////////
 
 ///////////////////////////
 // User Functions: Start //
@@ -394,19 +421,6 @@ function renderUser(){
 }
   
 
-function buildErrorMsg(data) {
-  signupForm.reset();
-  let errors = data["errors"];
-  for (const error of errors) {
-    let p = document.createElement("p");
-    p.innerText = error;
-    p.style.color = "red";
-    p.style.fontSize = "12px";
-    setTimeout(() => {
-      p.remove();
-    }, 2000);
-  }
-}
 function confirmUserSignup() {
   signupForm.reset();
   let p = document.createElement("p");
@@ -466,6 +480,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /////////////////////////
   // User Functions: End //
   /////////////////////////
+  
 
   ///////////////////////////
   // Goal Functions: Start //
