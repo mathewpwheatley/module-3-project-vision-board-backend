@@ -274,6 +274,7 @@ function loginUser(email) {
   fetch(`${BASE_URL}/login`, configObject)
     .then((res) => res.json())
     .then((data) => console.log(data));
+  loginForm.reset();
   loginFormDiv.style.display = "";
 }
 
@@ -300,7 +301,7 @@ function signupUser(firstName, lastName, email) {
 }
 
 function displayError(data) {
-  signupForm.reset()
+  signupForm.reset();
   let errors = data["errors"];
   for (const error of errors) {
     let p = document.createElement("p");
@@ -314,7 +315,7 @@ function displayError(data) {
   }
 }
 function displayUserSignup() {
-  signupForm.reset()
+  signupForm.reset();
   let p = document.createElement("p");
   p.innerText = "Account created! You can now sign in with your email";
   p.style.color = "green";
