@@ -129,10 +129,17 @@ button.togglebutton {
 
 /* Styles for the error container */
 .error-container {
-margin: 0 auto;
+display: none;
 width: 300px;
-padding: 20px;
+height: 100px;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+padding: 10px;
+z-index: 10;
 background-color: #fff;
+/* z-index: 10; */
 }
 
   /* Position the Popup form */
@@ -199,7 +206,7 @@ background-color: #fff;
   .btncontainer {
     background-color: #fff;
   }
-  
+
   /* Hover effects for buttons */
   .form-container .btn:hover, .open-button:hover, .cancel:hover, .togglebutton:hover {
   opacity: 1;
