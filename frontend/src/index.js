@@ -87,7 +87,7 @@ function buildBoardCard(board) {
   boardHeader.append(boardButtonsCard)
   boardCard.append(boardHeader)
   boardCard.append(goalsGrid)
-  document.querySelector("main").prepend(boardCard)
+  document.querySelector("main").append(boardCard)
 
   // Fill board with goals
   board.attributes.goals.forEach(function(goal) {
@@ -115,17 +115,34 @@ function buildBoardForm(boardId) {
   categoryCard.className = "board-form-input";
   const categoryLabel = document.createElement("p");
   categoryLabel.innerText = "Category: ";
-  const categoryInput = document.createElement("input");
+  const categoryInput = document.createElement("select");
   categoryInput.name = "category";
+
+  let values = ["Career", "Education", "Family", "Financial", "Health", "Home", "Other", "Personal", "Relationship", "Self Improvement", "Travel"];
+  for (const val of values) {
+    const option = document.createElement("option");
+    option.value = val;
+    option.text = val;
+    categoryInput.appendChild(option);
+  }
 
   const backgroundCard = document.createElement("div");
   backgroundCard.className = "board-form-input";
   const backgroundLabel = document.createElement("p");
   backgroundLabel.innerText = "Background: ";
-  const backgroundInput = document.createElement("input");
+  const backgroundInput = document.createElement("select");
   backgroundInput.setAttribute("type", "text");
   backgroundInput.name = "background";
 
+  
+  values = ["black_board.jpg", "cork_board.jpg", "dragon.jpg", "green_board.jpg", "monster_truck.jpg", "rocket.png", "school.jpg", "space.jpg", "unicorn.jpg"]
+  for (const val of values) {
+    const option = document.createElement("option");
+    option.value = val;
+    option.text = val;
+    backgroundInput.appendChild(option);
+  }
+  
   // Create from buttons
   const buttonCard = document.createElement("div");
   backgroundCard.className = "board-form-input";
@@ -157,11 +174,14 @@ function buildBoardForm(boardId) {
   titleCard.append(titleLabel);
   titleCard.append(titleInput);
   boardForm.append(titleCard);
+  boardForm.append(document.createElement("br"));
   categoryCard.append(categoryLabel);
   categoryCard.append(categoryInput);
+  boardForm.append(document.createElement("br"));
   boardForm.append(categoryCard);
   backgroundCard.append(backgroundLabel);
   backgroundCard.append(backgroundInput);
+  boardForm.append(document.createElement("br"));
   boardForm.append(backgroundCard);
   buttonCard.append(cancelButton);
   buttonCard.append(submitButton);
@@ -176,9 +196,8 @@ function createEditBoard(event) {
   // Setup fetch options for PATCH request, these will be changed for a new POST request
   const body = {
     title: event.target.form.querySelector("input[name='title']").value,
-    category: event.target.form.querySelector("input[name='category']").value,
-    background: event.target.form.querySelector("input[name='background']")
-      .value,
+    category: event.target.form.querySelector("select[name='category']").value,
+    background: event.target.form.querySelector("select[name='background']").value,
   };
   const options = {
     method: "PATCH",
