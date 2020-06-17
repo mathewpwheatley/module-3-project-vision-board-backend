@@ -369,7 +369,7 @@ function signupUser(firstName, lastName, email) {
   };
   fetch(`${USERS_URL}`, configObject).then((res) => {
     if (res.status == 201) {
-      confirmSignup();
+      confirmUserSignup();
     } else {
       res.json().then((errorData) => renderError(errorData));
     }
@@ -405,7 +405,7 @@ function renderError(data) {
     }, 2000);
   }
 }
-function confirmSignup() {
+function confirmUserSignup() {
   signupForm.reset();
   let p = document.createElement("p");
   p.innerText = "Account created! You can now sign in with your email";
