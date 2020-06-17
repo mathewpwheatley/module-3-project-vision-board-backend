@@ -260,6 +260,9 @@ function deleteBoard(boardId) {
 // Board Functions: End //
 //////////////////////////
 
+const statusInput = document.getElementById("status")
+const submitButton = document.getElementById("submit-button")
+
 function createGoalCard(goal) {
   const goalsSection = document.getElementById("notes");
   const note = document.createElement("div");
@@ -268,6 +271,9 @@ function createGoalCard(goal) {
   const h4 = document.createElement("h4");
   const editButton = document.createElement("button");
   const deleteButton = document.createElement("button");
+  const goalFormLabel = document.getElementById("form-label")
+  const nameInput = document.getElementById("name")
+  const descriptionInput = document.getElementById("description")
 
   editButton.innerText = "Edit";
   deleteButton.innerText = "Delete";
@@ -300,10 +306,10 @@ function createGoalCard(goal) {
   });
 
   editButton.addEventListener("click", function() {
-    goalFormLabel.innerHTML = `<strong>Edit ${goal.attributes.title}</strong>`
-    nameInput.value = goal.attributes.title
-    descriptionInput.value = goal.attributes.content
-    statusInput.value = goal.attributes.status
+    goalFormLabel.innerHTML = `<strong>Edit ${goal.title}</strong>`
+    nameInput.value = goal.title
+    descriptionInput.value = goal.content
+    statusInput.value = goal.status
     submitButton.setAttribute("goal-id", goal.id)
     submitButton.value = "Complete Edit"
   })
@@ -435,6 +441,57 @@ function logoutUser(navbarUsername) {
   document.getElementById("board-card").remove()
 }
 
+function createOrEditGoal() {
+  const newGoalForm = document.getElementById("new-goal");
+  newGoalForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const goal = {
+      id: event.target[3].getAttribute("goal-id"),
+      title: `${event.target[0].value}`,
+      content: `${event.target[1].value}`,
+      status: `${event.target[2].value}`,
+    };
+    const data = {
+      board_id: document.getElementById("board-card").getAttribute("board-id"),
+      title: goal.title,
+      content: goal.content,
+      status: goal.status
+    }
+    if (submitButton.value === "Complete Edit") {
+      let editedGoal = document.querySelector(`div[goal-id = "${goal.id}"]`)
+      let title = editedGoal.querySelector("h2")
+      let content = editedGoal.querySelector("p")
+      let status = editedGoal.querySelector("h4")
+      title.innerHTML = `${event.target[0].value}`
+      content.innerHTML = `${event.target[1].value}`
+      status.innerHTML = `${event.target[2].value}`
+      fetch(`${GOALS_URL}/${goal.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+      })
+    }
+    else {
+      fetch(`${GOALS_URL}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(function(json) {
+        fetchBoard(data.board_id)
+      })
+  }
+    newGoalForm.reset()
+    statusInput.value = "-- Select a Status --"
+  });
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
   //event listeners
   //login/signup form submission
@@ -468,61 +525,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Goal Functions: Start //
   ///////////////////////////
 
-  const newGoalForm = document.getElementById("new-goal");
-  const goalFormLabel = document.getElementById("form-label")
-  const nameInput = document.getElementById("name")
-  const descriptionInput = document.getElementById("description")
-  const statusInput = document.getElementById("status")
-  const submitButton = document.getElementById("submit-button")
+  createOrEditGoal()
 
-  function createOrEditGoal() {
-    newGoalForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const goal = {
-        id: event.target[3].getAttribute("goal-id"),
-        title: `${event.target[0].value}`,
-        content: `${event.target[1].value}`,
-        status: `${event.target[2].value}`,
-      };
-      const data = {
-        board_id: document.getElementById("board-card").getAttribute("board-id"),
-        title: goal.title,
-        content: goal.content,
-        status: goal.status
-      }
-      if (submitButton.value === "Complete Edit") {
-        let editedGoal = document.querySelector(`li[goal-id = "${goal.id}"]`)
-        let title = editedGoal.querySelector("h2")
-        let content = editedGoal.querySelector("p")
-        let status = editedGoal.querySelector("h4")
-        title.innerHTML = `${event.target[0].value}`
-        content.innerHTML = `${event.target[1].value}`
-        status.innerHTML = `${event.target[2].value}`
-        fetch(`${GOALS_URL}/${goal.id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data)
-        })
-      }
-      else {
-        fetch(`${GOALS_URL}`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(function(json) {
-          createGoalCard(json.data)
-        })
-    }
-      newGoalForm.reset()
-      statusInput.value = "-- Select a Status --"
-    });
-  }
   /////////////////////////
   // Goal Functions: End //
   /////////////////////////
