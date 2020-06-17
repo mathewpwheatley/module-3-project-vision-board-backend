@@ -126,6 +126,15 @@ button.togglebutton {
   font-family: Roboto, Helvetica, sans-serif;
   }
 
+
+/* Styles for the error container */
+.error-container {
+margin: 0 auto;
+width: 300px;
+padding: 20px;
+background-color: #fff;
+}
+
   /* Position the Popup form */
   .login-popup {
   position: relative;
@@ -136,9 +145,9 @@ button.togglebutton {
   .form-popup {
   display: none;
   position: fixed;
-  left: 45%;
+  left: 50%;
   top:5%;
-  transform: translate(-45%,5%);
+  transform: translate(-50%,5%);
   border: 2px solid #666;
   z-index: 9;
   }
@@ -185,6 +194,12 @@ button.togglebutton {
   margin-left:20px;
   opacity: 0.8;
   }
+
+  /* Style cancel button container */
+  .btncontainer {
+    background-color: #fff;
+  }
+  
   /* Hover effects for buttons */
   .form-container .btn:hover, .open-button:hover, .cancel:hover, .togglebutton:hover {
   opacity: 1;
