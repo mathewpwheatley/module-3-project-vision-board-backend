@@ -1,5 +1,5 @@
-# Vision Board: Module 3 Project
 ### Flatiorn School: Seattle 0420 Cohort
+# Vision Board: Module 3 Project
 
 # Team:
 * Colton Kaiser
