@@ -247,7 +247,7 @@ function createEditBoard(event) {
         if (json.errors) {
           // build error message from server for rendering
           buildErrorMsg(json)
-        } else {
+        } else if (json.data.id) {
           event.target.form.remove();
           buildBoardCard(json.data);
         }
