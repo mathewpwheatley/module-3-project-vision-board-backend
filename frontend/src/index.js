@@ -570,9 +570,11 @@ menuList.replaceChild(navbarUsername, signupBtn)
 }
 
 function logoutUser(navbarUsername) {
+  // Remove board and board form from DOM
+  if (document.getElementById("board-form")) {document.getElementById("board-form").remove()}
+  document.getElementById("board-card").remove()
 
   document.querySelector(".home-page-text").hidden = false
-  let boardForm = document.getElementById("board-form")
   
   newBoardBtn.style.display = "none"
   logoutBtn.style.display = "none" 
@@ -580,9 +582,6 @@ function logoutUser(navbarUsername) {
 
   menuList.replaceChild(signupBtn, navbarUsername)
   window.user = ""
-  // Remove board from DOM
-  boardForm.remove()
-  document.getElementById("board-card").remove();
 }
 
 function buildBoardsList(boards) {
