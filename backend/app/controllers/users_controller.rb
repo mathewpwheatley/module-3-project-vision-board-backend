@@ -21,10 +21,13 @@ class UsersController < ApplicationController
         end
     end
 
-    def login 
-        current_user = User.find_by(login_user_params)
-        # redirect_to current_user
-        render json: UserSerializer.new(current_user)
+    def login                 
+        if login_user_params[:email] == ""
+            render json: { errors: ["You must enter an email to login"], status: 401}
+        else
+            current_user = User.find_by(login_user_params)
+            render json: UserSerializer.new(current_user), status: 200
+        end
     end  
     
     def logout
