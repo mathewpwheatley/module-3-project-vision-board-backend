@@ -14,16 +14,18 @@ const confirmSignup = document.getElementById("signup-submit")
 const confirmLogin = document.getElementById("login-submit")
 
 const newGoalForm = document.querySelector(".new-goal-container")
-newGoalForm.style.padding = "25px"
 const goalFormLabel = document.getElementById("form-label")
 const header = document.querySelector("header")
 const boardsBtn = document.getElementById("boardsbtn")
 const menuList = document.getElementById("menuList")
 const boardsList = document.getElementById("boardsList")
-
 const errorBox = document.getElementById("error-div")
 const errorListDiv = document.querySelector(".errors")
-
+const newBoardBtn = document.getElementById("newBoardButton")
+const logoutBtn = document.getElementById("logoutButton")
+newBoardBtn.style.display ="none"
+logoutBtn.style.display ="none"
+newGoalForm.style.padding = "25px"
 ////////////////////////////
 // Board Functions: Start //
 ////////////////////////////
@@ -545,21 +547,28 @@ let currentUserUrl = `http://localhost:3000/users/${window.user.id}`
 fetch(currentUserUrl)
 .then(resp => resp.json())
 .then(object => buildBoardsList(object.data.attributes.boards))
-
-loginBtn.innerText = "Logout"
-loginBtn.addEventListener("click", () => {logoutUser(navbarUsername)}
+loginBtn.style.display = "none"
+newBoardBtn.style.display = "inline-block"
+logoutBtn.style.display = "inline-block"
+logoutBtn.addEventListener("click", () => {logoutUser(navbarUsername)}
 )
 const navbarUsername = document.createElement("li")
 navbarUsername.style.float="right"
 navbarUsername.innerText = `Logged in as: ${currentUser.attributes.first_name}`
-menuList.replaceChild(navbarUsername, signupButton)
+menuList.replaceChild(navbarUsername, signupBtn)
 }
 
 function logoutUser(navbarUsername) {
-  loginBtn.innerText = "Login"
+  let boardForm = document.getElementById("board-form")
+  
+  newBoardBtn.style.display = "none"
+  logoutBtn.style.display = "none" 
+  loginBtn.style.display = "inline-block"
+
   menuList.replaceChild(signupBtn, navbarUsername)
   window.user = ""
   // Remove board from DOM
+  boardForm.style.display = "none"
   document.getElementById("board-card").remove();
 }
 
