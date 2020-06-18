@@ -35,9 +35,6 @@ Assuming you already have all previously listed dependencies installed, download
 ### Running:
 This project was designed as a proof of concept so it requires hosting locally. To start hosting the local server navigate to ```install_directory/backend``` via a terminal interface and then execute ```rails s```. Next, from your Google Chrome browser navigate to your ```install_directory/frontend/index.html```. At this point the application will load and all functionality will be available.
 
-### Demo
-
-
 ### License
 Copyright 2020 Colton Kaiser, Joshua Mclean, Mathew Wheatley, David Knudson
 
