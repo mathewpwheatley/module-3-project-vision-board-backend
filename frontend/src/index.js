@@ -396,8 +396,22 @@ function createOrEditGoal() {
         },
         body: JSON.stringify(data)
       })
-    }
-    else {
+      .then(response => response.json())
+      .then(function(json) {
+        console.log(json)
+        if (json.errors){
+
+          buildErrorMsg(json)
+          
+        } else if (json.data.id){
+        fetchBoard(data.board_id)
+        document.getElementById("new-goal").reset()
+        goalFormLabel.innerHTML = `<strong>Create New Goal</strong>`
+        statusInput.value = "-- Select a Status --"
+        newGoalForm.hidden = true
+        submitButton.value = "Submit"
+      }})
+    } else {
       fetch(`${GOALS_URL}`, {
         method: "POST",
         headers: {
@@ -413,13 +427,14 @@ function createOrEditGoal() {
         } else if(json.data.id){
           console.log(json)
         fetchBoard(data.board_id)
+        document.getElementById("new-goal").reset()
+        goalFormLabel.innerHTML = `<strong>Create New Goal</strong>`
+        statusInput.value = "-- Select a Status --"
+        newGoalForm.hidden = true
+        submitButton.value = "Submit"
       }})
   }
-    document.getElementById("new-goal").reset()
-    goalFormLabel.innerHTML = `<strong>Create New Goal</strong>`
-    statusInput.value = "-- Select a Status --"
-    newGoalForm.hidden = true
-    submitButton.value = "Submit"
+   
   });
 }
 
@@ -431,6 +446,7 @@ function createOrEditGoal() {
 // Error Rendering Start//
 //////////////////////////
 function buildErrorMsg(data) {
+  console.log(data)
   let errors = data["errors"];
   for (const error of errors) {
     let errorP = document.createElement("p");
