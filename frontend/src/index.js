@@ -542,7 +542,9 @@ function confirmUserSignup() {
 function changeNavbar(currentUser){
 let currentUserUrl = `http://localhost:3000/users/${window.user.id}`
 
-fetch(currentUserUrl).then(resp => resp.json()).then(object => buildBoardsList(object.data.attributes.boards))
+fetch(currentUserUrl)
+.then(resp => resp.json())
+.then(object => buildBoardsList(object.data.attributes.boards))
 
 loginBtn.innerText = "Logout"
 loginBtn.addEventListener("click", () => {logoutUser(navbarUsername)}
