@@ -572,7 +572,8 @@ menuList.replaceChild(navbarUsername, signupBtn)
 function logoutUser(navbarUsername) {
   // Remove board and board form from DOM
   if (document.getElementById("board-form")) {document.getElementById("board-form").remove()}
-  document.getElementById("board-card").remove()
+  if(document.getElementById("board-card")){document.getElementById("board-card") .remove()}
+ 
 
   document.querySelector(".home-page-text").hidden = false
   
@@ -582,6 +583,7 @@ function logoutUser(navbarUsername) {
 
   menuList.replaceChild(signupBtn, navbarUsername)
   window.user = ""
+  location.reload()
 }
 
 function buildBoardsList(boards) {
@@ -624,6 +626,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // User Functions: End //
   /////////////////////////
 
-  createOrEditGoal()
+  // createOrEditGoal()
 });
 
