@@ -6,10 +6,9 @@ This project was designed to enable a user to creat vision boards in order to tu
 
 * Create an account
 * Login to an existing account
-* Create a vision board
-* Create a goal
+* Create, edit, and delete a vision board
+* Create, edit and delete goal
 * View all boards and related goals
-* Delete their account, boards, and goals.
 
 The backend of the application leverages Ruby on Rails API functionality to receive and send AJAX requests in a JSON formate. The interactive frontend is build on vanilla HTML and Javascript.
 
