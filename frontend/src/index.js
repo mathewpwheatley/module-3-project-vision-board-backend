@@ -523,6 +523,7 @@ async function loginUser(email) {
 }
 
 function renderUser() {
+  document.querySelector(".home-page-text").hidden = true
   loginForm.reset();
   loginFormDiv.style.display = "none";
   // Generate first board if it exists
@@ -569,6 +570,8 @@ menuList.replaceChild(navbarUsername, signupBtn)
 }
 
 function logoutUser(navbarUsername) {
+
+  document.querySelector(".home-page-text").hidden = false
   let boardForm = document.getElementById("board-form")
   
   newBoardBtn.style.display = "none"

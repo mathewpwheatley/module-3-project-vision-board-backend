@@ -36,6 +36,22 @@ main {
   padding-bottom: 30px;
 }
 
+/* Home Page Styling: Start */
+
+.home-page-text {
+  text-align: center;
+  color: rgb(120, 120, 206);
+  font-family: Helvetica, sans-serif;
+  font-size: xxx-large;
+  text-shadow: 2px 2px #201e1e;
+  opacity: 0.5;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  word-wrap: break-word;
+}
+
 /* Board Styling: Start */
 
 #board-card {
