@@ -396,8 +396,22 @@ function createOrEditGoal() {
         },
         body: JSON.stringify(data)
       })
-    }
-    else {
+      .then(response => response.json())
+      .then(function(json) {
+        console.log(json)
+        if (json.errors){
+
+          buildErrorMsg(json)
+          
+        } else if (json.data.id){
+        fetchBoard(data.board_id)
+        document.getElementById("new-goal").reset()
+        goalFormLabel.innerHTML = `<strong>Create New Goal</strong>`
+        statusInput.value = "-- Select a Status --"
+        newGoalForm.hidden = true
+        submitButton.value = "Submit"
+      }})
+    } else {
       fetch(`${GOALS_URL}`, {
         method: "POST",
         headers: {
@@ -407,14 +421,20 @@ function createOrEditGoal() {
       })
       .then(response => response.json())
       .then(function(json) {
+        console.log(json)
+        if(json.errors){
+          buildErrorMsg(json)
+        } else if(json.data.id){
+          console.log(json)
         fetchBoard(data.board_id)
-      })
+        document.getElementById("new-goal").reset()
+        goalFormLabel.innerHTML = `<strong>Create New Goal</strong>`
+        statusInput.value = "-- Select a Status --"
+        newGoalForm.hidden = true
+        submitButton.value = "Submit"
+      }})
   }
-    document.getElementById("new-goal").reset()
-    goalFormLabel.innerHTML = `<strong>Create New Goal</strong>`
-    statusInput.value = "-- Select a Status --"
-    newGoalForm.hidden = true
-    submitButton.value = "Submit"
+   
   });
 }
 
@@ -426,7 +446,7 @@ function createOrEditGoal() {
 // Error Rendering Start//
 //////////////////////////
 function buildErrorMsg(data) {
-  // signupForm.reset();
+  console.log(data)
   let errors = data["errors"];
   for (const error of errors) {
     let errorP = document.createElement("p");
@@ -561,8 +581,8 @@ fetch(currentUserUrl)
 loginBtn.style.display = "none"
 newBoardBtn.style.display = "inline-block"
 logoutBtn.style.display = "inline-block"
-logoutBtn.addEventListener("click", () => {logoutUser(navbarUsername)}
-)
+newBoardBtn.addEventListener("click", () => buildBoardForm())
+logoutBtn.addEventListener("click", () => logoutUser(navbarUsername))
 const navbarUsername = document.createElement("li")
 navbarUsername.style.float="right"
 navbarUsername.innerHTML = `<a>Logged in as: ${currentUser.attributes.first_name}</a>`
@@ -573,16 +593,18 @@ function logoutUser(navbarUsername) {
 
   document.querySelector(".home-page-text").hidden = false
   let boardForm = document.getElementById("board-form")
-  
+  let boardCard = document.getElementById("board-card")
   newBoardBtn.style.display = "none"
   logoutBtn.style.display = "none" 
   loginBtn.style.display = "inline-block"
-
-  menuList.replaceChild(signupBtn, navbarUsername)
   window.user = ""
   // Remove board from DOM
-  boardForm.remove()
-  document.getElementById("board-card").remove();
+  if(boardForm){
+    boardForm.remove()
+  }
+  if(boardCard){
+    boardCard.remove()
+  }
 }
 
 function buildBoardsList(boards) {
