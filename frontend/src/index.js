@@ -2,6 +2,7 @@ const BASE_URL = "http://localhost:3000"
 const USERS_URL = `${BASE_URL}/users`
 const BOARDS_URL = `${BASE_URL}/boards`
 const GOALS_URL = `${BASE_URL}/goals`
+
 const loginFormDiv = document.getElementById("login-form-div")
 const signupFormDiv = document.getElementById("signup-form-div")
 const loginForm = document.getElementById("login-form")
@@ -10,16 +11,21 @@ const loginBtn = document.getElementById("loginButton")
 const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
 const confirmSignup = document.getElementById("signup-submit")
+const confirmLogin = document.getElementById("login-submit")
+
 const newGoalForm = document.querySelector(".new-goal-container")
-newGoalForm.style.padding = "25px"
 const goalFormLabel = document.getElementById("form-label")
 const header = document.querySelector("header")
 const boardsBtn = document.getElementById("boardsbtn")
 const menuList = document.getElementById("menuList")
 const boardsList = document.getElementById("boardsList")
-const confirmLogin = document.getElementById("login-submit")
 const errorBox = document.getElementById("error-div")
-
+const errorListDiv = document.querySelector(".errors")
+const newBoardBtn = document.getElementById("newBoardButton")
+const logoutBtn = document.getElementById("logoutButton")
+newBoardBtn.style.display ="none"
+logoutBtn.style.display ="none"
+newGoalForm.style.padding = "25px"
 ////////////////////////////
 // Board Functions: Start //
 ////////////////////////////
@@ -81,8 +87,7 @@ function buildBoardCard(board) {
 
   const goalsGrid = document.createElement("div")
   // goalsGrid.id = "goals-grid"
-  goalsGrid.id = "notes"
-
+  goalsGrid.id = "notes";
 
   // Assemble board card elements
   boardHeader.append(addGoalButton)
@@ -97,9 +102,9 @@ function buildBoardCard(board) {
   document.querySelector("main").append(boardCard)
 
   // Fill board with goals
-  board.attributes.goals.forEach(function(goal) {
-    createGoalCard(goal)
-  })
+  board.attributes.goals.forEach(function (goal) {
+    createGoalCard(goal);
+  });
 }
 
 function buildBoardForm(boardId) {
@@ -155,9 +160,9 @@ function buildBoardForm(boardId) {
   backgroundCard.className = "board-form-input";
   const cancelButton = document.createElement("button");
   cancelButton.innerText = "Cancel";
-  cancelButton.addEventListener("click", function(event) {
-    event.preventDefault()
-    document.getElementById("board-form").remove()
+  cancelButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("board-form").remove();
   });
   const submitButton = document.createElement("button");
   submitButton.innerText = "Submit";
@@ -171,7 +176,11 @@ function buildBoardForm(boardId) {
     formLabel.innerText = "Edit Board";
     titleInput.value = document.getElementById("board-title").innerText;
     categoryInput.value = document.getElementById("board-category").innerText;
-    backgroundInput.value = document.getElementById("board-card").style.background.split("/").slice(-1)[0].slice(0,-2);
+    backgroundInput.value = document
+      .getElementById("board-card")
+      .style.background.split("/")
+      .slice(-1)[0]
+      .slice(0, -2);
   } else {
     formLabel.innerText = "New Board";
   }
@@ -218,31 +227,31 @@ function createEditBoard(event) {
   if (event.target.getAttribute("board-id")) {
     // Create board edit fetch request
     const boardId = event.target.getAttribute("board-id");
-    options.body =  JSON.stringify(body)
+    options.body = JSON.stringify(body);
     fetch(BOARDS_URL + "/" + boardId, options)
       .then((resp) => resp.json())
       .then(function (json) {
-        if (json.data.id === boardId) {
+        if (json.errors) {
+          buildErrorMsg(json)
+        } else if(json.data.id === boardId){
           event.target.form.remove();
           buildBoardCard(json.data);
-        } else {
-          console.log("Error Updating Board");
         }
       });
   } else {
     // Create new board fetch request
     options.method = "POST";
     body.user_id = window.user.id;
-    options.body = JSON.stringify(body)
+    options.body = JSON.stringify(body);
     fetch(BOARDS_URL, options)
       .then((resp) => resp.json())
       .then(function (json) {
-        if (json.data.id) {
+        if (json.errors) {
+          // build error message from server for rendering
+          buildErrorMsg(json)
+        } else if (json.data.id) {
           event.target.form.remove();
           buildBoardCard(json.data);
-        } else {
-          // Console log error message from server
-          console.log(json);
         }
       });
   }
@@ -274,9 +283,9 @@ function deleteBoard(boardId) {
           // Update user data now that board has been deleted
           await fetchUser(window.user.attributes.email)
           if (window.user.attributes.boards.length > 0) {
-            fetchBoard(window.user.attributes.boards[0].id)
+            fetchBoard(window.user.attributes.boards[0].id);
           } else {
-            buildBoardForm()
+            buildBoardForm();
           }
         }
       });
@@ -310,8 +319,8 @@ function createGoalCard(goal) {
   deleteButton.innerText = "Delete";
   editButton.style.marginRight = "5px";
   deleteButton.style.marginLeft = "5px";
-  editButton.className = "togglebutton"
-  deleteButton.className = "togglebutton"
+  editButton.className = "togglebutton";
+  deleteButton.className = "togglebutton";
 
   goalsSection.appendChild(note);
   note.appendChild(h2);
@@ -320,20 +329,20 @@ function createGoalCard(goal) {
   note.appendChild(deleteButton);
   note.appendChild(editButton);
 
-  note.setAttribute("goal-id", goal.id)
+  note.setAttribute("goal-id", goal.id);
   h2.innerHTML = goal.title;
   p.innerHTML = goal.content;
   h4.innerHTML = goal.status;
 
   deleteButton.addEventListener("click", function () {
-    note.remove()
+    note.remove();
     return fetch(`${GOALS_URL}/${goal.id}`, {
-      method: 'DELETE'
-    })
-    .then(response => response.json()
-    .then(json => {
-      return json
-    }))
+      method: "DELETE",
+    }).then((response) =>
+      response.json().then((json) => {
+        return json;
+      })
+    );
   });
 
   editButton.addEventListener("click", function() {
@@ -412,19 +421,20 @@ function buildErrorMsg(data) {
   for (const error of errors) {
     let errorP = document.createElement("p");
     errorP.innerText = error;
-    errorP.style.color = "red";
+    errorP.style.color = "black";
     errorP.style.fontSize = "12px";
-    errorP.style.textAlign = "center"
-    renderError(errorP)
+    errorP.style.textAlign = "center";
+    renderError(errorP);
   }
 }
 
-function renderError(errorMsg){
-  errorBox.appendChild(errorMsg)
-  errorBox.style.display = "block"
+function renderError(errorMsg) {
+  errorListDiv.appendChild(errorMsg);
+  errorBox.style.display = "block";
   setTimeout(() => {
-    errorBox.style.display = "none"
-  }, 3000)
+    errorBox.style.display = "none";
+    errorListDiv.innerHTML = "";
+  }, 2000);
 }
 
 //////////////////////////
@@ -441,7 +451,6 @@ function handleLogin(e) {
   loginUser(email);
 }
 
-
 function handleSignup(e) {
   e.preventDefault();
   let firstName = e.target.fname.value;
@@ -450,10 +459,9 @@ function handleSignup(e) {
   fetchSignupUser(firstName, lastName, email);
 }
 
-
 //Fetches
 //recieve user email from login handler and fetch user data, send to loginUser
-async function fetchUser(email){
+async function fetchUser(email) {
   let configObject = {
     method: "POST",
     headers: {
@@ -463,13 +471,16 @@ async function fetchUser(email){
     body: JSON.stringify({
       email: email,
     }),
-  }
+  };
   return fetch(`${BASE_URL}/login`, configObject)
-  .then(res => res.json())
-  .then(function(json) { 
-    // Set window variable to user data
-    window.user = json.data
-  })
+    .then((res) => res.json())
+    .then(function (json) {
+      if (json.errors) {
+        buildErrorMsg(json);
+      } else {
+        window.user = json.data;
+      }
+    });
 }
 
 function fetchSignupUser(firstName, lastName, email) {
@@ -490,30 +501,29 @@ function fetchSignupUser(firstName, lastName, email) {
       confirmUserSignup();
     } else {
       res.json().then((errorData) => {
-        
-        buildErrorMsg(errorData)
+        buildErrorMsg(errorData);
       });
     }
   });
 }
 
 async function loginUser(email) {
-  await fetchUser(email)
-  renderUser()
+  await fetchUser(email);
+  renderUser();
 }
 
-function renderUser(){
-  loginFormDiv.style.display = ""
+function renderUser() {
+  loginForm.reset();
+  loginFormDiv.style.display = "none";
   // Generate first board if it exists
   if (window.user.attributes.boards.length > 0) {
-   fetchBoard(window.user.attributes.boards[0].id)
- } else {
-   buildBoardForm()
- }
- // Update nav bar
- changeNavbar(window.user)
+    fetchBoard(window.user.attributes.boards[0].id);
+  } else {
+    buildBoardForm();
+  }
+  // Update nav bar
+  changeNavbar(window.user);
 }
-  
 
 function confirmUserSignup() {
   signupForm.reset();
@@ -524,33 +534,42 @@ function confirmUserSignup() {
   loginForm.insertBefore(p, confirmLogin);
   setTimeout(() => {
     signupFormDiv.style.display = "";
-    loginFormDiv.style.display = "block"
+    loginFormDiv.style.display = "block";
   });
   setTimeout(() => {
-    p.remove()
+    p.remove();
   }, 2000);
 }
 
 function changeNavbar(currentUser){
 let currentUserUrl = `http://localhost:3000/users/${window.user.id}`
 
-fetch(currentUserUrl).then(resp => resp.json()).then(object => buildBoardsList(object.data.attributes.boards))
-
-loginBtn.innerText = "Logout"
-loginBtn.addEventListener("click", () => {logoutUser(navbarUsername)}
+fetch(currentUserUrl)
+.then(resp => resp.json())
+.then(object => buildBoardsList(object.data.attributes.boards))
+loginBtn.style.display = "none"
+newBoardBtn.style.display = "inline-block"
+logoutBtn.style.display = "inline-block"
+logoutBtn.addEventListener("click", () => {logoutUser(navbarUsername)}
 )
 const navbarUsername = document.createElement("li")
 navbarUsername.style.float="right"
-navbarUsername.innerText = `Logged in as: ${currentUser.attributes.first_name}`
-menuList.replaceChild(navbarUsername, signupButton)
+navbarUsername.innerHTML = `<a>Logged in as: ${currentUser.attributes.first_name}</a>`
+menuList.replaceChild(navbarUsername, signupBtn)
 }
 
 function logoutUser(navbarUsername) {
-  loginBtn.innerText = "Login"
+  let boardForm = document.getElementById("board-form")
+  
+  newBoardBtn.style.display = "none"
+  logoutBtn.style.display = "none" 
+  loginBtn.style.display = "inline-block"
+
   menuList.replaceChild(signupBtn, navbarUsername)
   window.user = ""
   // Remove board from DOM
-  document.getElementById("board-card").remove()
+  boardForm.remove()
+  document.getElementById("board-card").remove();
 }
 
 function buildBoardsList(boards) {
@@ -575,9 +594,8 @@ document.addEventListener("DOMContentLoaded", function () {
   loginBtn.addEventListener("click", function () {
     loginFormDiv.style.display = "block";
   });
- 
-  //Edit navbar on login.  login becomes logout. signup button replaced with current useer firstname.
 
+  //Edit navbar on login.  login becomes logout. signup button replaced with current useer firstname.
 
   signupBtn.addEventListener("click", function () {
     signupFormDiv.style.display = "block";

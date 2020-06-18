@@ -27396,3 +27396,310 @@ Completed 200 OK in 121ms (Views: 111.8ms | ActiveRecord: 1.4ms | Allocations: 7
 Completed 200 OK in 124ms (Views: 95.5ms | ActiveRecord: 0.5ms | Allocations: 7727)
 
 
+Started POST "/users" for ::1 at 2020-06-18 01:03:27 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"", "first_name"=>"", "last_name"=>"", "user"=>{"email"=>"", "first_name"=>"", "last_name"=>""}}
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 178ms (Views: 1.0ms | ActiveRecord: 1.7ms | Allocations: 186815)
+
+
+Started POST "/login" for ::1 at 2020-06-18 01:13:26 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#login as JSON
+  Parameters: {"email"=>"", "user"=>{"email"=>""}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started POST "/login" for ::1 at 2020-06-18 01:13:31 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"email"=>"", "user"=>{"email"=>""}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 154)
+
+
+Started POST "/users" for ::1 at 2020-06-18 01:13:36 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"", "first_name"=>"", "last_name"=>"", "user"=>{"email"=>"", "first_name"=>"", "last_name"=>""}}
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 6247)
+
+
+Started POST "/users" for ::1 at 2020-06-18 01:13:42 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"", "first_name"=>"", "last_name"=>"", "user"=>{"email"=>"", "first_name"=>"", "last_name"=>""}}
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 2463)
+
+
+Started POST "/users" for ::1 at 2020-06-18 01:13:45 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"", "first_name"=>"", "last_name"=>"", "user"=>{"email"=>"", "first_name"=>"", "last_name"=>""}}
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 2442)
+
+
+Started POST "/users" for ::1 at 2020-06-18 01:13:48 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"", "first_name"=>"", "last_name"=>"", "user"=>{"email"=>"", "first_name"=>"", "last_name"=>""}}
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 2451)
+
+
+Started POST "/users" for ::1 at 2020-06-18 01:13:51 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"", "first_name"=>"", "last_name"=>"", "user"=>{"email"=>"", "first_name"=>"", "last_name"=>""}}
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 30ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 2462)
+
+
+Started POST "/users" for ::1 at 2020-06-18 01:13:56 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"", "first_name"=>"", "last_name"=>"", "user"=>{"email"=>"", "first_name"=>"", "last_name"=>""}}
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 2442)
+
+
+Started POST "/login" for ::1 at 2020-06-18 01:14:05 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"email"=>"", "user"=>{"email"=>""}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 152)
+
+
+Started POST "/login" for ::1 at 2020-06-18 01:14:10 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"email"=>"mcleajos000@gmail.com", "user"=>{"email"=>"mcleajos000@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mcleajos000@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `login'
+  [1m[36mBoard Load (1.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = ?[0m  [["user_id", 127]]
+  ↳ app/controllers/users_controller.rb:29:in `login'
+Completed 200 OK in 23ms (Views: 11.6ms | ActiveRecord: 1.8ms | Allocations: 6860)
+
+
+Started GET "/users/127" for ::1 at 2020-06-18 01:14:10 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"127"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = ?[0m  [["user_id", 127]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1828)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:14:14 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 8823)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:14:23 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3702)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:14:32 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"Test", "category"=>"Education", "background"=>"unicorn.jpg", "user_id"=>"127", "board"=>{"title"=>"Test", "category"=>"Education", "user_id"=>"127", "background"=>"unicorn.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mBoard Create (2.8ms)[0m  [1m[32mINSERT INTO "boards" ("title", "category", "user_id", "created_at", "updated_at", "background") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Test"], ["category", "Education"], ["user_id", 127], ["created_at", "2020-06-18 08:14:32.338840"], ["updated_at", "2020-06-18 08:14:32.338840"], ["background", "unicorn.jpg"]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mGoal Load (0.5ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 252]]
+  ↳ app/controllers/boards_controller.rb:11:in `create'
+Completed 200 OK in 17ms (Views: 5.0ms | ActiveRecord: 5.0ms | Allocations: 6540)
+
+
+Started DELETE "/boards/252" for ::1 at 2020-06-18 01:14:43 -0700
+Processing by BoardsController#destroy as JSON
+  Parameters: {"id"=>"252", "board"=>{}}
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 252], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:28:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:29:in `destroy'
+  [1m[36mBoard Destroy (1.0ms)[0m  [1m[31mDELETE FROM "boards" WHERE "boards"."id" = ?[0m  [["id", 252]]
+  ↳ app/controllers/boards_controller.rb:29:in `destroy'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/boards_controller.rb:29:in `destroy'
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."board_id" = ?[0m  [["board_id", 252]]
+  ↳ app/controllers/boards_controller.rb:30:in `destroy'
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 2.8ms | Allocations: 3761)
+
+
+Started POST "/login" for ::1 at 2020-06-18 01:14:43 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"email"=>"mcleajos000@gmail.com", "user"=>{"email"=>"mcleajos000@gmail.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mcleajos000@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `login'
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = ?[0m  [["user_id", 127]]
+  ↳ app/controllers/users_controller.rb:29:in `login'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1957)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:14:54 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3702)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:14:55 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3700)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:14:56 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3700)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:14:56 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 3700)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:14:56 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 3702)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:14:57 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 3700)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:14:57 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 3700)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:14:57 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 3700)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:15:10 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3700)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:15:10 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3700)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:15:30 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3700)
+
+
+Started POST "/boards" for ::1 at 2020-06-18 01:15:37 -0700
+Processing by BoardsController#create as JSON
+  Parameters: {"title"=>"", "category"=>"Career", "background"=>"black_board.jpg", "user_id"=>"127", "board"=>{"title"=>"", "category"=>"Career", "user_id"=>"127", "background"=>"black_board.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/boards_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3700)
+
+
