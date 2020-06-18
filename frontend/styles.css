@@ -127,17 +127,15 @@ button.togglebutton {
 /* Styles for the error container */
 .error-container {
 display: none;
-width: 350px;
-height: 175px;
-position: fixed;
+width: 300px;
+height: 100px;
+position: absolute;
 left: 50%;
-top: 21%;
+top: 50%;
 transform: translate(-50%, -50%);
 padding: 10px;
 z-index: 10;
-background-color: rgba(197, 100, 100, 1);
-border-radius: 25px;
-border: 2px solid #1d0303;
+background-color: #fff;
 /* z-index: 10; */
 }
 /* Styles for error box oops! */
@@ -169,7 +167,7 @@ border: 2px solid #1d0303;
   background-color: #fff;
   }
   /* Full-width for input fields */
-  .form-container input[type=text] {
+  .form-container input[type=text], .form-container input[type=password] {
   width: 100%;
   padding: 10px;
   margin: 5px 0 22px 0;
@@ -205,6 +203,18 @@ border: 2px solid #1d0303;
   margin-left:20px;
   opacity: 0.8;
   }
+
+    /* Style cancel button on new goal form*/
+    .new-form-cancel{
+      text-align: center;
+      background-color: #cc0000;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.8;
+      }
 
   /* Style cancel button container */
   .btncontainer {
@@ -310,23 +320,23 @@ ul{
   list-style: none;
   background: #f2f2f2;
 }
-#menuList li{
+ul li{
   display: inline-block;
   position: relative;
   line-height: 21px;
   text-align: left;
 }
-#menuList li a{
+ul li a{
   display: block;
   padding: 8px 25px;
   color: #333;
   text-decoration: none;
 }
-#menuList li a:hover{
+ul li a:hover{
   color: #fff;
   background: #939393;
 }
-#menuList li ul.dropdown{
+ul li ul.dropdown{
   min-width: 100%; /* Set width of the dropdown */
   background: #f2f2f2;
   display: none;
@@ -334,10 +344,10 @@ ul{
   z-index: 999;
   left: 0;
 }
-#menuList li:hover ul.dropdown{
+ul li:hover ul.dropdown{
   display: block; /* Display the dropdown */
   overflow: visible;
 }
-#menuList li ul.dropdown li{
+ul li ul.dropdown li{
   display: block;
 }
