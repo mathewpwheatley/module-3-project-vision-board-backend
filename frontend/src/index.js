@@ -161,7 +161,7 @@ function buildBoardForm(boardId) {
   backgroundCard.className = "board-form-input";
   const cancelButton = document.createElement("button");
   cancelButton.innerText = "Cancel";
-  cancelButton.className = "cancel"
+  cancelButton.className = "btn2"
   cancelButton.addEventListener("click", function (event) {
     event.preventDefault();
     document.getElementById("board-form").remove();
@@ -202,8 +202,8 @@ function buildBoardForm(boardId) {
   backgroundCard.append(backgroundInput);
   boardForm.append(document.createElement("br"));
   boardForm.append(backgroundCard);
-  buttonCard.append(cancelButton);
   buttonCard.append(submitButton);
+  buttonCard.append(cancelButton);
   boardForm.append(buttonCard);
 
   document.querySelector("main").append(boardForm);
@@ -488,6 +488,8 @@ async function fetchUser(email) {
       if (json.errors) {
         buildErrorMsg(json);
       } else {
+        loginForm.reset();
+        loginFormDiv.style.display = "none";
         window.user = json.data;
       }
     });
@@ -524,8 +526,6 @@ async function loginUser(email) {
 
 function renderUser() {
   document.querySelector(".home-page-text").hidden = true
-  loginForm.reset();
-  loginFormDiv.style.display = "none";
   // Generate first board if it exists
   if (window.user.attributes.boards.length > 0) {
     fetchBoard(window.user.attributes.boards[0].id);
