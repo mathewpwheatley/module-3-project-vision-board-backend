@@ -15,7 +15,7 @@ class GoalsController < ApplicationController
         if goal.valid?
             render json: GoalSerializer.new(goal)
         else
-            render json: {errors: goal.errors.full_messages}
+            # error
         end
     end
 
@@ -25,7 +25,7 @@ class GoalsController < ApplicationController
         if goal.valid?
             render json: GoalSerializer.new(goal)
         else
-            render json: {errors: goal.errors.full_messages}
+            #error
         end
     end
 
