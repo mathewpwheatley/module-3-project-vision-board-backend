@@ -24,6 +24,8 @@ class UsersController < ApplicationController
     def login                 
         if login_user_params[:email] == ""
             render json: { errors: ["You must enter an email to login"], status: 401}
+        elsif !User.find_by(login_user_params)
+            render json: {errors: ["That account does not exist"]}, status: 422
         else
             current_user = User.find_by(login_user_params)
             render json: UserSerializer.new(current_user), status: 200
