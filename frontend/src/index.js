@@ -244,13 +244,12 @@ function createEditBoard(event) {
     fetch(BOARDS_URL, options)
       .then((resp) => resp.json())
       .then(function (json) {
-        console.log(json);
-        if (json.data.id) {
+        if (json.errors) {
+          // build error message from server for rendering
+          buildErrorMsg(json)
+        } else {
           event.target.form.remove();
           buildBoardCard(json.data);
-        } else {
-          // Console log error message from server
-          console.log(json);
         }
       });
   }
