@@ -303,6 +303,13 @@ function deleteBoard(boardId) {
 const statusInput = document.getElementById("status")
 statusInput.style.margin = "25px"
 const submitButton = document.getElementById("submit-button")
+const newGoalEditButton = document.getElementById("cancel-button")
+
+newGoalEditButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  document.getElementById("new-goal").reset()
+  newGoalForm.hidden = true
+})
 
 function createGoalCard(goal) {
   const goalsSection = document.getElementById("notes");
@@ -359,7 +366,6 @@ function createGoalCard(goal) {
 function createOrEditGoal() {
   newGoalForm.addEventListener("submit", function (event) {
     event.preventDefault();
-    console.log(event)
     const goal = {
       id: event.target[3].getAttribute("goal-id"),
       title: `${event.target[0].value}`,
@@ -405,6 +411,7 @@ function createOrEditGoal() {
     goalFormLabel.innerHTML = `<strong>Create New Goal</strong>`
     statusInput.value = "-- Select a Status --"
     newGoalForm.hidden = true
+    submitButton.value = "Submit"
   });
 }
 
