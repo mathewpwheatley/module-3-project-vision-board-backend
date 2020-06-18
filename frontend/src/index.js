@@ -111,6 +111,7 @@ function buildBoardForm(boardId) {
   // Create form
   const boardForm = document.createElement("form");
   boardForm.id = "board-form";
+  boardForm.className = "form-container"
 
   // Label form
   const formLabel = document.createElement("h2");
@@ -160,12 +161,14 @@ function buildBoardForm(boardId) {
   backgroundCard.className = "board-form-input";
   const cancelButton = document.createElement("button");
   cancelButton.innerText = "Cancel";
+  cancelButton.className = "cancel"
   cancelButton.addEventListener("click", function (event) {
     event.preventDefault();
     document.getElementById("board-form").remove();
   });
   const submitButton = document.createElement("button");
   submitButton.innerText = "Submit";
+  submitButton.className = "btn"
   if (!!boardId) {
     submitButton.setAttribute("board-id", boardId);
   }
@@ -303,6 +306,13 @@ function deleteBoard(boardId) {
 const statusInput = document.getElementById("status")
 statusInput.style.margin = "25px"
 const submitButton = document.getElementById("submit-button")
+const newGoalEditButton = document.getElementById("cancel-button")
+
+newGoalEditButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  document.getElementById("new-goal").reset()
+  newGoalForm.hidden = true
+})
 
 function createGoalCard(goal) {
   const goalsSection = document.getElementById("notes");
@@ -359,7 +369,6 @@ function createGoalCard(goal) {
 function createOrEditGoal() {
   newGoalForm.addEventListener("submit", function (event) {
     event.preventDefault();
-    console.log(event)
     const goal = {
       id: event.target[3].getAttribute("goal-id"),
       title: `${event.target[0].value}`,
@@ -410,6 +419,7 @@ function createOrEditGoal() {
     goalFormLabel.innerHTML = `<strong>Create New Goal</strong>`
     statusInput.value = "-- Select a Status --"
     newGoalForm.hidden = true
+    submitButton.value = "Submit"
   });
 }
 
@@ -517,6 +527,7 @@ async function loginUser(email) {
 }
 
 function renderUser() {
+  document.querySelector(".home-page-text").hidden = true
   loginForm.reset();
   loginFormDiv.style.display = "none";
   // Generate first board if it exists
@@ -563,6 +574,8 @@ menuList.replaceChild(navbarUsername, signupBtn)
 }
 
 function logoutUser(navbarUsername) {
+
+  document.querySelector(".home-page-text").hidden = false
   let boardForm = document.getElementById("board-form")
   let boardCard = document.getElementById("board-card")
   newBoardBtn.style.display = "none"
