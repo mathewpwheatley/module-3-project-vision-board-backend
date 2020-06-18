@@ -605,6 +605,7 @@ function logoutUser(navbarUsername) {
   if(boardCard){
     boardCard.remove()
   }
+  menuList.replaceChild(signupBtn, navbarUsername)
 }
 
 function buildBoardsList(boards) {
