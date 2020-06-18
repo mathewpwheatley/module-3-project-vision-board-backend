@@ -77,20 +77,20 @@
         
     </div>
       <main>
-
-        <form hidden id="new-goal">
+      <div hidden class="new-goal-container">
+        <form class="form-container" id="new-goal">
           <label id="form-label"><strong>Create a New Goal</strong></label>
           <input id="name" type="text" placeholder="Name of Goal">
           <textarea id="description" type="text" placeholder="Goal Description"></textarea>
-          <input id="picture" type="text" placeholder="Picture Link">
           <select id="status" name="goal-status">
             <option disabled selected value> -- Select a Status -- </option>
             <option value="Not Started">Not Started</option>
             <option value="In Progress">In Progress</option>
             <option value="Completed">Completed</option>
           </select>
-          <input id="submit-button" type="submit" value="Submit">
+          <input class="btn" id="submit-button" type="submit" value="Submit">
         </form>
+      </div>
   
       </main>
     <script src="./src/index.js"></script>
