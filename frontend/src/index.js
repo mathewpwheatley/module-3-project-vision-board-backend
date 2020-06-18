@@ -229,11 +229,11 @@ function createEditBoard(event) {
     fetch(BOARDS_URL + "/" + boardId, options)
       .then((resp) => resp.json())
       .then(function (json) {
-        if (json.data.id === boardId) {
+        if (json.errors) {
+          buildErrorMsg(json)
+        } else if(json.data.id === boardId){
           event.target.form.remove();
           buildBoardCard(json.data);
-        } else {
-          console.log("Error Updating Board");
         }
       });
   } else {
