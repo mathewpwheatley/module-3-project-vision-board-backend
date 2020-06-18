@@ -554,7 +554,7 @@ logoutBtn.addEventListener("click", () => {logoutUser(navbarUsername)}
 )
 const navbarUsername = document.createElement("li")
 navbarUsername.style.float="right"
-navbarUsername.innerText = `Logged in as: ${currentUser.attributes.first_name}`
+navbarUsername.innerHTML = `<a>Logged in as: ${currentUser.attributes.first_name}</a>`
 menuList.replaceChild(navbarUsername, signupBtn)
 }
 
@@ -568,7 +568,7 @@ function logoutUser(navbarUsername) {
   menuList.replaceChild(signupBtn, navbarUsername)
   window.user = ""
   // Remove board from DOM
-  boardForm.style.display = "none"
+  boardForm.remove()
   document.getElementById("board-card").remove();
 }
 
