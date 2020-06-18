@@ -10,8 +10,9 @@ const loginBtn = document.getElementById("loginButton")
 const signupBtn = document.getElementById("signupButton")
 const cancelBtns = document.querySelectorAll(".cancel")
 const confirmSignup = document.getElementById("signup-submit")
-const newGoalForm = document.getElementById("new-goal")
+const newGoalForm = document.querySelector(".new-goal-container")
 newGoalForm.style.padding = "25px"
+const goalFormLabel = document.getElementById("form-label")
 const header = document.querySelector("header")
 const boardsBtn = document.getElementById("boardsbtn")
 const menuList = document.getElementById("menuList")
@@ -291,6 +292,7 @@ function deleteBoard(boardId) {
 ///////////////////////////
 
 const statusInput = document.getElementById("status")
+statusInput.style.margin = "25px"
 const submitButton = document.getElementById("submit-button")
 
 function createGoalCard(goal) {
@@ -301,7 +303,6 @@ function createGoalCard(goal) {
   const h4 = document.createElement("h4");
   const editButton = document.createElement("button");
   const deleteButton = document.createElement("button");
-  const goalFormLabel = document.getElementById("form-label")
   const nameInput = document.getElementById("name")
   const descriptionInput = document.getElementById("description")
 
@@ -316,8 +317,8 @@ function createGoalCard(goal) {
   note.appendChild(h2);
   note.appendChild(p);
   note.appendChild(h4);
-  note.appendChild(editButton);
   note.appendChild(deleteButton);
+  note.appendChild(editButton);
 
   note.setAttribute("goal-id", goal.id)
   h2.innerHTML = goal.title;
@@ -351,10 +352,10 @@ function createOrEditGoal() {
     event.preventDefault();
     console.log(event)
     const goal = {
-      id: event.target[4].getAttribute("goal-id"),
+      id: event.target[3].getAttribute("goal-id"),
       title: `${event.target[0].value}`,
       content: `${event.target[1].value}`,
-      status: `${event.target[3].value}`,
+      status: `${event.target[2].value}`,
     };
     const data = {
       board_id: document.getElementById("board-card").getAttribute("board-id"),
@@ -369,8 +370,7 @@ function createOrEditGoal() {
       let status = editedGoal.querySelector("h4")
       title.innerHTML = `${event.target[0].value}`
       content.innerHTML = `${event.target[1].value}`
-      status.innerHTML = `${event.target[3].value}`
-      editedGoal.style.background = `${event.target[2].value}`
+      status.innerHTML = `${event.target[2].value}`
       fetch(`${GOALS_URL}/${goal.id}`, {
         method: "PATCH",
         headers: {
@@ -391,10 +391,9 @@ function createOrEditGoal() {
       .then(function(json) {
         fetchBoard(data.board_id)
       })
-      //Trying to add picture funcionality but coming up as null
-      // document.querySelector(`div[goal-id = "${goal.id}"]`).style.background = `${event.target[2].value}`
   }
-    newGoalForm.reset()
+    document.getElementById("new-goal").reset()
+    goalFormLabel.innerHTML = `<strong>Create New Goal</strong>`
     statusInput.value = "-- Select a Status --"
     newGoalForm.hidden = true
   });

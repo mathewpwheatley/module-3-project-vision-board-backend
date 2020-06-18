@@ -116,6 +116,7 @@ button.togglebutton {
   /* border-radius: 10px; */
   float: right;
   opacity: 0.8;
+  margin: 5px;
 }
   
 * {
@@ -163,6 +164,7 @@ background-color: #fff;
   }
   /* Styles for the form container */
   .form-container {
+  text-align: center;
   max-width: 300px;
   padding: 20px;
   background-color: #fff;
@@ -214,6 +216,19 @@ background-color: #fff;
   .form-container .btn:hover, .open-button:hover, .cancel:hover, .togglebutton:hover {
   opacity: 1;
   }
+
+  .new-goal-container {
+    width: 300px;
+    height: 300p;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    z-index: 10;
+    background-color: rgba(228, 100, 91, 0.938);
+    /* z-index: 10; */
+    }
 
 #notes div {
   position: relative;
