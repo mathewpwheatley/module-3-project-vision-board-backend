@@ -111,6 +111,7 @@ function buildBoardForm(boardId) {
   // Create form
   const boardForm = document.createElement("form");
   boardForm.id = "board-form";
+  boardForm.className = "form-container"
 
   // Label form
   const formLabel = document.createElement("h2");
@@ -160,12 +161,14 @@ function buildBoardForm(boardId) {
   backgroundCard.className = "board-form-input";
   const cancelButton = document.createElement("button");
   cancelButton.innerText = "Cancel";
+  cancelButton.className = "cancel"
   cancelButton.addEventListener("click", function (event) {
     event.preventDefault();
     document.getElementById("board-form").remove();
   });
   const submitButton = document.createElement("button");
   submitButton.innerText = "Submit";
+  submitButton.className = "btn"
   if (!!boardId) {
     submitButton.setAttribute("board-id", boardId);
   }
