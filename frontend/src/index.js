@@ -396,22 +396,8 @@ function createOrEditGoal() {
         },
         body: JSON.stringify(data)
       })
-      .then(response => response.json())
-      .then(function(json) {
-        console.log(json)
-        if (json.errors){
-
-          buildErrorMsg(json)
-          
-        } else if (json.data.id){
-        fetchBoard(data.board_id)
-        document.getElementById("new-goal").reset()
-        goalFormLabel.innerHTML = `<strong>Create New Goal</strong>`
-        statusInput.value = "-- Select a Status --"
-        newGoalForm.hidden = true
-        submitButton.value = "Submit"
-      }})
-    } else {
+    }
+    else {
       fetch(`${GOALS_URL}`, {
         method: "POST",
         headers: {
@@ -421,20 +407,14 @@ function createOrEditGoal() {
       })
       .then(response => response.json())
       .then(function(json) {
-        console.log(json)
-        if(json.errors){
-          buildErrorMsg(json)
-        } else if(json.data.id){
-          console.log(json)
         fetchBoard(data.board_id)
-        document.getElementById("new-goal").reset()
-        goalFormLabel.innerHTML = `<strong>Create New Goal</strong>`
-        statusInput.value = "-- Select a Status --"
-        newGoalForm.hidden = true
-        submitButton.value = "Submit"
-      }})
+      })
   }
-   
+    document.getElementById("new-goal").reset()
+    goalFormLabel.innerHTML = `<strong>Create New Goal</strong>`
+    statusInput.value = "-- Select a Status --"
+    newGoalForm.hidden = true
+    submitButton.value = "Submit"
   });
 }
 
