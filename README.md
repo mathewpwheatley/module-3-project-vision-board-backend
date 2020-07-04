@@ -1,7 +1,4 @@
-### Flatiorn School: Seattle 0420 Cohort
-# Vision Board: Module 3 Project
-
-### Flatiorn School: Seattle 0420 Cohort
+### Flatiron School: Seattle 0420 Cohort
 # Vision Board: Module 3 Project
 
 # Description: 
@@ -43,7 +40,7 @@ Rails (6.0.3.1)
 Google Chrome (80.0.3987.149)
 
 # Installation:
-Assuming you already have all previously listed dependencies installed, download this entire git repository to your computer and place in your desired install directory. Via a terminal interface navigate to install_directory/backend. From this location execute bundle install to install all other required ruby gems.
+Download this entire git repository to your computer and place in your desired install directory. If you don't have the above dependencies, in your terminal run ``ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`` to install Homebrew, then run ``brew install rbenv ruby-build`` to install Ruby, then ``rbenv install 2.7.1`` ``rbenv global 2.7.1`` and ``ruby -v`` to confirm. Finally, to install rails, run ``gem install rails -v 6.0.2.2`` ``rbenv rehash`` and ``rails -v`` to confirm. Now, via a terminal interface navigate to install_directory/backend. From this location execute ``bundle install`` to install all other required ruby gems. This should allow you to explore all functionality of the application.
 
 # Running:
 This project was designed as a proof of concept so it requires hosting locally. To start hosting the local server navigate to install_directory/backend via a terminal interface and then execute rails s. Next, from your Google Chrome browser navigate to your install_directory/frontend/index.html. At this point the application will load and all functionality will be available.
