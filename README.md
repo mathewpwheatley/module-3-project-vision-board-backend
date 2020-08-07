@@ -2,7 +2,7 @@
 # Vision Board: Module 3 Project
 
 # Description: 
-This project was designed to enable a user to create vision boards. Through the tool a user can:
+This project was designed to enable a user to create, edit, and delete vision boards with associated goals. Through the tool a user can:
 
 * Create an account
 
