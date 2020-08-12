@@ -32,3 +32,5 @@ goal_seeds.times do
     board_id: Board.all.sample.id
     )
 end
+
+puts "Database seeded m8!"
