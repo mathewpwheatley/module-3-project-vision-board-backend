@@ -40,7 +40,7 @@ Rails (6.0.3.1)
 Google Chrome (80.0.3987.149)
 
 # Installation:
-This app is hosted here: https://ckaiser258.github.io/visionboard/. If you'd like to view it locally, follow the instructions below:
+This app is hosted here: https://ckaiser258.github.io/visionboard/. If you'd like to view it locally, follow the instructions below to install the backend server:
 
 1. Download this entire git repository to your computer and place in your desired install directory. 
 2. If you don't have the above dependencies:
