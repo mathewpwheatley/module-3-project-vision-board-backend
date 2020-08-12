@@ -40,7 +40,7 @@ Rails (6.0.3.1)
 Google Chrome (80.0.3987.149)
 
 # Installation:
-This app is hosted here: https://ckaiser258.github.io/module-3-project-vision-board-frontend/. If you'd like to view it locally, follow the instructions below:
+This app is hosted here: https://ckaiser258.github.io/visionboard/. If you'd like to view it locally, follow the instructions below:
 
 1. Download this entire git repository to your computer and place in your desired install directory. 
 2. If you don't have the above dependencies:
@@ -50,7 +50,8 @@ This app is hosted here: https://ckaiser258.github.io/module-3-project-vision-bo
 3. Now, via a terminal interface navigate to install_directory/backend. From this location execute ``bundle install`` to install all other required ruby gems. This should allow you to explore all functionality of the application.
 
 # Running:
-To start hosting the local server navigate to install_directory/backend via a terminal interface and then execute rails s. Next, from your Google Chrome browser navigate to your install_directory/frontend/index.html. At this point the application will load and all functionality will be available.
+1. Make sure you've installed the frontend repo (located here: https://github.com/ckaiser258/module-3-project-vision-board-frontend/) and followed the installation/running instructions. 
+2. To start hosting the local server, navigate to install_directory/backend via a terminal interface and then execute rails s.
 
 # License:
 
