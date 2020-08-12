@@ -15,7 +15,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 
   allow do
-    origins 'https://module-3-project-vision-board.herokuapp.com'
+    origins 'https://ckaiser258.github.io/module-3-project-vision-board-frontend'
 
     resource '*',
       headers: :any,
