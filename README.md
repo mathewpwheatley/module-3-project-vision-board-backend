@@ -50,7 +50,7 @@ This app is hosted here: https://ckaiser258.github.io/visionboard/. If you'd lik
 3. Now, via a terminal interface navigate to install_directory/backend. From this location execute ``bundle install`` to install all other required ruby gems. This should allow you to explore all functionality of the application.
 
 # Running:
-1. Make sure you've installed the frontend repo (located here: https://github.com/ckaiser258/module-3-project-vision-board-frontend/) and followed the installation/running instructions. 
+1. Make sure you've installed the frontend repo (located here: https://github.com/ckaiser258/visionboard/) and followed the installation/running instructions. 
 2. To start hosting the local server, navigate to install_directory/backend via a terminal interface and then execute rails s.
 
 # License:
