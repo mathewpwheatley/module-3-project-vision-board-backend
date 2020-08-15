@@ -55,7 +55,10 @@ This app is hosted here: https://ckaiser258.github.io/VisionBoard/. If you'd lik
 1. Make sure you've installed the frontend repo (located here: https://github.com/ckaiser258/VisionBoard/) and followed the installation/running instructions. 
 2. To start hosting the local server, start by opening PostgreSQL and starting the server. 
 3. Then, in your terminal navigate to the directory you've installed this repo in. Once there, execute `rails db:create`, `rails db:migrate`,`rails db:seed`, and finally ```rails s```. 
-Note: The rails server is functioning solely as a backend API for local development, so you do not need to navigate to localhost:3000 in your browser unless you'd like to test to make sure the database is running correctly.
+
+NOTE: If you're planning on making changes to this backend repo and/or using it instead of the hosted backend: navigate to where you installed the frontend repo, open it in your text editor and comment out line 1 of index.js, then comment IN line 2.
+
+NOTE #2: The rails server is functioning solely as a backend API for local development, so you do not need to navigate to localhost:3000 in your browser unless you'd like to test to make sure the database is running correctly.
 
 # License:
 
