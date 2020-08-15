@@ -37,6 +37,7 @@ The backend of the application leverages Ruby on Rails API functionality to rece
 Ruby (2.6.1)
 Bundler (2.1.4)
 Rails (6.0.3.1)
+PostgreSQL (12.3)
 Google Chrome (80.0.3987.149)
 
 # Installation:
@@ -46,12 +47,15 @@ This app is hosted here: https://ckaiser258.github.io/VisionBoard/. If you'd lik
 2. If you don't have the above dependencies:
    * In your terminal run ``ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`` to install Homebrew
    * Run ``brew install rbenv ruby-build`` to install Ruby, then ``rbenv install 2.7.1`` ``rbenv global 2.7.1`` and ``ruby -v`` to confirm. 
-   * Finally, to install Rails, run ``gem install rails -v 6.0.2.2`` ``rbenv rehash`` and ``rails -v`` to confirm. 
+   * Finally, to install Rails, run ``gem install rails -v 6.0.2.2`` ``rbenv rehash`` and ``rails -v`` to confirm.
+   * If you need to install PostgreSQL, follow their instructions here: https://postgresapp.com/.
 3. Now, via a terminal interface navigate to install_directory/backend. From this location execute ``bundle install`` to install all other required ruby gems. This should allow you to explore all functionality of the application.
 
 # Running:
 1. Make sure you've installed the frontend repo (located here: https://github.com/ckaiser258/VisionBoard/) and followed the installation/running instructions. 
-2. To start hosting the local server, navigate to install_directory/backend via a terminal interface and then execute rails s.
+2. To start hosting the local server, start by opening PostgreSQL and starting the server. 
+3. Then, in your terminal navigate to the directory you've installed this repo in. Once there, execute `rails db:create`, `rails db:migrate`,`rails db:seed`, and finally ```rails s```. 
+Note: The rails server is functioning solely as a backend API for local development, so you do not need to navigate to localhost:3000 in your browser unless you'd like to test to make sure the database is running correctly.
 
 # License:
 
